@@ -1,0 +1,665 @@
+{$myAccountLinks = $userquery->my_account_links()}
+{$leftMenuLinks = array_slice($myAccountLinks, 7)}
+{lang code='channel' assign='object_type'}
+{$loadMoreLang ={lang code="load_more"}}
+{$uservideos=get_videos(["user"=>$user.userid, "type"=>"video", "order"=>"date_added DESC"])}
+{$userads=get_videos(["user"=>$user.userid, "type"=>"ad", "order"=>"date_added DESC"])}
+{$useraudios=get_videos(["user"=>$user.userid, "type"=>"audio", "order"=>"date_added DESC"])}
+
+{$total_videos = $user.total_videos}
+{$total_photos = $user.total_photos}
+
+{if $uservideos}
+	{$mainVideo = userMainVideo($uservideos)}
+	{$first_video = $cbvid->get_video($mainVideo)}
+{/if}
+
+<link rel="stylesheet" href="{$baseurl}/js/jquery_plugs/owl-carousel/assets/owlcarousel/assets/owl.carousel.min.css">
+<link rel="stylesheet" href="{$baseurl}/js/jquery_plugs/owl-carousel/assets/owlcarousel/assets/owl.theme.default.min.css">
+
+<script src="{$baseurl}/js/jquery_plugs/owl-carousel/assets/owlcarousel/owl.carousel.js"></script>
+<script src="{$baseurl}/js/jquery_plugs/owl-carousel/assets/vendors/jquery.mousewheel.min.js"></script>
+
+<!--<link rel="stylesheet" href="{$baseurl}/includes/libraries/royalslider/royalslider.css">-->
+<!--<link rel="stylesheet" href="{$baseurl}/includes/libraries/royalslider/rs-universal.css">-->
+<!--<script src="{$baseurl}/includes/libraries/royalslider/jquery.royalslider.min.js"></script>-->
+
+<div id="main" class="container clearfix">
+	<div class="clearfix">
+		{include file="$style_dir/blocks/view_channel/channel_header.html"}
+	</div>
+	<div class="clearfix report-block" id="report-user-form" style="display:none">
+		{show_flag_form id=$user.userid type=user}	
+	</div>
+	<div class="clearfix">
+		<section id="content" class="clearfix">
+			{if $uservideos}
+			<div class="player-items">
+				<div class="clearfix player-holder">
+					<div id="cb_player" class="clearfix cb_player">
+						{FlashPlayer vdetails=$first_video width='100%' height='355'}
+					</div>
+				</div>
+				<img src="{$theme}/images/player-ratio.png" class="playerRatio">
+			</div>
+			{/if}
+			<div id="messageFav" class="alert alert-info marginTop" style="display:none"></div>
+
+			<!--R.K-->
+			<div id="content_sponsor_ads" class="clearfix channel-video">
+				<div class="clearfix row videos user_audios">
+				<h2>{lang code="direct_sponsor_ads"}</h2>
+
+				{if $sponsor_ads}
+				<div id="sponsor_ads_main" class="videos clearfix royalSlider rsUni">
+					{foreach $sponsor_ads as $video}
+					<div class="item-video col-lg-4 col-md-4 col-sm-6 col-xs-12">
+						{include file="$style_dir/blocks/videos/video.html" display_type='homeVideos'}
+					</div>
+					{/foreach}
+				</div>
+
+				{else}
+				<div class="well well-info">{lang code='no_results_found'}</div>
+				{/if}
+				</div>
+			</div>
+
+			<div class="channel-tabs flat-tabs clearfix">
+				<ul class="clearfix nav nav-tabs">
+					<li>
+						<a href="#user-audios" data-toggle="tab">{lang code='audios'}</a>
+					</li>
+					{if isSectionEnabled('videos') && $u_control.show_my_videos != 'no'}
+					<li class="active">
+						<a href="#user-videos" data-toggle="tab">{lang code='videos'}</a>
+					</li>
+					{/if}
+					{if isSectionEnabled('photos') && $u_control.show_my_photos != 'no'}
+					<li {if $u_control.show_my_videos == 'no' || !isSectionEnabled('videos')}class="active"{/if}>
+						<a href="#user-photos" data-toggle="tab">{lang code='photos'}</a>
+					</li>
+					<li>
+					{/if}
+					<li>
+						<a href="#user-ads" data-toggle="tab">{lang code='ads'}</a>
+					</li>
+				</ul>
+				<div class="tab-content clearfix">
+					<div class="tab-pane fade in clearfix {if $u_control.show_my_videos == 'no' && $u_control.show_my_photos == 'no'}active{/if}}" id="user-audios">
+						<div class="clearfix row videos user_audios">
+							{if $useraudios}
+							<div id="usr-audios" class="clearfix channel-video">
+								{foreach $useraudios as $video}
+								<div class="item-video col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									{include file="$style_dir/blocks/videos/video.html" display_type='homeVideos'}
+								</div>
+								{/foreach}
+							</div>
+							{else}
+							<div class="well well-info">{lang code='no_results_found'}</div>
+							{/if}
+						</div>
+					</div>
+					<div class="tab-pane videos fade in clearfix {if $u_control.show_my_videos != 'no'}active{/if}" id="user-videos">
+						<div class="clearfix row videos user_vids">
+							{if $uservideos}
+								<div id="usr-vids" class="clearfix channel-video">
+								{foreach $uservideos as $video}
+									<div class="item-video col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									{include file="$style_dir/blocks/videos/video.html" display_type='homeVideos'}
+									</div>
+								{/foreach}
+								</div>
+								{if $total_videos > 9}
+									<div class="clearfix text-center">
+										<button id="more-view-channel" class="btn btn-loadmore" dataLimit="9" dataHit="2">{lang code='load_more'}</button>
+									</div>
+								{/if}
+							{else}
+								<div class="well well-info">{lang code='no_results_found'}</div>
+							{/if}
+						</div>
+					</div>
+					<div class="tab-pane fade in clearfix {if $u_control.show_my_videos == 'no'}active{/if}" id="user-photos">
+						<div id="usr-photos" class="clearfix row user_photos">
+						{$photos=get_photos(["user"=>$user.userid,"limit" =>9])}
+							{if $photos}
+								{foreach from=$photos item=p_list}
+								<div class="item-photo col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									{include file="$style_dir/blocks/photo.html" photo=$p_list display_type = "default_photo"}
+								</div>
+								{/foreach}
+								{if $user.total_photos > 9} 
+									<div class="clearfix text-center">
+										<button id="more-channel-photos" class="btn btn-loadmore" dataLimit="9" dataHit="2">{lang code='load_more'}</button>
+									</div>
+								{/if}
+							{else}
+								<div class="well well-info">{lang code='no_results_found'}</div>
+							{/if}
+						</div>
+					</div>
+					<div class="tab-pane fade in clearfix" id="user-ads">
+						<div class="clearfix row videos user_ads">
+							{if $userads}
+							<div id="usr-ads" class="clearfix channel-video">
+								{foreach $userads as $video}
+								<div class="item-video col-lg-4 col-md-4 col-sm-6 col-xs-12">
+									{include file="$style_dir/blocks/videos/video.html" display_type='homeVideos'}
+								</div>
+								{/foreach}
+							</div>
+							{else}
+							<div class="well well-info">{lang code='no_results_found'}</div>
+							{/if}
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<aside id="sidebar">
+
+			<!--R.K for sponsor direct ads-->
+			<h2>{lang code="direct_sponsor_ads"}</h2>
+			{if $sponsor_ads}
+
+			<div class="scroll-up"><span class="fa fa-chevron-up"></span></div>
+
+			<div id="sponsor_ads" class="videos clearfix royalSlider rsUni">
+				{foreach $sponsor_ads as $video}
+				<div class="item-video col-lg-4 col-md-4 col-sm-6 col-xs-12">
+					{include file="$style_dir/blocks/videos/video.html" display_type='homeVideos'}
+				</div>
+				{/foreach}
+			</div>
+
+			<div class="scroll-down"><span class="fa fa-chevron-down"></span></div>
+
+			{else}
+			<div class="well well-info">{lang code='no_results_found'}</div>
+			{/if}
+
+			<!--{assign var=userFeeds value=$cbfeeds->getUserFeeds($u)}-->
+			<!--{if $userFeeds && userid()}-->
+			<!--<h2>{lang code="user_activity"}</h2>-->
+			<!--<div id="userFeeds" class="user-activities clearfix sidebar-items">-->
+				<!--{foreach from=$userFeeds item=userFeed}-->
+					<!--{include file="$style_dir/blocks/feed.html" feed=$userFeed}-->
+				<!--{/foreach}-->
+			<!--</div>-->
+			<!--{/if}-->
+			<!--{$popular_users = get_users(['order'=>'profile_hits DESC limit 5'])}-->
+			<!--{if $popular_users}-->
+			<!--<h2>{lang code="Popular Users"}</h2>-->
+			<!--<div class="clearfix sidebar-channels">-->
+				<!--{foreach $popular_users as $popular}-->
+				<!--{if $popular.username == $smarty.get.user} -->
+					<!--{continue}-->
+				<!--{/if}-->
+				<!--<div class="clearfix channel-item">-->
+					<!--<a href="{$userquery->profile_link($popular)}" class="avatar">-->
+						<!--<img src="{$userquery->getuserthumb($popular,'small')}" width="50" height="50" class="img-circle">-->
+					<!--</a>-->
+					<!--<div class="channel-info">-->
+						<!--<h3><a href="{$userquery->profile_link($popular)}">{$popular.username}</a></h3>-->
+						<!--<div class="clearfix views-videos">-->
+							<!--<span>{$popular.profile_hits|number_format} {lang code='views'}</span>-->
+							<!--<span>{$popular.total_videos|number_format} {lang code='videos'}</span>-->
+						<!--</div>-->
+					<!--</div>-->
+				<!--</div>-->
+				<!--{/foreach}-->
+			<!--</div>-->
+			<!--{/if}-->
+		</aside>
+	</div>
+	
+		
+</div>
+
+<style>
+	.channel-video .owl-item:first-child {
+		width: auto!important;
+	}
+	#sponsor_ads::-webkit-scrollbar {
+		display: none;
+	}
+	#sponsor_ads {
+		height: 600px;
+		overflow-y: auto;
+		-ms-overflow-style: none;  /* IE and Edge */
+		scrollbar-width: none;  /* Firefox */
+	}
+	#sidebar .fa-chevron-up, #sidebar .fa-chevron-down {
+		position: relative;
+		left: 85px;
+		padding: 0 25px;
+		font-size: 25px;
+		margin: 10px 0;
+	}
+	.owl-carousel .owl-nav.disabled {
+		display: block;
+	}
+</style>
+
+
+<script>
+/*$('#changeCover').on("click", function(){
+
+$('#cover_info').show();
+
+});*/
+
+
+(function(window){
+  $(document).ready(function(){
+	$("#report-user").on("click",function(){
+		$("#report-user-form").toggle();
+	});
+	var extensions = "{$extensions}";
+	var baseurl = '{$baseurl}';
+	var channelId = "{$user['userid']}";
+	extensions = (extensions.substring(0, extensions.length - 1)) + ",png,jpeg";
+	$.get("{$theme}/js/plupload/js/plupload.full.min.js", function(e){
+	  var uploader = new plupload.Uploader({
+		  browse_button: 'changeCover',
+		  runtimes : 'html5,flash,silverlight,html4',
+		  url : baseurl + "/edit_account.php?mode=avatar_bg",
+		  file_data_name : "coverPhoto",
+		  filters: {
+			mime_types : [
+			  { title : "Image files", extensions : extensions },
+			],
+			max_file_size: "2mb",
+			prevent_duplicates: false,
+		  }
+	  });
+	  window.uploader = uploader;
+	  uploader.init();
+	  uploader.bind("FilesAdded", function(up, uploadedFiles){
+		$(".cb-live-background").attr("src",baseurl+'/images/loading.png');
+		up.start();
+	  });
+	  uploader.bind('UploadComplete', function(plupload, files, response){
+		
+	  });
+
+	  uploader.bind("FileUploaded", function(plupload, files, response){
+		var response = $.parseJSON(response.response);
+		if(response.status == true){
+		  $(".cb-live-background").attr("src",response.url);
+		}else{
+		  $(".cb-live-background").attr("src",response.url);
+		  alert(response.msg);
+		}
+	  });
+
+	  uploader.bind("Error", function(plupload, error){
+		alert(error.message);
+	  });
+	});
+	$("#coverContainer").hover(function(e){
+		//$("#changeCover").removeClass("sr-only");
+		$("#changeCover").show();
+	}, function(e){
+	  // $("#changeCover").addClass("sr-only");
+		$("#changeCover").hide();
+	});
+	$("#channelVoteUp, #channelVoteDown").one({
+	  click: function(e){
+		var vote = "";
+		var id = "" + this.id;
+		var likes = parseInt($("#likes").text());
+		var totalVotes = parseInt($("#totalVotes").text()) + 1;
+		if(this.id == "channelVoteDown"){
+		  vote  = "no";
+		   likes = likes - 1;
+
+		}else{
+		  vote = "yes";
+		  likes = likes + 1;
+		}
+		$.ajax({
+		  type: "POST",
+		  url: "{$baseurl}/actions/vote_channel.php",
+		  data: { vote: vote, channelId : channelId}
+		}).success(function(data){
+		  $("#likes").text(likes);
+		  $("#totalVotes").text(totalVotes);
+		});
+	  }
+	})
+
+  });
+})(window);
+
+/* player height and editerpick activities height */
+	var WinWidHome = "";
+	function editpickVideos(){
+		WinWidHome = $(window).width();
+		if(WinWidHome > 991)
+		{
+			// console.log("height "+WinWidHome);
+			var bannerHeight = $(".player-items").height();
+			bannerHeight = bannerHeight - 43;
+			console.log("height "+bannerHeight);
+			$(".user-activities").css({
+				"max-height" : bannerHeight+"px",
+				"overflow-y" : "auto"
+			});
+		}
+		else
+		{
+			// console.log("height "+WinWidHome);
+			
+			$(".user-activities").css("max-height","auto");
+		}
+	}
+/* */
+	$(document).ready(function (){
+		editpickVideos();
+		var id ='{$user.userid}';
+		$('#subscribe_channel').on({
+		click: function(e){
+			e.preventDefault();
+		   _cb.subscribeToChannelNew(id,'subscribe_user');
+		   
+		 }
+		});
+
+		$('#sidebar .scroll-up .fa-chevron-up').on({
+			click: function () {
+            	$('#sponsor_ads').scrollTop($('#sponsor_ads').scrollTop() - 100);
+			}
+        });
+        $('#sidebar .scroll-down .fa-chevron-down').on('click', function () {
+            $('#sponsor_ads').scrollTop($('#sponsor_ads').scrollTop() + 100);
+        });
+
+        user_videos_carousel();
+
+	});
+
+	$('#myTab a, #reportTab a').click(function (e) {
+		e.preventDefault();
+		$(this).tab('show')
+	});
+	$('#load_more_playlist').click(function() 
+	 { 
+	  var limit = $(this).attr("limit");
+	  var mode = 'load_more';
+	  var inner_mode = 'load_more_playlist';
+	  var append_id = 'load_more_channel_playlist';
+	  var attrb = $(this);
+	  var cat_id = $(this).attr("cat-id");
+	  var total = $(this).attr("total");
+	  load_more(limit,mode,inner_mode,append_id,attrb,cat_id,total);
+	 });
+
+	var loadMoreLang = "{$loadMoreLang}";
+	$('#container').on("click","#more-view-channel",function(){
+		loadHit = $(this).attr('dataHit');
+		loadLimit = $(this).attr('dataLimit');
+		user = "{$user['userid']}";
+		totalVids = "{$total_videos}";
+		totalShown = loadHit * 9 - 9;
+		if (totalVids - totalShown <= 9) {
+			loadMore = false;
+		} else {
+			loadMore = true;
+		}
+
+		nextHit = parseInt(loadHit) + 1;
+		$.ajax({
+			url: baseurl + "/ajax/view_channel.php",
+			type: "post",
+			dataType: "html",
+			data: {
+				"mode":'channelMore',
+				"loadHit":loadHit,
+				"loadLimit":loadLimit,
+				"totalVids":totalVids,
+				"userid":user,
+			},
+			beforeSend: function() {
+				$(document).find('#more-view-channel').text('Loading videos..')
+			},
+
+			success: function(data) {
+				$('#more-view-channel').remove();
+				if (data.length > 1) {
+					$(data).appendTo('#usr-vids').fadeIn('slow');
+					if (loadMore == true) {
+						$('<div class="clearfix text-center"><button id="more-view-channel" class="btn btn-loadmore" dataLimit="'+loadLimit+'" dataHit="'+nextHit+'">'+loadMoreLang+'</button></div>').appendTo('.user_vids').fadeIn('slow');
+					}
+					var moveTo = $( ".recentAppending" ).last().offset().top,
+					currWidth = $(window).width();
+					moveTo = moveTo - 630;
+					if (currWidth > 767) {
+						thakkiLoading(moveTo);
+					}
+				} else {
+					$('<div class="clearfix text-center"><button id="more-view-channel" class="btn btn-loadmore" disabled="disabled">Unable to fetch more</button></div>').appendTo('.user_vids').fadeIn('slow');
+				}
+
+				
+			}
+		});
+	});
+
+	$('#container').on("click","#more-channel-photos",function(){
+		loadHit = $(this).attr('dataHit');
+		loadLimit = $(this).attr('dataLimit');
+		user = "{$smarty.get.user}";
+		totalPhotos = "{$total_photos}";
+		totalShown = loadHit * 9 - 9;
+		if (totalPhotos - totalShown <= 9) {
+			loadMore = false;
+		} else {
+			loadMore = true;
+		}
+
+		nextHit = parseInt(loadHit) + 1;
+		$.ajax({
+			url: baseurl + "/ajax/view_channel.php",
+			type: "post",
+			dataType: "html",
+			data: {
+				"mode":'channelMorePhotos',
+				"loadHit":loadHit,
+				"loadLimit":loadLimit,
+				"totalPhotos":totalPhotos,
+				"userid":user,
+			},
+			beforeSend: function() {
+				$(document).find('#more-channel-photos').text('Loading photos..')
+			},
+
+			success: function(data) {
+				$('#more-channel-photos').remove();
+				if (data.length > 1) {
+					$(data).appendTo('#usr-photos').fadeIn('slow');
+					if (loadMore == true) {
+						$('<div class="clearfix text-center"><button id="more-channel-photos" class="btn btn-loadmore" dataLimit="'+loadLimit+'" dataHit="'+nextHit+'">Load More</button></div>').appendTo('.user_photos').fadeIn('slow');
+					}
+
+					var moveTo = $( ".photoAppending" ).last().offset().top,
+					currWidth = $(window).width();
+					moveTo = moveTo + 240;
+					if (currWidth > 767) {
+						thakkiLoading(moveTo);
+					}
+				} else {
+					$('<div class="clearfix text-center"><button id="more-view-channel" class="btn btn-loadmore" disabled="disabled">Unable to fetch more</button></div>').appendTo('.user_vids').fadeIn('slow');
+				}
+
+				
+			}
+		});
+	});
+	/**/
+
+// R.K
+	function user_videos_carousel() {
+        if($('#usr-vids').find('.item-video').length > 0) {
+            $('#usr-vids').addClass('owl-carousel');
+            $('#more-view-channel').hide();
+            var owl = $('#usr-vids');
+            owl.owlCarousel({
+                loop: false,
+                nav: true,
+                margin: 10,
+                animateOut: 'slideOutDown',
+                animateIn: 'slideInDown',
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    1120: {
+                        items: 2
+                    },
+                    1490: {
+                        items: 3
+                    }
+                }
+            });
+            owl.on('mousewheel', '.owl-stage', function (e) {
+                if (e.deltaY > 0) {
+                    owl.trigger('next.owl');
+                } else {
+                    owl.trigger('prev.owl');
+                }
+                e.preventDefault();
+            });
+            n = 1;
+            setTimeout(user_audios_carousel, 1000);
+            setTimeout(user_ads_carousel, 1000);
+            setTimeout(sponsor_ads_carousel, 1000);
+        }
+        else {
+            setTimeout(user_videos_carousel, 1000);
+        }
+	}
+
+	function sponsor_ads_carousel() {
+        if($('#sponsor_ads_main').find('.item-video').length > 0) {
+            $('#sponsor_ads_main').addClass('owl-carousel');
+            $('#more-view-channel').hide();
+            var owl = $('#sponsor_ads_main');
+            owl.owlCarousel({
+                loop: false,
+                nav: true,
+                margin: 10,
+                animateOut: 'slideOutDown',
+                animateIn: 'slideInDown',
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    1120: {
+                        items: 2
+                    },
+                    1490: {
+                        items: 3
+                    }
+                }
+            });
+            owl.on('mousewheel', '.owl-stage', function (e) {
+                if (e.deltaY > 0) {
+                    owl.trigger('next.owl');
+                } else {
+                    owl.trigger('prev.owl');
+                }
+                e.preventDefault();
+            });
+            n = 1;
+        }
+        else {
+            setTimeout(sponsor_ads_carousel, 1000);
+        }
+	}
+
+	function user_audios_carousel() {
+        if($('#usr-audios').find('.item-video').length > 0) {
+            $('#usr-audios').addClass('owl-carousel');
+            $('#more-view-channel').hide();
+            var owl = $('#usr-audios');
+            owl.owlCarousel({
+                loop: false,
+                nav: true,
+                margin: 10,
+                animateOut: 'slideOutDown',
+                animateIn: 'slideInDown',
+                responsive: {
+                    0: {
+                        items: 1
+                    },
+                    1120: {
+                        items: 2
+                    },
+                    1490: {
+                        items: 3
+                    }
+                }
+            });
+            owl.on('mousewheel', '.owl-stage', function (e) {
+                if (e.deltaY > 0) {
+                    owl.trigger('next.owl');
+                } else {
+                    owl.trigger('prev.owl');
+                }
+                e.preventDefault();
+            });
+            n = 1;
+        }
+        else {
+            setTimeout(user_audios_carousel, 1000);
+        }
+	}
+
+function user_ads_carousel() {
+    if($('#usr-ads').find('.item-video').length > 0) {
+        $('#usr-ads').addClass('owl-carousel');
+        $('#more-view-channel').hide();
+        var owl = $('#usr-ads');
+        owl.owlCarousel({
+            loop: false,
+            nav: true,
+            margin: 10,
+            animateOut: 'slideOutDown',
+            animateIn: 'slideInDown',
+            responsive: {
+                0: {
+                    items: 1
+                },
+                1120: {
+                    items: 2
+                },
+                1490: {
+                    items: 3
+                }
+            }
+        });
+        owl.on('mousewheel', '.owl-stage', function (e) {
+            if (e.deltaY > 0) {
+                owl.trigger('next.owl');
+            } else {
+                owl.trigger('prev.owl');
+            }
+            e.preventDefault();
+        });
+        n = 1;
+    }
+    else {
+        setTimeout(user_ads_carousel, 1000);
+    }
+}
+	
+	$('.playerRatio').load(function(){
+		editpickVideos();
+	});
+	$(window).resize(function() {
+		editpickVideos();
+	});
+</script>

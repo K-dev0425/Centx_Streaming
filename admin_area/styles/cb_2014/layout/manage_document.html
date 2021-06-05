@@ -1,0 +1,47 @@
+<!--<link href="../theme/stylesheet.css" rel="stylesheet" type="text/css">-->
+{$allowed_extensions = $Cbucket->configs['allowed_document_extensions']}
+{$max_upload_size = $Cbucket->configs['allowed_document_size']}
+<div class="heading">
+    <h2>Manage Document</h2>
+</div>
+
+<!--<a class="btn btn-primary btn-sm pull-right" href="?mode=add">Add New Level <b>+</b></a>-->
+<br>
+
+<form action="#" id="form_document" method="post">
+    <div class="row">
+        <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <label for="allowed_extensions"><b>{lang code="allowed_extensions"}:</b></label> <br>
+            <textarea type="text" name="allowed_extensions" id="allowed_extensions">{$allowed_extensions}</textarea>
+        </div>
+        <div class="form-group col-lg-3 col-md-3 col-sm-4 col-xs-12">
+            <label for="max_upload_size"><b>{lang code="max_upload_size"}(MB):</b></label> <br>
+            <input type="number" name="max_upload_size" id="max_upload_size" value="{(int)$max_upload_size}">
+        </div>
+    </div>
+    <br>
+    <button class="btn btn-success" type="button" id="btn_submit">Update Settings</button>
+</form>
+
+<script>
+    var baseurl = '{$baseurl}';
+
+    $(document).ready(function () {
+        $('#btn_submit').click(function () {
+            var form_data = $('#form_document').serialize();
+
+            $.ajax({
+                url: baseurl + '/admin_area/manage_document.php',
+                type: 'post',
+                data: form_data,
+                success: function (msg) {
+                    if (msg) {
+                        alert('Successfully updated.');
+                        window.location.reload();
+                    }
+                }
+            })
+        })
+    });
+
+</script>

@@ -1,0 +1,537 @@
+
+
+==========================================
+	Pre-Check Configurations
+==========================================
+
+File to be converted
+--------------------
+		Initializing File <strong>1604526940741fd.mp4</strong> and pre checking configurations...
+
+System hardware Information
+---------------------------
+		Unable log System hardware information, plaese install "lshw" 
+
+Temporary Uploading
+-------------------
+		File Uploaded to Temp directory successfully and video conversion file is being executed !
+
+Video Conversion File Execution
+-------------------------------
+		Video Converson File executed successfully with Target File > !1604526940741fd.mov
+
+
+==========================================
+	Starting Conversion Log
+==========================================
+
+Getting Arguments
+-----------------
+		Filename : 1604526940741fd.mov
+File directory : 2020/11/04
+Log file : /var/www/vhosts/lookmyad.com/httpdocs/clip/files/logs/2020/11/04/1604526940741fd.log
+
+
+Conversion queue
+----------------
+		Getting the file information from the queue for conversion
+
+Conversion queue
+----------------
+		File has been moved from Temporary dir to Conversion Queue/var/www/vhosts/lookmyad.com/httpdocs/clip/files/temp/1604526940741fd.ozz Orig_ /var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov
+
+Parsing FFmpeg Configurations
+-----------------------------
+		<strong>use_video_rate</strong> : 1
+<strong>use_video_bit_rate</strong> : 1
+<strong>use_audio_rate</strong> : 1
+<strong>use_audio_bit_rate</strong> : 1
+<strong>use_audio_codec</strong> : 1
+<strong>use_video_codec</strong> : 1
+<strong>format</strong> : mp4
+<strong>video_codec</strong> : libx264
+<strong>audio_codec</strong> : libfdk_aac
+<strong>audio_rate</strong> : 22050
+<strong>audio_bitrate</strong> : 128000
+<strong>video_rate</strong> : 
+<strong>video_bitrate</strong> : 
+<strong>video_bitrate_hd</strong> : 
+<strong>normal_res</strong> : 
+<strong>high_res</strong> : 
+<strong>max_video_duration</strong> : 320
+<strong>resize</strong> : max
+<strong>outputPath</strong> : 2020/11/04/
+<strong>cb_combo_res</strong> : 
+<strong>gen_240</strong> : yes
+<strong>gen_360</strong> : yes
+<strong>gen_480</strong> : yes
+<strong>gen_720</strong> : yes
+<strong>gen_1080</strong> : yes
+
+
+Starting Conversion
+-------------------
+		Started on 2020-11-04 21:55:46 - 2020 Nov 04
+
+Checking File...
+File : /var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov
+
+File Exists____19200
+--------------------
+		Yes
+
+Preparing file...
+-----------------
+		<strong>format</strong> : mov,mp4,m4a,3gp,3g2,mj2
+<strong>duration</strong> : 18.07
+<strong>size</strong> : 3136152
+<strong>bitrate</strong> : 1388701
+<strong>video_width</strong> : 1878
+<strong>video_height</strong> : 1012
+<strong>video_wh_ratio</strong> : 1.8557312252964
+<strong>video_codec</strong> : h264
+<strong>video_rate</strong> : 60
+<strong>video_bitrate</strong> : 1356999
+<strong>video_color</strong> : N/A
+<strong>audio_codec</strong> : 
+<strong>audio_bitrate</strong> : 0
+<strong>audio_rate</strong> : 0
+<strong>audio_channels</strong> : 0
+<strong>path</strong> : /var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov
+<strong>rotation</strong> : 0
+
+
+Thumbs Generation ____
+----------------------
+		Starting
+
+Thumbs Files ____ /var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov Resolutions: 
+---------------------------------------------------------------------------------------------------------------------
+		/var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov
+
+==========================================
+	Video Conversionvideo
+==========================================
+
+Getting Video Details Array: 
+-----------------------------
+		<strong>size</strong> : 3136152
+<strong>duration</strong> : 18
+<strong>bitrate</strong> : 1361
+<strong>format</strong> : mov,mp4,m4a,3gp,3g2,mj2
+<strong>video_width</strong> : 1878
+<strong>video_height</strong> : 1012
+<strong>video_wh_ratio</strong> : 1.8557312252964
+<strong>video_codec</strong> : h264
+<strong>audio_codec</strong> : 
+<strong>audio_rate</strong> : 
+<strong>audio_channels</strong> : 
+
+
+Getting out : 
+--------------
+		ffmpeg version 3.4.8 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-39)
+  configuration: --prefix=/usr --bindir=/usr/bin --datadir=/usr/share/ffmpeg --docdir=/usr/share/doc/ffmpeg --incdir=/usr/include/ffmpeg --libdir=/usr/lib64 --mandir=/usr/share/man --arch=x86_64 --optflags='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic' --extra-ldflags='-Wl,-z,relro ' --extra-cflags=' ' --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-version3 --enable-bzlib --disable-crystalhd --enable-fontconfig --enable-gcrypt --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcdio --enable-libdrm --enable-indev=jack --enable-libfreetype --enable-libfribidi --enable-libgsm --enable-libmp3lame --enable-nvenc --enable-openal --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libopus --disable-encoder=libopus --enable-libpulse --enable-librsvg --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libv4l2 --enable-libvidstab --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxvid --enable-libzvbi --enable-avfilter --enable-avresample --enable-libmodplug --enable-postproc --enable-pthreads --disable-static --enable-shared --enable-gpl --disable-debug --disable-stripping --shlibdir=/usr/lib64 --enable-libmfx --enable-runtime-cpudetect
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 0
+    compatible_brands: qt  
+    creation_time   : 2020-07-18T17:34:59.000000Z
+    com.apple.quicktime.make: Apple
+    com.apple.quicktime.model: iMac14,2
+    com.apple.quicktime.software: Mac OS X 10.14.6 (18G103)
+    com.apple.quicktime.creationdate: 2020-07-19T01:34:58+0800
+  Duration: 00:00:18.07, start: 0.000000, bitrate: 1388 kb/s
+    Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709), 1878x1012 [SAR 1:1 DAR 939:506], 1356 kb/s, 59.83 fps, 60 tbr, 6k tbn, 12k tbc (default)
+    Metadata:
+      creation_time   : 2020-07-18T17:34:59.000000Z
+      handler_name    : Core Media Data Handler
+      encoder         : H.264
+Output #0, null, to '/dev/null':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 0
+    compatible_brands: qt  
+    com.apple.quicktime.creationdate: 2020-07-19T01:34:58+0800
+    com.apple.quicktime.make: Apple
+    com.apple.quicktime.model: iMac14,2
+    com.apple.quicktime.software: Mac OS X 10.14.6 (18G103)
+    encoder         : Lavf57.83.100
+    Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709), 1878x1012 [SAR 1:1 DAR 939:506], q=2-31, 1356 kb/s, 59.83 fps, 60 tbr, 6k tbn, 6k tbc (default)
+    Metadata:
+      creation_time   : 2020-07-18T17:34:59.000000Z
+      handler_name    : Core Media Data Handler
+      encoder         : H.264
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Press [q] to stop, [?] for help
+frame= 1081 fps=0.0 q=-1.0 Lsize=N/A time=00:00:18.03 bitrate=N/A speed= 827x    
+video:2993kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+
+Low Resolution Full Command : 
+------------------------------
+		/usr/local/bin/ffmpeg -i /var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov -vcodec libx264 -acodec libfdk_aac -s 1878x1012 -preset medium -f mp4 -b:a 128000 -minrate 128000 -maxrate 128000 -ar 22050 /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4
+
+Conversion Ouput
+----------------
+		
+======Converting Video=========
+
+
+=======Low Resolution Conversion=======
+
+
+ Sarting : Generating Low resolution video @ 2020-11-04 21:55:52 
+
+ Converting Video SD File  
+
+ Command : /usr/local/bin/ffmpeg -i /var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov -vcodec libx264 -acodec libfdk_aac -s 1878x1012 -preset medium -f mp4 -b:a 128000 -minrate 128000 -maxrate 128000 -ar 22050 /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4 
+
+ ffmpeg output : ffmpeg version 3.4.8 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-39)
+  configuration: --prefix=/usr --bindir=/usr/bin --datadir=/usr/share/ffmpeg --docdir=/usr/share/doc/ffmpeg --incdir=/usr/include/ffmpeg --libdir=/usr/lib64 --mandir=/usr/share/man --arch=x86_64 --optflags='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic' --extra-ldflags='-Wl,-z,relro ' --extra-cflags=' ' --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-version3 --enable-bzlib --disable-crystalhd --enable-fontconfig --enable-gcrypt --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcdio --enable-libdrm --enable-indev=jack --enable-libfreetype --enable-libfribidi --enable-libgsm --enable-libmp3lame --enable-nvenc --enable-openal --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libopus --disable-encoder=libopus --enable-libpulse --enable-librsvg --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libv4l2 --enable-libvidstab --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxvid --enable-libzvbi --enable-avfilter --enable-avresample --enable-libmodplug --enable-postproc --enable-pthreads --disable-static --enable-shared --enable-gpl --disable-debug --disable-stripping --shlibdir=/usr/lib64 --enable-libmfx --enable-runtime-cpudetect
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 0
+    compatible_brands: qt  
+    creation_time   : 2020-07-18T17:34:59.000000Z
+    com.apple.quicktime.make: Apple
+    com.apple.quicktime.model: iMac14,2
+    com.apple.quicktime.software: Mac OS X 10.14.6 (18G103)
+    com.apple.quicktime.creationdate: 2020-07-19T01:34:58+0800
+  Duration: 00:00:18.07, start: 0.000000, bitrate: 1388 kb/s
+    Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709), 1878x1012 [SAR 1:1 DAR 939:506], 1356 kb/s, 59.83 fps, 60 tbr, 6k tbn, 12k tbc (default)
+    Metadata:
+      creation_time   : 2020-07-18T17:34:59.000000Z
+      handler_name    : Core Media Data Handler
+      encoder         : H.264
+Codec AVOption b (set bitrate (in bits/s)) specified for output file #0 (/var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x1ca5020] VBV maxrate specified, but no bufsize, ignored
+[libx264 @ 0x1ca5020] using SAR=1/1
+[libx264 @ 0x1ca5020] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0x1ca5020] profile High, level 4.2
+[libx264 @ 0x1ca5020] 264 - core 148 r2795 aaa9aa8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 0
+    compatible_brands: qt  
+    com.apple.quicktime.creationdate: 2020-07-19T01:34:58+0800
+    com.apple.quicktime.make: Apple
+    com.apple.quicktime.model: iMac14,2
+    com.apple.quicktime.software: Mac OS X 10.14.6 (18G103)
+    encoder         : Lavf57.83.100
+    Stream #0:0(und): Video: h264 (libx264) (avc1 / 0x31637661), yuv420p, 1878x1012 [SAR 1:1 DAR 939:506], q=-1--1, 60 fps, 15360 tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2020-07-18T17:34:59.000000Z
+      handler_name    : Core Media Data Handler
+      encoder         : Lavc57.107.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 128000/0/0 buffer size: 0 vbv_delay: -1
+frame=   22 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=3 drop=0 speed=   0x    frame=   47 fps= 30 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=3 drop=0 speed=   0x    frame=   56 fps= 26 q=31.0 size=       0kB time=00:00:00.10 bitrate=   3.8kbits/s dup=3 drop=0 speed=0.0469x    frame=   64 fps= 24 q=31.0 size=       0kB time=00:00:00.23 bitrate=   1.6kbits/s dup=3 drop=0 speed=0.0884x    frame=   73 fps= 23 q=31.0 size=       0kB time=00:00:00.38 bitrate=   1.0kbits/s dup=3 drop=0 speed=0.121x    frame=   83 fps= 22 q=31.0 size=       0kB time=00:00:00.55 bitrate=   0.7kbits/s dup=3 drop=0 speed=0.148x    frame=   93 fps= 22 q=31.0 size=       0kB time=00:00:00.71 bitrate=   0.5kbits/s dup=3 drop=0 speed=0.169x    frame=  103 fps= 21 q=31.0 size=       0kB time=00:00:00.88 bitrate=   0.4kbits/s dup=3 drop=0 speed=0.183x    frame=  115 fps= 21 q=31.0 size=       0kB time=00:00:01.08 bitrate=   0.4kbits/s dup=3 drop=0 speed= 0.2x    frame=  125 fps= 21 q=31.0 size=       0kB time=00:00:01.25 bitrate=   0.3kbits/s dup=3 drop=0 speed=0.21x    frame=  133 fps= 21 q=31.0 size=       0kB time=00:00:01.38 bitrate=   0.3kbits/s dup=3 drop=0 speed=0.214x    frame=  142 fps= 20 q=31.0 size=       0kB time=00:00:01.53 bitrate=   0.3kbits/s dup=3 drop=0 speed=0.218x    frame=  152 fps= 20 q=31.0 size=       0kB time=00:00:01.70 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.223x    frame=  158 fps= 19 q=31.0 size=       0kB time=00:00:01.80 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.221x    frame=  166 fps= 19 q=31.0 size=       0kB time=00:00:01.93 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.22x    frame=  173 fps= 19 q=31.0 size=       0kB time=00:00:02.05 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.221x    frame=  178 fps= 18 q=31.0 size=       0kB time=00:00:02.13 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.218x    frame=  187 fps= 18 q=31.0 size=       0kB time=00:00:02.28 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.222x    frame=  193 fps= 18 q=31.0 size=       0kB time=00:00:02.38 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.219x    frame=  201 fps= 18 q=31.0 size=       0kB time=00:00:02.51 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.221x    frame=  208 fps= 17 q=31.0 size=       0kB time=00:00:02.63 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.221x    frame=  214 fps= 17 q=31.0 size=       0kB time=00:00:02.73 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.219x    frame=  222 fps= 17 q=31.0 size=       0kB time=00:00:02.86 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.221x    frame=  229 fps= 17 q=31.0 size=       0kB time=00:00:02.98 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.221x    frame=  234 fps= 17 q=31.0 size=       0kB time=00:00:03.06 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.218x    frame=  242 fps= 17 q=31.0 size=       0kB time=00:00:03.20 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.22x    frame=  250 fps= 17 q=31.0 size=       0kB time=00:00:03.33 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.221x    frame=  258 fps= 17 q=31.0 size=       0kB time=00:00:03.46 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.222x    frame=  266 fps= 16 q=31.0 size=       0kB time=00:00:03.60 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.223x    frame=  274 fps= 16 q=31.0 size=       0kB time=00:00:03.73 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.224x    frame=  281 fps= 16 q=31.0 size=       0kB time=00:00:03.85 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.224x    frame=  284 fps= 16 q=31.0 size=       0kB time=00:00:03.90 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.219x    frame=  289 fps= 16 q=31.0 size=       0kB time=00:00:03.98 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.215x    frame=  294 fps= 15 q=31.0 size=       0kB time=00:00:04.06 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.213x    frame=  302 fps= 15 q=31.0 size=       0kB time=00:00:04.20 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.214x    frame=  311 fps= 15 q=31.0 size=       0kB time=00:00:04.35 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.216x    frame=  322 fps= 16 q=31.0 size=       0kB time=00:00:04.53 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.219x    frame=  332 fps= 16 q=31.0 size=       0kB time=00:00:04.70 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.222x    frame=  345 fps= 16 q=31.0 size=       0kB time=00:00:04.91 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.226x    frame=  357 fps= 16 q=31.0 size=       0kB time=00:00:05.11 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.229x    frame=  368 fps= 16 q=31.0 size=       0kB time=00:00:05.30 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.232x    frame=  378 fps= 16 q=31.0 size=       0kB time=00:00:05.46 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.234x    frame=  388 fps= 16 q=31.0 size=       0kB time=00:00:05.63 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.235x    frame=  398 fps= 16 q=31.0 size=       0kB time=00:00:05.80 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.236x    frame=  408 fps= 16 q=31.0 size=       0kB time=00:00:05.96 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.238x    frame=  417 fps= 16 q=31.0 size=       0kB time=00:00:06.11 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.239x    frame=  425 fps= 16 q=31.0 size=       0kB time=00:00:06.25 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.24x    frame=  433 fps= 16 q=31.0 size=       0kB time=00:00:06.38 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.24x    frame=  441 fps= 16 q=31.0 size=       0kB time=00:00:06.51 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.24x    frame=  451 fps= 16 q=31.0 size=       0kB time=00:00:06.68 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.241x    frame=  460 fps= 16 q=31.0 size=       0kB time=00:00:06.83 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.241x    frame=  468 fps= 16 q=31.0 size=       0kB time=00:00:06.96 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.241x    frame=  477 fps= 16 q=31.0 size=       0kB time=00:00:07.11 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.242x    frame=  484 fps= 16 q=31.0 size=       0kB time=00:00:07.23 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.241x    frame=  493 fps= 16 q=31.0 size=       0kB time=00:00:07.38 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.241x    frame=  502 fps= 16 q=31.0 size=       0kB time=00:00:07.53 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.242x    frame=  512 fps= 16 q=31.0 size=       0kB time=00:00:07.70 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.243x    frame=  522 fps= 16 q=31.0 size=       0kB time=00:00:07.86 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.245x    frame=  532 fps= 16 q=31.0 size=       0kB time=00:00:08.03 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.245x    frame=  538 fps= 16 q=31.0 size=       0kB time=00:00:08.13 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.244x    frame=  548 fps= 16 q=31.0 size=       0kB time=00:00:08.30 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.244x    frame=  558 fps= 16 q=31.0 size=       0kB time=00:00:08.46 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.246x    frame=  567 fps= 16 q=31.0 size=       0kB time=00:00:08.61 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.246x    frame=  571 fps= 16 q=31.0 size=       0kB time=00:00:08.68 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.244x    frame=  576 fps= 16 q=31.0 size=       0kB time=00:00:08.76 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.242x    frame=  583 fps= 16 q=31.0 size=       0kB time=00:00:08.88 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.242x    frame=  592 fps= 16 q=31.0 size=       0kB time=00:00:09.03 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.243x    frame=  602 fps= 16 q=31.0 size=       0kB time=00:00:09.20 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.244x    frame=  614 fps= 16 q=31.0 size=       0kB time=00:00:09.40 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.245x    frame=  621 fps= 16 q=31.0 size=     256kB time=00:00:09.51 bitrate= 220.4kbits/s dup=3 drop=0 speed=0.245x    frame=  631 fps= 16 q=31.0 size=     256kB time=00:00:09.68 bitrate= 216.6kbits/s dup=3 drop=0 speed=0.246x    frame=  638 fps= 16 q=31.0 size=     256kB time=00:00:09.80 bitrate= 214.0kbits/s dup=3 drop=0 speed=0.246x    frame=  647 fps= 16 q=31.0 size=     256kB time=00:00:09.95 bitrate= 210.8kbits/s dup=3 drop=0 speed=0.246x    frame=  655 fps= 16 q=31.0 size=     256kB time=00:00:10.08 bitrate= 208.0kbits/s dup=3 drop=0 speed=0.246x    frame=  665 fps= 16 q=31.0 size=     256kB time=00:00:10.25 bitrate= 204.6kbits/s dup=3 drop=0 speed=0.247x    frame=  674 fps= 16 q=31.0 size=     256kB time=00:00:10.40 bitrate= 201.7kbits/s dup=3 drop=0 speed=0.247x    frame=  682 fps= 16 q=31.0 size=     256kB time=00:00:10.53 bitrate= 199.1kbits/s dup=3 drop=0 speed=0.248x    frame=  691 fps= 16 q=31.0 size=     256kB time=00:00:10.68 bitrate= 196.3kbits/s dup=3 drop=0 speed=0.248x    frame=  702 fps= 16 q=31.0 size=     256kB time=00:00:10.86 bitrate= 193.0kbits/s dup=3 drop=0 speed=0.249x    frame=  712 fps= 16 q=31.0 size=     256kB time=00:00:11.03 bitrate= 190.1kbits/s dup=3 drop=0 speed=0.25x    frame=  723 fps= 16 q=31.0 size=     256kB time=00:00:11.21 bitrate= 187.0kbits/s dup=3 drop=0 speed=0.251x    frame=  738 fps= 16 q=31.0 size=     256kB time=00:00:11.46 bitrate= 182.9kbits/s dup=3 drop=0 speed=0.253x    frame=  751 fps= 16 q=31.0 size=     256kB time=00:00:11.68 bitrate= 179.5kbits/s dup=3 drop=0 speed=0.255x    frame=  762 fps= 16 q=31.0 size=     256kB time=00:00:11.86 bitrate= 176.8kbits/s dup=3 drop=0 speed=0.256x    frame=  771 fps= 16 q=31.0 size=     256kB time=00:00:12.01 bitrate= 174.6kbits/s dup=3 drop=0 speed=0.256x    frame=  782 fps= 17 q=31.0 size=     256kB time=00:00:12.20 bitrate= 171.9kbits/s dup=3 drop=0 speed=0.258x    frame=  793 fps= 17 q=31.0 size=     256kB time=00:00:12.38 bitrate= 169.4kbits/s dup=3 drop=0 speed=0.258x    frame=  802 fps= 17 q=31.0 size=     256kB time=00:00:12.53 bitrate= 167.4kbits/s dup=3 drop=0 speed=0.259x    frame=  808 fps= 16 q=31.0 size=     256kB time=00:00:12.63 bitrate= 166.0kbits/s dup=3 drop=0 speed=0.258x    frame=  817 fps= 16 q=31.0 size=     256kB time=00:00:12.78 bitrate= 164.1kbits/s dup=3 drop=0 speed=0.258x    frame=  827 fps= 17 q=31.0 size=     256kB time=00:00:12.95 bitrate= 162.0kbits/s dup=3 drop=0 speed=0.259x    frame=  839 fps= 17 q=31.0 size=     256kB time=00:00:13.15 bitrate= 159.5kbits/s dup=3 drop=0 speed=0.26x    frame=  851 fps= 17 q=31.0 size=     256kB time=00:00:13.35 bitrate= 157.1kbits/s dup=3 drop=0 speed=0.261x    frame=  863 fps= 17 q=31.0 size=     256kB time=00:00:13.55 bitrate= 154.8kbits/s dup=3 drop=0 speed=0.262x    frame=  875 fps= 17 q=31.0 size=     256kB time=00:00:13.75 bitrate= 152.5kbits/s dup=3 drop=0 speed=0.264x    frame=  888 fps= 17 q=31.0 size=     256kB time=00:00:13.96 bitrate= 150.2kbits/s dup=3 drop=0 speed=0.265x    frame=  900 fps= 17 q=31.0 size=     256kB time=00:00:14.16 bitrate= 148.1kbits/s dup=3 drop=0 speed=0.266x    frame=  910 fps= 17 q=31.0 size=     256kB time=00:00:14.33 bitrate= 146.3kbits/s dup=3 drop=0 speed=0.266x    frame=  921 fps= 17 q=31.0 size=     256kB time=00:00:14.51 bitrate= 144.5kbits/s dup=3 drop=0 speed=0.267x    frame=  933 fps= 17 q=31.0 size=     256kB time=00:00:14.71 bitrate= 142.5kbits/s dup=3 drop=0 speed=0.268x    frame=  944 fps= 17 q=31.0 size=     256kB time=00:00:14.90 bitrate= 140.8kbits/s dup=3 drop=0 speed=0.269x    frame=  953 fps= 17 q=31.0 size=     256kB time=00:00:15.05 bitrate= 139.4kbits/s dup=3 drop=0 speed=0.269x    frame=  960 fps= 17 q=31.0 size=     256kB time=00:00:15.16 bitrate= 138.3kbits/s dup=3 drop=0 speed=0.269x    frame=  970 fps= 17 q=31.0 size=     256kB time=00:00:15.33 bitrate= 136.8kbits/s dup=3 drop=0 speed=0.269x    frame=  982 fps= 17 q=31.0 size=     256kB time=00:00:15.53 bitrate= 135.0kbits/s dup=3 drop=0 speed=0.27x    frame=  994 fps= 17 q=31.0 size=     256kB time=00:00:15.73 bitrate= 133.3kbits/s dup=3 drop=0 speed=0.271x    frame= 1007 fps= 17 q=31.0 size=     256kB time=00:00:15.95 bitrate= 131.5kbits/s dup=3 drop=0 speed=0.272x    frame= 1018 fps= 17 q=31.0 size=     256kB time=00:00:16.13 bitrate= 130.0kbits/s dup=3 drop=0 speed=0.273x    frame= 1029 fps= 17 q=31.0 size=     256kB time=00:00:16.31 bitrate= 128.6kbits/s dup=3 drop=0 speed=0.273x    frame= 1041 fps= 17 q=31.0 size=     256kB time=00:00:16.51 bitrate= 127.0kbits/s dup=3 drop=0 speed=0.274x    frame= 1051 fps= 17 q=31.0 size=     256kB time=00:00:16.68 bitrate= 125.7kbits/s dup=3 drop=0 speed=0.274x    frame= 1064 fps= 17 q=31.0 size=     256kB time=00:00:16.90 bitrate= 124.1kbits/s dup=3 drop=0 speed=0.275x    frame= 1075 fps= 17 q=31.0 size=     256kB time=00:00:17.08 bitrate= 122.8kbits/s dup=3 drop=0 speed=0.276x    frame= 1084 fps= 17 q=-1.0 Lsize=     482kB time=00:00:18.01 bitrate= 219.3kbits/s dup=3 drop=0 speed=0.284x    
+video:469kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 2.849014%
+[libx264 @ 0x1ca5020] frame I:5     Avg QP:17.51  size: 41473
+[libx264 @ 0x1ca5020] frame P:314   Avg QP:24.27  size:   502
+[libx264 @ 0x1ca5020] frame B:765   Avg QP:33.35  size:   150
+[libx264 @ 0x1ca5020] consecutive B-frames:  3.5%  5.9%  3.9% 86.7%
+[libx264 @ 0x1ca5020] mb I  I16..4: 42.9% 47.9%  9.1%
+[libx264 @ 0x1ca5020] mb P  I16..4:  1.6%  1.2%  0.1%  P16..4:  0.9%  0.0%  0.0%  0.0%  0.0%    skip:96.2%
+[libx264 @ 0x1ca5020] mb B  I16..4:  0.2%  0.0%  0.0%  B16..8:  0.7%  0.0%  0.0%  direct: 0.0%  skip:99.0%  L0:47.5% L1:52.0% BI: 0.5%
+[libx264 @ 0x1ca5020] 8x8 transform intra:39.9% inter:53.7%
+[libx264 @ 0x1ca5020] coded y,uvDC,uvAC intra: 3.3% 2.6% 1.6% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x1ca5020] i16 v,h,dc,p: 43% 57%  0%  0%
+[libx264 @ 0x1ca5020] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 39% 18% 42%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x1ca5020] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 34% 32% 18%  2%  3%  3%  3%  2%  3%
+[libx264 @ 0x1ca5020] i8c dc,h,v,p: 86% 13%  1%  0%
+[libx264 @ 0x1ca5020] Weighted P-Frames: Y:7.6% UV:7.6%
+[libx264 @ 0x1ca5020] ref P L0: 31.8%  8.5% 53.1%  5.3%  1.3%
+[libx264 @ 0x1ca5020] ref B L0: 46.8% 50.3%  2.9%
+[libx264 @ 0x1ca5020] ref B L1: 96.8%  3.2%
+[libx264 @ 0x1ca5020] kb/s:212.28
+ 
+
+ outputFile : /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4 
+
+ Sarting : MP4Box Conversion for SD 
+
+ MP4Box Command : /usr/local/bin/MP4Box -inter 0.5 /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4  -tmp /var/www/vhosts/lookmyad.com/httpdocs/clip/files/temp 
+
+ output : Saving /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4: 0.001 secs Interleaving
+ISO File Writing: |                    | (01/100)ISO File Writing: |                    | (02/100)ISO File Writing: |                    | (03/100)ISO File Writing: |                    | (04/100)ISO File Writing: |=                   | (05/100)ISO File Writing: |=                   | (06/100)ISO File Writing: |=                   | (07/100)ISO File Writing: |=                   | (08/100)ISO File Writing: |=                   | (09/100)ISO File Writing: |==                  | (10/100)ISO File Writing: |==                  | (11/100)ISO File Writing: |==                  | (12/100)ISO File Writing: |==                  | (13/100)ISO File Writing: |==                  | (14/100)ISO File Writing: |===                 | (15/100)ISO File Writing: |===                 | (16/100)ISO File Writing: |===                 | (17/100)ISO File Writing: |===                 | (18/100)ISO File Writing: |===                 | (19/100)ISO File Writing: |====                | (20/100)ISO File Writing: |====                | (21/100)ISO File Writing: |====                | (22/100)ISO File Writing: |====                | (23/100)ISO File Writing: |====                | (24/100)ISO File Writing: |=====               | (25/100)ISO File Writing: |=====               | (26/100)ISO File Writing: |=====               | (27/100)ISO File Writing: |=====               | (28/100)ISO File Writing: |=====               | (29/100)ISO File Writing: |======              | (30/100)ISO File Writing: |======              | (31/100)ISO File Writing: |======              | (32/100)ISO File Writing: |======              | (33/100)ISO File Writing: |======              | (34/100)ISO File Writing: |=======             | (35/100)ISO File Writing: |=======             | (36/100)ISO File Writing: |=======             | (37/100)ISO File Writing: |=======             | (38/100)ISO File Writing: |=======             | (39/100)ISO File Writing: |========            | (40/100)ISO File Writing: |========            | (41/100)ISO File Writing: |========            | (42/100)ISO File Writing: |========            | (43/100)ISO File Writing: |========            | (44/100)ISO File Writing: |=========           | (45/100)ISO File Writing: |=========           | (46/100)ISO File Writing: |=========           | (47/100)ISO File Writing: |=========           | (48/100)ISO File Writing: |=========           | (49/100)ISO File Writing: |==========          | (50/100)ISO File Writing: |==========          | (51/100)ISO File Writing: |==========          | (52/100)ISO File Writing: |==========          | (53/100)ISO File Writing: |==========          | (54/100)ISO File Writing: |===========         | (55/100)ISO File Writing: |===========         | (56/100)ISO File Writing: |===========         | (57/100)ISO File Writing: |===========         | (58/100)ISO File Writing: |===========         | (59/100)ISO File Writing: |============        | (60/100)ISO File Writing: |============        | (61/100)ISO File Writing: |============        | (62/100)ISO File Writing: |============        | (63/100)ISO File Writing: |============        | (64/100)ISO File Writing: |=============       | (65/100)ISO File Writing: |=============       | (66/100)ISO File Writing: |=============       | (67/100)ISO File Writing: |=============       | (68/100)ISO File Writing: |=============       | (69/100)ISO File Writing: |==============      | (70/100)ISO File Writing: |==============      | (71/100)ISO File Writing: |==============      | (72/100)ISO File Writing: |==============      | (73/100)ISO File Writing: |==============      | (74/100)ISO File Writing: |===============     | (75/100)ISO File Writing: |===============     | (76/100)ISO File Writing: |===============     | (77/100)ISO File Writing: |===============     | (78/100)ISO File Writing: |===============     | (79/100)ISO File Writing: |================    | (80/100)ISO File Writing: |================    | (81/100)ISO File Writing: |================    | (82/100)ISO File Writing: |================    | (83/100)ISO File Writing: |================    | (84/100)ISO File Writing: |=================   | (85/100)ISO File Writing: |=================   | (86/100)ISO File Writing: |=================   | (87/100)ISO File Writing: |=================   | (88/100)ISO File Writing: |=================   | (89/100)ISO File Writing: |==================  | (90/100)ISO File Writing: |==================  | (91/100)ISO File Writing: |==================  | (92/100)ISO File Writing: |==================  | (93/100)ISO File Writing: |==================  | (94/100)ISO File Writing: |=================== | (95/100)ISO File Writing: |=================== | (96/100)ISO File Writing: |=================== | (97/100)ISO File Writing: |=================== | (98/100)ISO File Writing: |=================== | (99/100)ISO File Writing: |====================| (100/100)                                                         
+
+ Conversion Status : Successful @ 2020-11-04 21:56:56 
+
+
+OutPut Deatils
+--------------
+		<strong>format</strong> : mov,mp4,m4a,3gp,3g2,mj2
+<strong>duration</strong> : 18.07
+<strong>size</strong> : 493932
+<strong>bitrate</strong> : 218711
+<strong>video_width</strong> : 1878
+<strong>video_height</strong> : 1012
+<strong>video_wh_ratio</strong> : 1.8557312252964
+<strong>video_codec</strong> : h264
+<strong>video_rate</strong> : 60
+<strong>video_bitrate</strong> : 212589
+<strong>video_color</strong> : N/A
+<strong>audio_codec</strong> : 
+<strong>audio_bitrate</strong> : 0
+<strong>audio_rate</strong> : 0
+<strong>audio_channels</strong> : 0
+<strong>path</strong> : /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4
+<strong>rotation</strong> : 0
+
+
+Conversion Ouput
+----------------
+		
+======Converting Video=========
+
+
+=======Low Resolution Conversion=======
+
+
+ Sarting : Generating Low resolution video @ 2020-11-04 21:55:52 
+
+ Converting Video SD File  
+
+ Command : /usr/local/bin/ffmpeg -i /var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov -vcodec libx264 -acodec libfdk_aac -s 1878x1012 -preset medium -f mp4 -b:a 128000 -minrate 128000 -maxrate 128000 -ar 22050 /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4 
+
+ ffmpeg output : ffmpeg version 3.4.8 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-39)
+  configuration: --prefix=/usr --bindir=/usr/bin --datadir=/usr/share/ffmpeg --docdir=/usr/share/doc/ffmpeg --incdir=/usr/include/ffmpeg --libdir=/usr/lib64 --mandir=/usr/share/man --arch=x86_64 --optflags='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic' --extra-ldflags='-Wl,-z,relro ' --extra-cflags=' ' --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-version3 --enable-bzlib --disable-crystalhd --enable-fontconfig --enable-gcrypt --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcdio --enable-libdrm --enable-indev=jack --enable-libfreetype --enable-libfribidi --enable-libgsm --enable-libmp3lame --enable-nvenc --enable-openal --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libopus --disable-encoder=libopus --enable-libpulse --enable-librsvg --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libv4l2 --enable-libvidstab --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxvid --enable-libzvbi --enable-avfilter --enable-avresample --enable-libmodplug --enable-postproc --enable-pthreads --disable-static --enable-shared --enable-gpl --disable-debug --disable-stripping --shlibdir=/usr/lib64 --enable-libmfx --enable-runtime-cpudetect
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 0
+    compatible_brands: qt  
+    creation_time   : 2020-07-18T17:34:59.000000Z
+    com.apple.quicktime.make: Apple
+    com.apple.quicktime.model: iMac14,2
+    com.apple.quicktime.software: Mac OS X 10.14.6 (18G103)
+    com.apple.quicktime.creationdate: 2020-07-19T01:34:58+0800
+  Duration: 00:00:18.07, start: 0.000000, bitrate: 1388 kb/s
+    Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709), 1878x1012 [SAR 1:1 DAR 939:506], 1356 kb/s, 59.83 fps, 60 tbr, 6k tbn, 12k tbc (default)
+    Metadata:
+      creation_time   : 2020-07-18T17:34:59.000000Z
+      handler_name    : Core Media Data Handler
+      encoder         : H.264
+Codec AVOption b (set bitrate (in bits/s)) specified for output file #0 (/var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x1ca5020] VBV maxrate specified, but no bufsize, ignored
+[libx264 @ 0x1ca5020] using SAR=1/1
+[libx264 @ 0x1ca5020] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0x1ca5020] profile High, level 4.2
+[libx264 @ 0x1ca5020] 264 - core 148 r2795 aaa9aa8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 0
+    compatible_brands: qt  
+    com.apple.quicktime.creationdate: 2020-07-19T01:34:58+0800
+    com.apple.quicktime.make: Apple
+    com.apple.quicktime.model: iMac14,2
+    com.apple.quicktime.software: Mac OS X 10.14.6 (18G103)
+    encoder         : Lavf57.83.100
+    Stream #0:0(und): Video: h264 (libx264) (avc1 / 0x31637661), yuv420p, 1878x1012 [SAR 1:1 DAR 939:506], q=-1--1, 60 fps, 15360 tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2020-07-18T17:34:59.000000Z
+      handler_name    : Core Media Data Handler
+      encoder         : Lavc57.107.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 128000/0/0 buffer size: 0 vbv_delay: -1
+frame=   22 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=3 drop=0 speed=   0x    frame=   47 fps= 30 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=3 drop=0 speed=   0x    frame=   56 fps= 26 q=31.0 size=       0kB time=00:00:00.10 bitrate=   3.8kbits/s dup=3 drop=0 speed=0.0469x    frame=   64 fps= 24 q=31.0 size=       0kB time=00:00:00.23 bitrate=   1.6kbits/s dup=3 drop=0 speed=0.0884x    frame=   73 fps= 23 q=31.0 size=       0kB time=00:00:00.38 bitrate=   1.0kbits/s dup=3 drop=0 speed=0.121x    frame=   83 fps= 22 q=31.0 size=       0kB time=00:00:00.55 bitrate=   0.7kbits/s dup=3 drop=0 speed=0.148x    frame=   93 fps= 22 q=31.0 size=       0kB time=00:00:00.71 bitrate=   0.5kbits/s dup=3 drop=0 speed=0.169x    frame=  103 fps= 21 q=31.0 size=       0kB time=00:00:00.88 bitrate=   0.4kbits/s dup=3 drop=0 speed=0.183x    frame=  115 fps= 21 q=31.0 size=       0kB time=00:00:01.08 bitrate=   0.4kbits/s dup=3 drop=0 speed= 0.2x    frame=  125 fps= 21 q=31.0 size=       0kB time=00:00:01.25 bitrate=   0.3kbits/s dup=3 drop=0 speed=0.21x    frame=  133 fps= 21 q=31.0 size=       0kB time=00:00:01.38 bitrate=   0.3kbits/s dup=3 drop=0 speed=0.214x    frame=  142 fps= 20 q=31.0 size=       0kB time=00:00:01.53 bitrate=   0.3kbits/s dup=3 drop=0 speed=0.218x    frame=  152 fps= 20 q=31.0 size=       0kB time=00:00:01.70 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.223x    frame=  158 fps= 19 q=31.0 size=       0kB time=00:00:01.80 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.221x    frame=  166 fps= 19 q=31.0 size=       0kB time=00:00:01.93 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.22x    frame=  173 fps= 19 q=31.0 size=       0kB time=00:00:02.05 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.221x    frame=  178 fps= 18 q=31.0 size=       0kB time=00:00:02.13 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.218x    frame=  187 fps= 18 q=31.0 size=       0kB time=00:00:02.28 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.222x    frame=  193 fps= 18 q=31.0 size=       0kB time=00:00:02.38 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.219x    frame=  201 fps= 18 q=31.0 size=       0kB time=00:00:02.51 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.221x    frame=  208 fps= 17 q=31.0 size=       0kB time=00:00:02.63 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.221x    frame=  214 fps= 17 q=31.0 size=       0kB time=00:00:02.73 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.219x    frame=  222 fps= 17 q=31.0 size=       0kB time=00:00:02.86 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.221x    frame=  229 fps= 17 q=31.0 size=       0kB time=00:00:02.98 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.221x    frame=  234 fps= 17 q=31.0 size=       0kB time=00:00:03.06 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.218x    frame=  242 fps= 17 q=31.0 size=       0kB time=00:00:03.20 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.22x    frame=  250 fps= 17 q=31.0 size=       0kB time=00:00:03.33 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.221x    frame=  258 fps= 17 q=31.0 size=       0kB time=00:00:03.46 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.222x    frame=  266 fps= 16 q=31.0 size=       0kB time=00:00:03.60 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.223x    frame=  274 fps= 16 q=31.0 size=       0kB time=00:00:03.73 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.224x    frame=  281 fps= 16 q=31.0 size=       0kB time=00:00:03.85 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.224x    frame=  284 fps= 16 q=31.0 size=       0kB time=00:00:03.90 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.219x    frame=  289 fps= 16 q=31.0 size=       0kB time=00:00:03.98 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.215x    frame=  294 fps= 15 q=31.0 size=       0kB time=00:00:04.06 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.213x    frame=  302 fps= 15 q=31.0 size=       0kB time=00:00:04.20 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.214x    frame=  311 fps= 15 q=31.0 size=       0kB time=00:00:04.35 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.216x    frame=  322 fps= 16 q=31.0 size=       0kB time=00:00:04.53 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.219x    frame=  332 fps= 16 q=31.0 size=       0kB time=00:00:04.70 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.222x    frame=  345 fps= 16 q=31.0 size=       0kB time=00:00:04.91 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.226x    frame=  357 fps= 16 q=31.0 size=       0kB time=00:00:05.11 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.229x    frame=  368 fps= 16 q=31.0 size=       0kB time=00:00:05.30 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.232x    frame=  378 fps= 16 q=31.0 size=       0kB time=00:00:05.46 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.234x    frame=  388 fps= 16 q=31.0 size=       0kB time=00:00:05.63 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.235x    frame=  398 fps= 16 q=31.0 size=       0kB time=00:00:05.80 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.236x    frame=  408 fps= 16 q=31.0 size=       0kB time=00:00:05.96 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.238x    frame=  417 fps= 16 q=31.0 size=       0kB time=00:00:06.11 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.239x    frame=  425 fps= 16 q=31.0 size=       0kB time=00:00:06.25 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.24x    frame=  433 fps= 16 q=31.0 size=       0kB time=00:00:06.38 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.24x    frame=  441 fps= 16 q=31.0 size=       0kB time=00:00:06.51 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.24x    frame=  451 fps= 16 q=31.0 size=       0kB time=00:00:06.68 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.241x    frame=  460 fps= 16 q=31.0 size=       0kB time=00:00:06.83 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.241x    frame=  468 fps= 16 q=31.0 size=       0kB time=00:00:06.96 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.241x    frame=  477 fps= 16 q=31.0 size=       0kB time=00:00:07.11 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.242x    frame=  484 fps= 16 q=31.0 size=       0kB time=00:00:07.23 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.241x    frame=  493 fps= 16 q=31.0 size=       0kB time=00:00:07.38 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.241x    frame=  502 fps= 16 q=31.0 size=       0kB time=00:00:07.53 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.242x    frame=  512 fps= 16 q=31.0 size=       0kB time=00:00:07.70 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.243x    frame=  522 fps= 16 q=31.0 size=       0kB time=00:00:07.86 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.245x    frame=  532 fps= 16 q=31.0 size=       0kB time=00:00:08.03 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.245x    frame=  538 fps= 16 q=31.0 size=       0kB time=00:00:08.13 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.244x    frame=  548 fps= 16 q=31.0 size=       0kB time=00:00:08.30 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.244x    frame=  558 fps= 16 q=31.0 size=       0kB time=00:00:08.46 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.246x    frame=  567 fps= 16 q=31.0 size=       0kB time=00:00:08.61 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.246x    frame=  571 fps= 16 q=31.0 size=       0kB time=00:00:08.68 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.244x    frame=  576 fps= 16 q=31.0 size=       0kB time=00:00:08.76 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.242x    frame=  583 fps= 16 q=31.0 size=       0kB time=00:00:08.88 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.242x    frame=  592 fps= 16 q=31.0 size=       0kB time=00:00:09.03 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.243x    frame=  602 fps= 16 q=31.0 size=       0kB time=00:00:09.20 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.244x    frame=  614 fps= 16 q=31.0 size=       0kB time=00:00:09.40 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.245x    frame=  621 fps= 16 q=31.0 size=     256kB time=00:00:09.51 bitrate= 220.4kbits/s dup=3 drop=0 speed=0.245x    frame=  631 fps= 16 q=31.0 size=     256kB time=00:00:09.68 bitrate= 216.6kbits/s dup=3 drop=0 speed=0.246x    frame=  638 fps= 16 q=31.0 size=     256kB time=00:00:09.80 bitrate= 214.0kbits/s dup=3 drop=0 speed=0.246x    frame=  647 fps= 16 q=31.0 size=     256kB time=00:00:09.95 bitrate= 210.8kbits/s dup=3 drop=0 speed=0.246x    frame=  655 fps= 16 q=31.0 size=     256kB time=00:00:10.08 bitrate= 208.0kbits/s dup=3 drop=0 speed=0.246x    frame=  665 fps= 16 q=31.0 size=     256kB time=00:00:10.25 bitrate= 204.6kbits/s dup=3 drop=0 speed=0.247x    frame=  674 fps= 16 q=31.0 size=     256kB time=00:00:10.40 bitrate= 201.7kbits/s dup=3 drop=0 speed=0.247x    frame=  682 fps= 16 q=31.0 size=     256kB time=00:00:10.53 bitrate= 199.1kbits/s dup=3 drop=0 speed=0.248x    frame=  691 fps= 16 q=31.0 size=     256kB time=00:00:10.68 bitrate= 196.3kbits/s dup=3 drop=0 speed=0.248x    frame=  702 fps= 16 q=31.0 size=     256kB time=00:00:10.86 bitrate= 193.0kbits/s dup=3 drop=0 speed=0.249x    frame=  712 fps= 16 q=31.0 size=     256kB time=00:00:11.03 bitrate= 190.1kbits/s dup=3 drop=0 speed=0.25x    frame=  723 fps= 16 q=31.0 size=     256kB time=00:00:11.21 bitrate= 187.0kbits/s dup=3 drop=0 speed=0.251x    frame=  738 fps= 16 q=31.0 size=     256kB time=00:00:11.46 bitrate= 182.9kbits/s dup=3 drop=0 speed=0.253x    frame=  751 fps= 16 q=31.0 size=     256kB time=00:00:11.68 bitrate= 179.5kbits/s dup=3 drop=0 speed=0.255x    frame=  762 fps= 16 q=31.0 size=     256kB time=00:00:11.86 bitrate= 176.8kbits/s dup=3 drop=0 speed=0.256x    frame=  771 fps= 16 q=31.0 size=     256kB time=00:00:12.01 bitrate= 174.6kbits/s dup=3 drop=0 speed=0.256x    frame=  782 fps= 17 q=31.0 size=     256kB time=00:00:12.20 bitrate= 171.9kbits/s dup=3 drop=0 speed=0.258x    frame=  793 fps= 17 q=31.0 size=     256kB time=00:00:12.38 bitrate= 169.4kbits/s dup=3 drop=0 speed=0.258x    frame=  802 fps= 17 q=31.0 size=     256kB time=00:00:12.53 bitrate= 167.4kbits/s dup=3 drop=0 speed=0.259x    frame=  808 fps= 16 q=31.0 size=     256kB time=00:00:12.63 bitrate= 166.0kbits/s dup=3 drop=0 speed=0.258x    frame=  817 fps= 16 q=31.0 size=     256kB time=00:00:12.78 bitrate= 164.1kbits/s dup=3 drop=0 speed=0.258x    frame=  827 fps= 17 q=31.0 size=     256kB time=00:00:12.95 bitrate= 162.0kbits/s dup=3 drop=0 speed=0.259x    frame=  839 fps= 17 q=31.0 size=     256kB time=00:00:13.15 bitrate= 159.5kbits/s dup=3 drop=0 speed=0.26x    frame=  851 fps= 17 q=31.0 size=     256kB time=00:00:13.35 bitrate= 157.1kbits/s dup=3 drop=0 speed=0.261x    frame=  863 fps= 17 q=31.0 size=     256kB time=00:00:13.55 bitrate= 154.8kbits/s dup=3 drop=0 speed=0.262x    frame=  875 fps= 17 q=31.0 size=     256kB time=00:00:13.75 bitrate= 152.5kbits/s dup=3 drop=0 speed=0.264x    frame=  888 fps= 17 q=31.0 size=     256kB time=00:00:13.96 bitrate= 150.2kbits/s dup=3 drop=0 speed=0.265x    frame=  900 fps= 17 q=31.0 size=     256kB time=00:00:14.16 bitrate= 148.1kbits/s dup=3 drop=0 speed=0.266x    frame=  910 fps= 17 q=31.0 size=     256kB time=00:00:14.33 bitrate= 146.3kbits/s dup=3 drop=0 speed=0.266x    frame=  921 fps= 17 q=31.0 size=     256kB time=00:00:14.51 bitrate= 144.5kbits/s dup=3 drop=0 speed=0.267x    frame=  933 fps= 17 q=31.0 size=     256kB time=00:00:14.71 bitrate= 142.5kbits/s dup=3 drop=0 speed=0.268x    frame=  944 fps= 17 q=31.0 size=     256kB time=00:00:14.90 bitrate= 140.8kbits/s dup=3 drop=0 speed=0.269x    frame=  953 fps= 17 q=31.0 size=     256kB time=00:00:15.05 bitrate= 139.4kbits/s dup=3 drop=0 speed=0.269x    frame=  960 fps= 17 q=31.0 size=     256kB time=00:00:15.16 bitrate= 138.3kbits/s dup=3 drop=0 speed=0.269x    frame=  970 fps= 17 q=31.0 size=     256kB time=00:00:15.33 bitrate= 136.8kbits/s dup=3 drop=0 speed=0.269x    frame=  982 fps= 17 q=31.0 size=     256kB time=00:00:15.53 bitrate= 135.0kbits/s dup=3 drop=0 speed=0.27x    frame=  994 fps= 17 q=31.0 size=     256kB time=00:00:15.73 bitrate= 133.3kbits/s dup=3 drop=0 speed=0.271x    frame= 1007 fps= 17 q=31.0 size=     256kB time=00:00:15.95 bitrate= 131.5kbits/s dup=3 drop=0 speed=0.272x    frame= 1018 fps= 17 q=31.0 size=     256kB time=00:00:16.13 bitrate= 130.0kbits/s dup=3 drop=0 speed=0.273x    frame= 1029 fps= 17 q=31.0 size=     256kB time=00:00:16.31 bitrate= 128.6kbits/s dup=3 drop=0 speed=0.273x    frame= 1041 fps= 17 q=31.0 size=     256kB time=00:00:16.51 bitrate= 127.0kbits/s dup=3 drop=0 speed=0.274x    frame= 1051 fps= 17 q=31.0 size=     256kB time=00:00:16.68 bitrate= 125.7kbits/s dup=3 drop=0 speed=0.274x    frame= 1064 fps= 17 q=31.0 size=     256kB time=00:00:16.90 bitrate= 124.1kbits/s dup=3 drop=0 speed=0.275x    frame= 1075 fps= 17 q=31.0 size=     256kB time=00:00:17.08 bitrate= 122.8kbits/s dup=3 drop=0 speed=0.276x    frame= 1084 fps= 17 q=-1.0 Lsize=     482kB time=00:00:18.01 bitrate= 219.3kbits/s dup=3 drop=0 speed=0.284x    
+video:469kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 2.849014%
+[libx264 @ 0x1ca5020] frame I:5     Avg QP:17.51  size: 41473
+[libx264 @ 0x1ca5020] frame P:314   Avg QP:24.27  size:   502
+[libx264 @ 0x1ca5020] frame B:765   Avg QP:33.35  size:   150
+[libx264 @ 0x1ca5020] consecutive B-frames:  3.5%  5.9%  3.9% 86.7%
+[libx264 @ 0x1ca5020] mb I  I16..4: 42.9% 47.9%  9.1%
+[libx264 @ 0x1ca5020] mb P  I16..4:  1.6%  1.2%  0.1%  P16..4:  0.9%  0.0%  0.0%  0.0%  0.0%    skip:96.2%
+[libx264 @ 0x1ca5020] mb B  I16..4:  0.2%  0.0%  0.0%  B16..8:  0.7%  0.0%  0.0%  direct: 0.0%  skip:99.0%  L0:47.5% L1:52.0% BI: 0.5%
+[libx264 @ 0x1ca5020] 8x8 transform intra:39.9% inter:53.7%
+[libx264 @ 0x1ca5020] coded y,uvDC,uvAC intra: 3.3% 2.6% 1.6% inter: 0.0% 0.0% 0.0%
+[libx264 @ 0x1ca5020] i16 v,h,dc,p: 43% 57%  0%  0%
+[libx264 @ 0x1ca5020] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 39% 18% 42%  0%  0%  0%  0%  0%  0%
+[libx264 @ 0x1ca5020] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 34% 32% 18%  2%  3%  3%  3%  2%  3%
+[libx264 @ 0x1ca5020] i8c dc,h,v,p: 86% 13%  1%  0%
+[libx264 @ 0x1ca5020] Weighted P-Frames: Y:7.6% UV:7.6%
+[libx264 @ 0x1ca5020] ref P L0: 31.8%  8.5% 53.1%  5.3%  1.3%
+[libx264 @ 0x1ca5020] ref B L0: 46.8% 50.3%  2.9%
+[libx264 @ 0x1ca5020] ref B L1: 96.8%  3.2%
+[libx264 @ 0x1ca5020] kb/s:212.28
+ 
+
+ outputFile : /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4 
+
+ Sarting : MP4Box Conversion for SD 
+
+ MP4Box Command : /usr/local/bin/MP4Box -inter 0.5 /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4  -tmp /var/www/vhosts/lookmyad.com/httpdocs/clip/files/temp 
+
+ output : Saving /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-sd.mp4: 0.001 secs Interleaving
+ISO File Writing: |                    | (01/100)ISO File Writing: |                    | (02/100)ISO File Writing: |                    | (03/100)ISO File Writing: |                    | (04/100)ISO File Writing: |=                   | (05/100)ISO File Writing: |=                   | (06/100)ISO File Writing: |=                   | (07/100)ISO File Writing: |=                   | (08/100)ISO File Writing: |=                   | (09/100)ISO File Writing: |==                  | (10/100)ISO File Writing: |==                  | (11/100)ISO File Writing: |==                  | (12/100)ISO File Writing: |==                  | (13/100)ISO File Writing: |==                  | (14/100)ISO File Writing: |===                 | (15/100)ISO File Writing: |===                 | (16/100)ISO File Writing: |===                 | (17/100)ISO File Writing: |===                 | (18/100)ISO File Writing: |===                 | (19/100)ISO File Writing: |====                | (20/100)ISO File Writing: |====                | (21/100)ISO File Writing: |====                | (22/100)ISO File Writing: |====                | (23/100)ISO File Writing: |====                | (24/100)ISO File Writing: |=====               | (25/100)ISO File Writing: |=====               | (26/100)ISO File Writing: |=====               | (27/100)ISO File Writing: |=====               | (28/100)ISO File Writing: |=====               | (29/100)ISO File Writing: |======              | (30/100)ISO File Writing: |======              | (31/100)ISO File Writing: |======              | (32/100)ISO File Writing: |======              | (33/100)ISO File Writing: |======              | (34/100)ISO File Writing: |=======             | (35/100)ISO File Writing: |=======             | (36/100)ISO File Writing: |=======             | (37/100)ISO File Writing: |=======             | (38/100)ISO File Writing: |=======             | (39/100)ISO File Writing: |========            | (40/100)ISO File Writing: |========            | (41/100)ISO File Writing: |========            | (42/100)ISO File Writing: |========            | (43/100)ISO File Writing: |========            | (44/100)ISO File Writing: |=========           | (45/100)ISO File Writing: |=========           | (46/100)ISO File Writing: |=========           | (47/100)ISO File Writing: |=========           | (48/100)ISO File Writing: |=========           | (49/100)ISO File Writing: |==========          | (50/100)ISO File Writing: |==========          | (51/100)ISO File Writing: |==========          | (52/100)ISO File Writing: |==========          | (53/100)ISO File Writing: |==========          | (54/100)ISO File Writing: |===========         | (55/100)ISO File Writing: |===========         | (56/100)ISO File Writing: |===========         | (57/100)ISO File Writing: |===========         | (58/100)ISO File Writing: |===========         | (59/100)ISO File Writing: |============        | (60/100)ISO File Writing: |============        | (61/100)ISO File Writing: |============        | (62/100)ISO File Writing: |============        | (63/100)ISO File Writing: |============        | (64/100)ISO File Writing: |=============       | (65/100)ISO File Writing: |=============       | (66/100)ISO File Writing: |=============       | (67/100)ISO File Writing: |=============       | (68/100)ISO File Writing: |=============       | (69/100)ISO File Writing: |==============      | (70/100)ISO File Writing: |==============      | (71/100)ISO File Writing: |==============      | (72/100)ISO File Writing: |==============      | (73/100)ISO File Writing: |==============      | (74/100)ISO File Writing: |===============     | (75/100)ISO File Writing: |===============     | (76/100)ISO File Writing: |===============     | (77/100)ISO File Writing: |===============     | (78/100)ISO File Writing: |===============     | (79/100)ISO File Writing: |================    | (80/100)ISO File Writing: |================    | (81/100)ISO File Writing: |================    | (82/100)ISO File Writing: |================    | (83/100)ISO File Writing: |================    | (84/100)ISO File Writing: |=================   | (85/100)ISO File Writing: |=================   | (86/100)ISO File Writing: |=================   | (87/100)ISO File Writing: |=================   | (88/100)ISO File Writing: |=================   | (89/100)ISO File Writing: |==================  | (90/100)ISO File Writing: |==================  | (91/100)ISO File Writing: |==================  | (92/100)ISO File Writing: |==================  | (93/100)ISO File Writing: |==================  | (94/100)ISO File Writing: |=================== | (95/100)ISO File Writing: |=================== | (96/100)ISO File Writing: |=================== | (97/100)ISO File Writing: |=================== | (98/100)ISO File Writing: |=================== | (99/100)ISO File Writing: |====================| (100/100)                                                         
+
+ Conversion Status : Successful @ 2020-11-04 21:56:56 
+
+
+=======High Resolution Conversion=======
+
+
+ Sarting : Generating high resolution video @ 2020-11-04 21:56:56
+
+ Converting Video HD File   
+
+ Command : /usr/local/bin/ffmpeg -i /var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov -vcodec libx264 -acodec libfdk_aac -s 1280x720 -preset slow -f mp4 -b:a 128000 -minrate 128000 -maxrate 128000 -ar 22050 /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-hd.mp4 > /var/www/vhosts/lookmyad.com/httpdocs/clip/files/temp/1604526940741fd.tmp 
+
+ ffmpeg output : ffmpeg version 3.4.8 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-39)
+  configuration: --prefix=/usr --bindir=/usr/bin --datadir=/usr/share/ffmpeg --docdir=/usr/share/doc/ffmpeg --incdir=/usr/include/ffmpeg --libdir=/usr/lib64 --mandir=/usr/share/man --arch=x86_64 --optflags='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic' --extra-ldflags='-Wl,-z,relro ' --extra-cflags=' ' --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-version3 --enable-bzlib --disable-crystalhd --enable-fontconfig --enable-gcrypt --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcdio --enable-libdrm --enable-indev=jack --enable-libfreetype --enable-libfribidi --enable-libgsm --enable-libmp3lame --enable-nvenc --enable-openal --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libopus --disable-encoder=libopus --enable-libpulse --enable-librsvg --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libv4l2 --enable-libvidstab --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxvid --enable-libzvbi --enable-avfilter --enable-avresample --enable-libmodplug --enable-postproc --enable-pthreads --disable-static --enable-shared --enable-gpl --disable-debug --disable-stripping --shlibdir=/usr/lib64 --enable-libmfx --enable-runtime-cpudetect
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/var/www/vhosts/lookmyad.com/httpdocs/clip/files/conversion_queue/1604526940741fd.mov':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 0
+    compatible_brands: qt  
+    creation_time   : 2020-07-18T17:34:59.000000Z
+    com.apple.quicktime.make: Apple
+    com.apple.quicktime.model: iMac14,2
+    com.apple.quicktime.software: Mac OS X 10.14.6 (18G103)
+    com.apple.quicktime.creationdate: 2020-07-19T01:34:58+0800
+  Duration: 00:00:18.07, start: 0.000000, bitrate: 1388 kb/s
+    Stream #0:0(und): Video: h264 (Main) (avc1 / 0x31637661), yuv420p(tv, bt709), 1878x1012 [SAR 1:1 DAR 939:506], 1356 kb/s, 59.83 fps, 60 tbr, 6k tbn, 12k tbc (default)
+    Metadata:
+      creation_time   : 2020-07-18T17:34:59.000000Z
+      handler_name    : Core Media Data Handler
+      encoder         : H.264
+Codec AVOption b (set bitrate (in bits/s)) specified for output file #0 (/var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-hd.mp4) has not been used for any stream. The most likely reason is either wrong type (e.g. a video option with no video streams) or that it is a private option of some encoder which was not actually used for any stream.
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0x24be020] VBV maxrate specified, but no bufsize, ignored
+[libx264 @ 0x24be020] using SAR=857/821
+[libx264 @ 0x24be020] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0x24be020] profile High, level 3.2
+[libx264 @ 0x24be020] 264 - core 148 r2795 aaa9aa8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=5 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=8 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=2 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=3 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=25 scenecut=40 intra_refresh=0 rc_lookahead=50 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-hd.mp4':
+  Metadata:
+    major_brand     : qt  
+    minor_version   : 0
+    compatible_brands: qt  
+    com.apple.quicktime.creationdate: 2020-07-19T01:34:58+0800
+    com.apple.quicktime.make: Apple
+    com.apple.quicktime.model: iMac14,2
+    com.apple.quicktime.software: Mac OS X 10.14.6 (18G103)
+    encoder         : Lavf57.83.100
+    Stream #0:0(und): Video: h264 (libx264) (avc1 / 0x31637661), yuv420p, 1280x720 [SAR 8451:8096 DAR 939:506], q=-1--1, 60 fps, 15360 tbn, 60 tbc (default)
+    Metadata:
+      creation_time   : 2020-07-18T17:34:59.000000Z
+      handler_name    : Core Media Data Handler
+      encoder         : Lavc57.107.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 128000/0/0 buffer size: 0 vbv_delay: -1
+frame=   30 fps=0.0 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=3 drop=0 speed=   0x    frame=   57 fps= 48 q=0.0 size=       0kB time=00:00:00.00 bitrate=N/A dup=3 drop=0 speed=   0x    frame=   68 fps= 40 q=31.0 size=       0kB time=00:00:00.13 bitrate=   2.9kbits/s dup=3 drop=0 speed=0.0791x    frame=   84 fps= 38 q=31.0 size=       0kB time=00:00:00.40 bitrate=   1.0kbits/s dup=3 drop=0 speed=0.182x    frame=   98 fps= 36 q=31.0 size=       0kB time=00:00:00.63 bitrate=   0.6kbits/s dup=3 drop=0 speed=0.233x    frame=  113 fps= 35 q=31.0 size=       0kB time=00:00:00.88 bitrate=   0.4kbits/s dup=3 drop=0 speed=0.274x    frame=  129 fps= 35 q=31.0 size=       0kB time=00:00:01.15 bitrate=   0.3kbits/s dup=3 drop=0 speed=0.308x    frame=  145 fps= 34 q=31.0 size=       0kB time=00:00:01.41 bitrate=   0.3kbits/s dup=3 drop=0 speed=0.333x    frame=  161 fps= 34 q=31.0 size=       0kB time=00:00:01.68 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.353x    frame=  180 fps= 34 q=31.0 size=       0kB time=00:00:02.00 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.378x    frame=  195 fps= 34 q=31.0 size=       0kB time=00:00:02.25 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.389x    frame=  210 fps= 33 q=31.0 size=       0kB time=00:00:02.50 bitrate=   0.2kbits/s dup=3 drop=0 speed=0.395x    frame=  223 fps= 32 q=31.0 size=       0kB time=00:00:02.71 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.396x    frame=  238 fps= 32 q=31.0 size=       0kB time=00:00:02.96 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.399x    frame=  247 fps= 31 q=31.0 size=       0kB time=00:00:03.11 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.388x    frame=  261 fps= 30 q=31.0 size=       0kB time=00:00:03.35 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.391x    frame=  273 fps= 30 q=31.0 size=       0kB time=00:00:03.55 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.391x    frame=  284 fps= 30 q=31.0 size=       0kB time=00:00:03.73 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.389x    frame=  294 fps= 29 q=31.0 size=       0kB time=00:00:03.90 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.383x    frame=  300 fps= 28 q=31.0 size=       0kB time=00:00:04.00 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.374x    frame=  311 fps= 28 q=31.0 size=       0kB time=00:00:04.18 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.373x    frame=  328 fps= 28 q=31.0 size=       0kB time=00:00:04.46 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.381x    frame=  349 fps= 29 q=31.0 size=       0kB time=00:00:04.81 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.393x    frame=  368 fps= 29 q=31.0 size=       0kB time=00:00:05.13 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.403x    frame=  385 fps= 29 q=31.0 size=       0kB time=00:00:05.41 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.408x    frame=  398 fps= 29 q=31.0 size=       0kB time=00:00:05.63 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.409x    frame=  413 fps= 29 q=31.0 size=       0kB time=00:00:05.88 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.411x    frame=  431 fps= 29 q=31.0 size=       0kB time=00:00:06.18 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.416x    frame=  443 fps= 29 q=31.0 size=       0kB time=00:00:06.38 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.415x    frame=  455 fps= 29 q=31.0 size=       0kB time=00:00:06.58 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.413x    frame=  470 fps= 29 q=31.0 size=       0kB time=00:00:06.83 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.415x    frame=  484 fps= 28 q=31.0 size=       0kB time=00:00:07.06 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.416x    frame=  498 fps= 28 q=31.0 size=       0kB time=00:00:07.30 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.417x    frame=  512 fps= 28 q=31.0 size=       0kB time=00:00:07.53 bitrate=   0.1kbits/s dup=3 drop=0 speed=0.417x    frame=  525 fps= 28 q=31.0 size=       0kB time=00:00:07.75 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.415x    frame=  539 fps= 28 q=31.0 size=       0kB time=00:00:07.98 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.416x    frame=  559 fps= 28 q=31.0 size=       0kB time=00:00:08.31 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.418x    frame=  572 fps= 28 q=31.0 size=       0kB time=00:00:08.53 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.419x    frame=  583 fps= 28 q=31.0 size=       0kB time=00:00:08.71 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.417x    frame=  597 fps= 28 q=31.0 size=       0kB time=00:00:08.95 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.418x    frame=  613 fps= 28 q=31.0 size=       0kB time=00:00:09.21 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.42x    frame=  633 fps= 28 q=31.0 size=       0kB time=00:00:09.55 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.426x    frame=  651 fps= 28 q=31.0 size=       0kB time=00:00:09.85 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.429x    frame=  669 fps= 28 q=31.0 size=       0kB time=00:00:10.15 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.432x    frame=  684 fps= 28 q=31.0 size=       0kB time=00:00:10.40 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.432x    frame=  700 fps= 28 q=31.0 size=       0kB time=00:00:10.66 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.434x    frame=  716 fps= 29 q=31.0 size=       0kB time=00:00:10.93 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.436x    frame=  735 fps= 29 q=31.0 size=       0kB time=00:00:11.25 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.439x    frame=  751 fps= 29 q=31.0 size=       0kB time=00:00:11.51 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.441x    frame=  766 fps= 29 q=31.0 size=       0kB time=00:00:11.76 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.442x    frame=  782 fps= 29 q=31.0 size=       0kB time=00:00:12.03 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.443x    frame=  800 fps= 29 q=31.0 size=       0kB time=00:00:12.33 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.446x    frame=  814 fps= 29 q=31.0 size=       0kB time=00:00:12.56 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.445x    frame=  825 fps= 29 q=31.0 size=       0kB time=00:00:12.75 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.443x    frame=  836 fps= 29 q=31.0 size=       0kB time=00:00:12.93 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.441x    frame=  850 fps= 28 q=31.0 size=       0kB time=00:00:13.16 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.441x    frame=  865 fps= 28 q=31.0 size=       0kB time=00:00:13.41 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.442x    frame=  883 fps= 29 q=31.0 size=       0kB time=00:00:13.71 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.444x    frame=  897 fps= 29 q=31.0 size=       0kB time=00:00:13.95 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.444x    frame=  911 fps= 29 q=31.0 size=       0kB time=00:00:14.18 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.444x    frame=  929 fps= 29 q=31.0 size=       0kB time=00:00:14.48 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.446x    frame=  949 fps= 29 q=31.0 size=       0kB time=00:00:14.81 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.449x    frame=  966 fps= 29 q=31.0 size=       0kB time=00:00:15.10 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.45x    frame=  985 fps= 29 q=31.0 size=       0kB time=00:00:15.41 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.453x    frame=  998 fps= 29 q=31.0 size=       0kB time=00:00:15.63 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.452x    frame= 1018 fps= 29 q=31.0 size=       0kB time=00:00:15.96 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.455x    frame= 1043 fps= 29 q=31.0 size=       0kB time=00:00:16.38 bitrate=   0.0kbits/s dup=3 drop=0 speed=0.46x    frame= 1062 fps= 29 q=31.0 size=     256kB time=00:00:16.70 bitrate= 125.6kbits/s dup=3 drop=0 speed=0.463x    frame= 1083 fps= 30 q=31.0 size=     256kB time=00:00:17.05 bitrate= 123.0kbits/s dup=3 drop=0 speed=0.466x    frame= 1084 fps= 29 q=-1.0 Lsize=     295kB time=00:00:18.01 bitrate= 134.0kbits/s dup=3 drop=0 speed=0.482x    
+video:281kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 4.758484%
+[libx264 @ 0x24be020] frame I:5     Avg QP:18.84  size: 25516
+[libx264 @ 0x24be020] frame P:306   Avg QP:24.56  size:   306
+[libx264 @ 0x24be020] frame B:773   Avg QP:33.64  size:    86
+[libx264 @ 0x24be020] consecutive B-frames:  3.0%  4.6%  3.0% 89.3%
+[libx264 @ 0x24be020] mb I  I16..4: 35.3% 53.1% 11.6%
+[libx264 @ 0x24be020] mb P  I16..4:  1.2%  1.3%  0.1%  P16..4:  1.1%  0.1%  0.0%  0.0%  0.0%    skip:96.2%
+[libx264 @ 0x24be020] mb B  I16..4:  0.1%  0.1%  0.0%  B16..8:  1.1%  0.0%  0.0%  direct: 0.0%  skip:98.8%  L0:50.4% L1:49.3% BI: 0.3%
+[libx264 @ 0x24be020] 8x8 transform intra:51.8% inter:46.9%
+[libx264 @ 0x24be020] direct mvs  spatial:99.2% temporal:0.8%
+[libx264 @ 0x24be020] coded y,uvDC,uvAC intra: 5.1% 2.7% 2.0% inter: 0.1% 0.0% 0.0%
+[libx264 @ 0x24be020] i16 v,h,dc,p: 46% 53%  0%  0%
+[libx264 @ 0x24be020] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 36% 32% 30%  0%  0%  0%  0%  0%  1%
+[libx264 @ 0x24be020] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 37% 17%  2%  4%  3%  4%  3%  7%
+[libx264 @ 0x24be020] i8c dc,h,v,p: 85% 14%  1%  0%
+[libx264 @ 0x24be020] Weighted P-Frames: Y:7.8% UV:7.8%
+[libx264 @ 0x24be020] ref P L0: 34.4% 13.3% 45.0%  4.8%  2.2%  0.3%  0.0%
+[libx264 @ 0x24be020] ref B L0: 58.3% 39.0%  2.3%  0.5%
+[libx264 @ 0x24be020] ref B L1: 97.2%  2.8%
+[libx264 @ 0x24be020] kb/s:127.29
+ 
+
+ Sarting : MP4Box Conversion for HD 
+
+ MP4Box Command : /usr/local/bin/MP4Box -inter 0.5 /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-hd.mp4  -tmp /var/www/vhosts/lookmyad.com/httpdocs/clip/files/temp 
+
+ output : Saving /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-hd.mp4: 0.001 secs Interleaving
+ISO File Writing: |                    | (01/100)ISO File Writing: |                    | (02/100)ISO File Writing: |                    | (03/100)ISO File Writing: |                    | (04/100)ISO File Writing: |=                   | (05/100)ISO File Writing: |=                   | (06/100)ISO File Writing: |=                   | (07/100)ISO File Writing: |=                   | (08/100)ISO File Writing: |=                   | (09/100)ISO File Writing: |==                  | (10/100)ISO File Writing: |==                  | (11/100)ISO File Writing: |==                  | (12/100)ISO File Writing: |==                  | (13/100)ISO File Writing: |==                  | (14/100)ISO File Writing: |===                 | (15/100)ISO File Writing: |===                 | (16/100)ISO File Writing: |===                 | (17/100)ISO File Writing: |===                 | (18/100)ISO File Writing: |===                 | (19/100)ISO File Writing: |====                | (20/100)ISO File Writing: |====                | (21/100)ISO File Writing: |====                | (22/100)ISO File Writing: |====                | (23/100)ISO File Writing: |====                | (24/100)ISO File Writing: |=====               | (25/100)ISO File Writing: |=====               | (26/100)ISO File Writing: |=====               | (27/100)ISO File Writing: |=====               | (28/100)ISO File Writing: |=====               | (29/100)ISO File Writing: |======              | (30/100)ISO File Writing: |======              | (31/100)ISO File Writing: |======              | (32/100)ISO File Writing: |======              | (33/100)ISO File Writing: |======              | (34/100)ISO File Writing: |=======             | (35/100)ISO File Writing: |=======             | (36/100)ISO File Writing: |=======             | (37/100)ISO File Writing: |=======             | (38/100)ISO File Writing: |=======             | (39/100)ISO File Writing: |========            | (40/100)ISO File Writing: |========            | (41/100)ISO File Writing: |========            | (42/100)ISO File Writing: |========            | (43/100)ISO File Writing: |========            | (44/100)ISO File Writing: |=========           | (45/100)ISO File Writing: |=========           | (46/100)ISO File Writing: |=========           | (47/100)ISO File Writing: |=========           | (48/100)ISO File Writing: |=========           | (49/100)ISO File Writing: |==========          | (50/100)ISO File Writing: |==========          | (51/100)ISO File Writing: |==========          | (52/100)ISO File Writing: |==========          | (53/100)ISO File Writing: |==========          | (54/100)ISO File Writing: |===========         | (55/100)ISO File Writing: |===========         | (56/100)ISO File Writing: |===========         | (57/100)ISO File Writing: |===========         | (58/100)ISO File Writing: |===========         | (59/100)ISO File Writing: |============        | (60/100)ISO File Writing: |============        | (61/100)ISO File Writing: |============        | (62/100)ISO File Writing: |============        | (63/100)ISO File Writing: |============        | (64/100)ISO File Writing: |=============       | (65/100)ISO File Writing: |=============       | (66/100)ISO File Writing: |=============       | (67/100)ISO File Writing: |=============       | (68/100)ISO File Writing: |=============       | (69/100)ISO File Writing: |==============      | (70/100)ISO File Writing: |==============      | (71/100)ISO File Writing: |==============      | (72/100)ISO File Writing: |==============      | (73/100)ISO File Writing: |==============      | (74/100)ISO File Writing: |===============     | (75/100)ISO File Writing: |===============     | (76/100)ISO File Writing: |===============     | (77/100)ISO File Writing: |===============     | (78/100)ISO File Writing: |===============     | (79/100)ISO File Writing: |================    | (80/100)ISO File Writing: |================    | (81/100)ISO File Writing: |================    | (82/100)ISO File Writing: |================    | (83/100)ISO File Writing: |================    | (84/100)ISO File Writing: |=================   | (85/100)ISO File Writing: |=================   | (86/100)ISO File Writing: |=================   | (87/100)ISO File Writing: |=================   | (88/100)ISO File Writing: |=================   | (89/100)ISO File Writing: |==================  | (90/100)ISO File Writing: |==================  | (91/100)ISO File Writing: |==================  | (92/100)ISO File Writing: |==================  | (93/100)ISO File Writing: |==================  | (94/100)ISO File Writing: |=================== | (95/100)ISO File Writing: |=================== | (96/100)ISO File Writing: |=================== | (97/100)ISO File Writing: |=================== | (98/100)ISO File Writing: |=================== | (99/100)ISO File Writing: |====================| (100/100)                                                         
+
+ Conversion Status : Successful @ 2020-11-04 21:57:34
+
+
+OutPut Deatils
+--------------
+		<strong>format</strong> : mov,mp4,m4a,3gp,3g2,mj2
+<strong>duration</strong> : 18.07
+<strong>size</strong> : 302029
+<strong>bitrate</strong> : 133737
+<strong>video_width</strong> : 1280
+<strong>video_height</strong> : 720
+<strong>video_wh_ratio</strong> : 1.7777777777778
+<strong>video_codec</strong> : h264
+<strong>video_rate</strong> : 60
+<strong>video_bitrate</strong> : 127598
+<strong>video_color</strong> : N/A
+<strong>audio_codec</strong> : 
+<strong>audio_bitrate</strong> : 0
+<strong>audio_rate</strong> : 0
+<strong>audio_channels</strong> : 0
+<strong>path</strong> : /var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-hd.mp4
+<strong>rotation</strong> : 0
+
+
+Conversion Completed___ Output File/var/www/vhosts/lookmyad.com/httpdocs/clip/files/videos/2020/11/04//1604526940741fd-hd.mp4
+-----------------------------------------------------------------------------------------------------------------------------
+		
+
+Time Took : 108.694 seconds
+
+conversion_status : completed 

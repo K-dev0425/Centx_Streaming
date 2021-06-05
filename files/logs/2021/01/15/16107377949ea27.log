@@ -1,0 +1,344 @@
+
+
+==========================================
+	Pre-Check Configurations
+==========================================
+
+File to be converted
+--------------------
+		Initializing File <strong>16107377949ea27.mp4</strong> and pre checking configurations...
+
+System hardware Information
+---------------------------
+		Unable log System hardware information, plaese install "lshw" 
+
+Temporary Uploading
+-------------------
+		File Uploaded to Temp directory successfully and video conversion file is being executed !
+
+Video Conversion File Execution
+-------------------------------
+		Video Converson File executed successfully with Target File > !16107377949ea27.mp4
+
+
+==========================================
+	Starting Conversion Log
+==========================================
+
+Getting Arguments
+-----------------
+		Filename : 16107377949ea27.mp4
+File directory : 2021/01/15
+Log file : /var/www/vhosts/centx.app/httpdocs/files/logs/2021/01/15/16107377949ea27.log
+
+
+Conversion queue
+----------------
+		Getting the file information from the queue for conversion
+
+Conversion queue
+----------------
+		File has been moved from Temporary dir to Conversion Queue/var/www/vhosts/centx.app/httpdocs/files/temp/16107377949ea27.ozz Orig_ /var/www/vhosts/centx.app/httpdocs/files/conversion_queue/16107377949ea27.mp4
+
+Parsing FFmpeg Configurations
+-----------------------------
+		<strong>use_video_rate</strong> : 1
+<strong>use_video_bit_rate</strong> : 1
+<strong>use_audio_rate</strong> : 1
+<strong>use_audio_bit_rate</strong> : 1
+<strong>use_audio_codec</strong> : 1
+<strong>use_video_codec</strong> : 1
+<strong>format</strong> : mp4
+<strong>video_codec</strong> : libx264
+<strong>audio_codec</strong> : libfdk_aac
+<strong>audio_rate</strong> : 22050
+<strong>audio_bitrate</strong> : 128000
+<strong>video_rate</strong> : 
+<strong>video_bitrate</strong> : 
+<strong>video_bitrate_hd</strong> : 
+<strong>normal_res</strong> : 
+<strong>high_res</strong> : 
+<strong>max_video_duration</strong> : 320
+<strong>resize</strong> : max
+<strong>outputPath</strong> : 2021/01/15/
+<strong>cb_combo_res</strong> : 
+<strong>gen_240</strong> : yes
+<strong>gen_360</strong> : yes
+<strong>gen_480</strong> : yes
+<strong>gen_720</strong> : yes
+<strong>gen_1080</strong> : yes
+
+
+Starting Conversion
+-------------------
+		Started on 2021-01-15 19:09:59 - 2021 Jan 15
+
+Checking File...
+File : /var/www/vhosts/centx.app/httpdocs/files/conversion_queue/16107377949ea27.mp4
+
+File Exists____application
+--------------------------
+		Yes
+
+Preparing file...
+-----------------
+		<strong>format</strong> : mov,mp4,m4a,3gp,3g2,mj2
+<strong>duration</strong> : 1.33
+<strong>size</strong> : 26180
+<strong>bitrate</strong> : 157473
+<strong>video_width</strong> : 360
+<strong>video_height</strong> : 206
+<strong>video_wh_ratio</strong> : 1.747572815534
+<strong>video_codec</strong> : h264
+<strong>video_rate</strong> : 14.285714285714
+<strong>video_bitrate</strong> : 152992
+<strong>video_color</strong> : N/A
+<strong>audio_codec</strong> : 
+<strong>audio_bitrate</strong> : 0
+<strong>audio_rate</strong> : 0
+<strong>audio_channels</strong> : 0
+<strong>path</strong> : /var/www/vhosts/centx.app/httpdocs/files/conversion_queue/16107377949ea27.mp4
+<strong>rotation</strong> : 0
+
+
+Audio Files ____ /var/www/vhosts/centx.app/httpdocs/files/conversion_queue/16107377949ea27.mp4 Resolutions: 
+------------------------------------------------------------------------------------------------------------
+		/var/www/vhosts/centx.app/httpdocs/files/conversion_queue/16107377949ea27.mp4
+
+==========================================
+	Video Conversionapplication
+==========================================
+
+Getting Video Details Array: 
+-----------------------------
+		<strong>size</strong> : 26180
+<strong>duration</strong> : 1
+<strong>bitrate</strong> : 204
+<strong>format</strong> : mov,mp4,m4a,3gp,3g2,mj2
+<strong>video_width</strong> : 360
+<strong>video_height</strong> : 206
+<strong>video_wh_ratio</strong> : 1.747572815534
+<strong>video_codec</strong> : h264
+<strong>audio_codec</strong> : 
+<strong>audio_rate</strong> : 
+<strong>audio_channels</strong> : 
+
+
+Getting out : 
+--------------
+		ffmpeg version 3.4.8 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-39)
+  configuration: --prefix=/usr --bindir=/usr/bin --datadir=/usr/share/ffmpeg --docdir=/usr/share/doc/ffmpeg --incdir=/usr/include/ffmpeg --libdir=/usr/lib64 --mandir=/usr/share/man --arch=x86_64 --optflags='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic' --extra-ldflags='-Wl,-z,relro ' --extra-cflags=' ' --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-version3 --enable-bzlib --disable-crystalhd --enable-fontconfig --enable-gcrypt --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcdio --enable-libdrm --enable-indev=jack --enable-libfreetype --enable-libfribidi --enable-libgsm --enable-libmp3lame --enable-nvenc --enable-openal --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libopus --disable-encoder=libopus --enable-libpulse --enable-librsvg --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libv4l2 --enable-libvidstab --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxvid --enable-libzvbi --enable-avfilter --enable-avresample --enable-libmodplug --enable-postproc --enable-pthreads --disable-static --enable-shared --enable-gpl --disable-debug --disable-stripping --shlibdir=/usr/lib64 --enable-libmfx --enable-runtime-cpudetect
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/var/www/vhosts/centx.app/httpdocs/files/conversion_queue/16107377949ea27.mp4':
+  Metadata:
+    major_brand     : mp4v
+    minor_version   : 0
+    compatible_brands: mp4vmp42isom
+  Duration: 00:00:01.33, start: 0.000000, bitrate: 157 kb/s
+    Stream #0:0(und): Video: h264 (Baseline) (avc1 / 0x31637661), yuv420p, 360x206, 152 kb/s, 14.29 fps, 14.29 tbr, 600 tbn, 1200 tbc (default)
+Output #0, null, to '/dev/null':
+  Metadata:
+    major_brand     : mp4v
+    minor_version   : 0
+    compatible_brands: mp4vmp42isom
+    encoder         : Lavf57.83.100
+    Stream #0:0(und): Video: h264 (Baseline) (avc1 / 0x31637661), yuv420p, 360x206, q=2-31, 152 kb/s, 14.29 fps, 14.29 tbr, 600 tbn, 600 tbc (default)
+Stream mapping:
+  Stream #0:0 -> #0:0 (copy)
+Press [q] to stop, [?] for help
+frame=   19 fps=0.0 q=-1.0 Lsize=N/A time=00:00:01.26 bitrate=N/A speed=9.35e+03x    
+video:25kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: unknown
+
+
+Low SD second Execute Full Command : 
+-------------------------------------
+		
+======Converting Video=========
+
+
+=======Low Resolution Conversion=======
+
+
+ Sarting : Generating Low resolution video @ 2021-01-15 19:09:59 
+
+ Converting Video SD File  
+
+ Command : /bin/ffmpeg -i /var/www/vhosts/centx.app/httpdocs/files/conversion_queue/16107377949ea27.mp4 /var/www/vhosts/centx.app/httpdocs/files/videos/2021/01/15//16107377949ea27-audio.mp4 
+
+ ffmpeg output : ffmpeg version 3.4.8 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-39)
+  configuration: --prefix=/usr --bindir=/usr/bin --datadir=/usr/share/ffmpeg --docdir=/usr/share/doc/ffmpeg --incdir=/usr/include/ffmpeg --libdir=/usr/lib64 --mandir=/usr/share/man --arch=x86_64 --optflags='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic' --extra-ldflags='-Wl,-z,relro ' --extra-cflags=' ' --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-version3 --enable-bzlib --disable-crystalhd --enable-fontconfig --enable-gcrypt --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcdio --enable-libdrm --enable-indev=jack --enable-libfreetype --enable-libfribidi --enable-libgsm --enable-libmp3lame --enable-nvenc --enable-openal --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libopus --disable-encoder=libopus --enable-libpulse --enable-librsvg --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libv4l2 --enable-libvidstab --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxvid --enable-libzvbi --enable-avfilter --enable-avresample --enable-libmodplug --enable-postproc --enable-pthreads --disable-static --enable-shared --enable-gpl --disable-debug --disable-stripping --shlibdir=/usr/lib64 --enable-libmfx --enable-runtime-cpudetect
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/var/www/vhosts/centx.app/httpdocs/files/conversion_queue/16107377949ea27.mp4':
+  Metadata:
+    major_brand     : mp4v
+    minor_version   : 0
+    compatible_brands: mp4vmp42isom
+  Duration: 00:00:01.33, start: 0.000000, bitrate: 157 kb/s
+    Stream #0:0(und): Video: h264 (Baseline) (avc1 / 0x31637661), yuv420p, 360x206, 152 kb/s, 14.29 fps, 14.29 tbr, 600 tbn, 1200 tbc (default)
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0xd34400] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0xd34400] profile High, level 1.2
+[libx264 @ 0xd34400] 264 - core 148 r2795 aaa9aa8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=14 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/var/www/vhosts/centx.app/httpdocs/files/videos/2021/01/15//16107377949ea27-audio.mp4':
+  Metadata:
+    major_brand     : mp4v
+    minor_version   : 0
+    compatible_brands: mp4vmp42isom
+    encoder         : Lavf57.83.100
+    Stream #0:0(und): Video: h264 (libx264) (avc1 / 0x31637661), yuv420p, 360x206, q=-1--1, 14.29 fps, 12800 tbn, 14.29 tbc (default)
+    Metadata:
+      encoder         : Lavc57.107.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: -1
+frame=   19 fps=0.0 q=-1.0 Lsize=      27kB time=00:00:01.12 bitrate= 196.4kbits/s speed= 8.6x    
+video:26kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 3.868677%
+[libx264 @ 0xd34400] frame I:1     Avg QP:21.96  size:  2731
+[libx264 @ 0xd34400] frame P:12    Avg QP:21.79  size:  1554
+[libx264 @ 0xd34400] frame B:6     Avg QP:23.96  size:   734
+[libx264 @ 0xd34400] consecutive B-frames: 42.1% 42.1% 15.8%  0.0%
+[libx264 @ 0xd34400] mb I  I16..4: 19.4% 58.2% 22.4%
+[libx264 @ 0xd34400] mb P  I16..4:  3.8%  8.3%  4.1%  P16..4: 49.9% 15.5%  5.3%  0.0%  0.0%    skip:13.0%
+[libx264 @ 0xd34400] mb B  I16..4:  0.8%  0.9%  0.9%  B16..8: 52.7% 10.0%  0.7%  direct: 1.3%  skip:32.6%  L0:62.4% L1:34.7% BI: 3.0%
+[libx264 @ 0xd34400] 8x8 transform intra:52.8% inter:72.3%
+[libx264 @ 0xd34400] coded y,uvDC,uvAC intra: 50.0% 59.4% 22.2% inter: 19.3% 17.1% 0.6%
+[libx264 @ 0xd34400] i16 v,h,dc,p:  9% 56% 15% 20%
+[libx264 @ 0xd34400] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 15% 35% 26%  4%  3%  2%  6%  2%  7%
+[libx264 @ 0xd34400] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 25% 20%  5%  6%  5%  7%  5%  4%
+[libx264 @ 0xd34400] i8c dc,h,v,p: 46% 26% 21%  8%
+[libx264 @ 0xd34400] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0xd34400] ref P L0: 86.6%  5.2%  6.6%  1.7%
+[libx264 @ 0xd34400] ref B L0: 95.0%  5.0%
+[libx264 @ 0xd34400] kb/s:155.07
+ 
+
+
+Conversion Ouput
+----------------
+		
+======Converting Video=========
+
+
+=======Low Resolution Conversion=======
+
+
+ Sarting : Generating Low resolution video @ 2021-01-15 19:09:59 
+
+ Converting Video SD File  
+
+ Command : /bin/ffmpeg -i /var/www/vhosts/centx.app/httpdocs/files/conversion_queue/16107377949ea27.mp4 /var/www/vhosts/centx.app/httpdocs/files/videos/2021/01/15//16107377949ea27-audio.mp4 
+
+ ffmpeg output : ffmpeg version 3.4.8 Copyright (c) 2000-2020 the FFmpeg developers
+  built with gcc 4.8.5 (GCC) 20150623 (Red Hat 4.8.5-39)
+  configuration: --prefix=/usr --bindir=/usr/bin --datadir=/usr/share/ffmpeg --docdir=/usr/share/doc/ffmpeg --incdir=/usr/include/ffmpeg --libdir=/usr/lib64 --mandir=/usr/share/man --arch=x86_64 --optflags='-O2 -g -pipe -Wall -Wp,-D_FORTIFY_SOURCE=2 -fexceptions -fstack-protector-strong --param=ssp-buffer-size=4 -grecord-gcc-switches -m64 -mtune=generic' --extra-ldflags='-Wl,-z,relro ' --extra-cflags=' ' --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libvo-amrwbenc --enable-version3 --enable-bzlib --disable-crystalhd --enable-fontconfig --enable-gcrypt --enable-gnutls --enable-ladspa --enable-libass --enable-libbluray --enable-libcdio --enable-libdrm --enable-indev=jack --enable-libfreetype --enable-libfribidi --enable-libgsm --enable-libmp3lame --enable-nvenc --enable-openal --enable-opencl --enable-opengl --enable-libopenjpeg --enable-libopus --disable-encoder=libopus --enable-libpulse --enable-librsvg --enable-libsoxr --enable-libspeex --enable-libtheora --enable-libvorbis --enable-libv4l2 --enable-libvidstab --enable-libvpx --enable-libx264 --enable-libx265 --enable-libxvid --enable-libzvbi --enable-avfilter --enable-avresample --enable-libmodplug --enable-postproc --enable-pthreads --disable-static --enable-shared --enable-gpl --disable-debug --disable-stripping --shlibdir=/usr/lib64 --enable-libmfx --enable-runtime-cpudetect
+  libavutil      55. 78.100 / 55. 78.100
+  libavcodec     57.107.100 / 57.107.100
+  libavformat    57. 83.100 / 57. 83.100
+  libavdevice    57. 10.100 / 57. 10.100
+  libavfilter     6.107.100 /  6.107.100
+  libavresample   3.  7.  0 /  3.  7.  0
+  libswscale      4.  8.100 /  4.  8.100
+  libswresample   2.  9.100 /  2.  9.100
+  libpostproc    54.  7.100 / 54.  7.100
+Input #0, mov,mp4,m4a,3gp,3g2,mj2, from '/var/www/vhosts/centx.app/httpdocs/files/conversion_queue/16107377949ea27.mp4':
+  Metadata:
+    major_brand     : mp4v
+    minor_version   : 0
+    compatible_brands: mp4vmp42isom
+  Duration: 00:00:01.33, start: 0.000000, bitrate: 157 kb/s
+    Stream #0:0(und): Video: h264 (Baseline) (avc1 / 0x31637661), yuv420p, 360x206, 152 kb/s, 14.29 fps, 14.29 tbr, 600 tbn, 1200 tbc (default)
+Stream mapping:
+  Stream #0:0 -> #0:0 (h264 (native) -> h264 (libx264))
+Press [q] to stop, [?] for help
+[libx264 @ 0xd34400] using cpu capabilities: MMX2 SSE2Fast SSSE3 SSE4.2 AVX FMA3 AVX2 LZCNT BMI2
+[libx264 @ 0xd34400] profile High, level 1.2
+[libx264 @ 0xd34400] 264 - core 148 r2795 aaa9aa8 - H.264/MPEG-4 AVC codec - Copyleft 2003-2017 - http://www.videolan.org/x264.html - options: cabac=1 ref=3 deblock=1:0:0 analyse=0x3:0x113 me=hex subme=7 psy=1 psy_rd=1.00:0.00 mixed_ref=1 me_range=16 chroma_me=1 trellis=1 8x8dct=1 cqm=0 deadzone=21,11 fast_pskip=1 chroma_qp_offset=-2 threads=3 lookahead_threads=1 sliced_threads=0 nr=0 decimate=1 interlaced=0 bluray_compat=0 constrained_intra=0 bframes=3 b_pyramid=2 b_adapt=1 b_bias=0 direct=1 weightb=1 open_gop=0 weightp=2 keyint=250 keyint_min=14 scenecut=40 intra_refresh=0 rc_lookahead=40 rc=crf mbtree=1 crf=23.0 qcomp=0.60 qpmin=0 qpmax=69 qpstep=4 ip_ratio=1.40 aq=1:1.00
+Output #0, mp4, to '/var/www/vhosts/centx.app/httpdocs/files/videos/2021/01/15//16107377949ea27-audio.mp4':
+  Metadata:
+    major_brand     : mp4v
+    minor_version   : 0
+    compatible_brands: mp4vmp42isom
+    encoder         : Lavf57.83.100
+    Stream #0:0(und): Video: h264 (libx264) (avc1 / 0x31637661), yuv420p, 360x206, q=-1--1, 14.29 fps, 12800 tbn, 14.29 tbc (default)
+    Metadata:
+      encoder         : Lavc57.107.100 libx264
+    Side data:
+      cpb: bitrate max/min/avg: 0/0/0 buffer size: 0 vbv_delay: -1
+frame=   19 fps=0.0 q=-1.0 Lsize=      27kB time=00:00:01.12 bitrate= 196.4kbits/s speed= 8.6x    
+video:26kB audio:0kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 3.868677%
+[libx264 @ 0xd34400] frame I:1     Avg QP:21.96  size:  2731
+[libx264 @ 0xd34400] frame P:12    Avg QP:21.79  size:  1554
+[libx264 @ 0xd34400] frame B:6     Avg QP:23.96  size:   734
+[libx264 @ 0xd34400] consecutive B-frames: 42.1% 42.1% 15.8%  0.0%
+[libx264 @ 0xd34400] mb I  I16..4: 19.4% 58.2% 22.4%
+[libx264 @ 0xd34400] mb P  I16..4:  3.8%  8.3%  4.1%  P16..4: 49.9% 15.5%  5.3%  0.0%  0.0%    skip:13.0%
+[libx264 @ 0xd34400] mb B  I16..4:  0.8%  0.9%  0.9%  B16..8: 52.7% 10.0%  0.7%  direct: 1.3%  skip:32.6%  L0:62.4% L1:34.7% BI: 3.0%
+[libx264 @ 0xd34400] 8x8 transform intra:52.8% inter:72.3%
+[libx264 @ 0xd34400] coded y,uvDC,uvAC intra: 50.0% 59.4% 22.2% inter: 19.3% 17.1% 0.6%
+[libx264 @ 0xd34400] i16 v,h,dc,p:  9% 56% 15% 20%
+[libx264 @ 0xd34400] i8 v,h,dc,ddl,ddr,vr,hd,vl,hu: 15% 35% 26%  4%  3%  2%  6%  2%  7%
+[libx264 @ 0xd34400] i4 v,h,dc,ddl,ddr,vr,hd,vl,hu: 23% 25% 20%  5%  6%  5%  7%  5%  4%
+[libx264 @ 0xd34400] i8c dc,h,v,p: 46% 26% 21%  8%
+[libx264 @ 0xd34400] Weighted P-Frames: Y:0.0% UV:0.0%
+[libx264 @ 0xd34400] ref P L0: 86.6%  5.2%  6.6%  1.7%
+[libx264 @ 0xd34400] ref B L0: 95.0%  5.0%
+[libx264 @ 0xd34400] kb/s:155.07
+ 
+
+ Sarting : MP4Box Conversion for SD 
+
+ MP4Box Command : /usr/bin/MP4Box -inter 0.5 /var/www/vhosts/centx.app/httpdocs/files/videos/2021/01/15//16107377949ea27-audio.mp4  -tmp /var/www/vhosts/centx.app/httpdocs/files/temp 
+
+ output : Saving /var/www/vhosts/centx.app/httpdocs/files/videos/2021/01/15//16107377949ea27-audio.mp4: 0.001 secs Interleaving
+ISO File Writing: |=                   | (05/100)ISO File Writing: |==                  | (10/100)ISO File Writing: |===                 | (15/100)ISO File Writing: |====                | (21/100)ISO File Writing: |=====               | (26/100)ISO File Writing: |======              | (31/100)ISO File Writing: |=======             | (36/100)ISO File Writing: |========            | (42/100)ISO File Writing: |=========           | (47/100)ISO File Writing: |==========          | (52/100)ISO File Writing: |===========         | (57/100)ISO File Writing: |============        | (63/100)ISO File Writing: |=============       | (68/100)ISO File Writing: |==============      | (73/100)ISO File Writing: |===============     | (78/100)ISO File Writing: |================    | (84/100)ISO File Writing: |=================   | (89/100)ISO File Writing: |==================  | (94/100)ISO File Writing: |====================| (100/100)                                                         
+
+ Conversion Status : Successful @ 2021-01-15 19:09:59 
+
+
+OutPut Deatils
+--------------
+		<strong>format</strong> : mov,mp4,m4a,3gp,3g2,mj2
+<strong>duration</strong> : 1.33
+<strong>size</strong> : 27571
+<strong>bitrate</strong> : 165840
+<strong>video_width</strong> : 360
+<strong>video_height</strong> : 206
+<strong>video_wh_ratio</strong> : 1.747572815534
+<strong>video_codec</strong> : h264
+<strong>video_rate</strong> : 14.285714285714
+<strong>video_bitrate</strong> : 159218
+<strong>video_color</strong> : N/A
+<strong>audio_codec</strong> : 
+<strong>audio_bitrate</strong> : 0
+<strong>audio_rate</strong> : 0
+<strong>audio_channels</strong> : 0
+<strong>path</strong> : /var/www/vhosts/centx.app/httpdocs/files/videos/2021/01/15//16107377949ea27-audio.mp4
+<strong>rotation</strong> : 0
+
+
+Conversion Completed___ Output File/var/www/vhosts/centx.app/httpdocs/files/videos/2021/01/15//16107377949ea27-audio.mp4
+------------------------------------------------------------------------------------------------------------------------
+		
+
+Time Took : 0.4364 seconds
+
+conversion_status : completed 

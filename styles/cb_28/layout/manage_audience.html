@@ -1,0 +1,267 @@
+{$myAccountLinks = $userquery->my_account_links()}
+
+{literal}
+<link rel="stylesheet" href="https://cdn.leafletjs.com/leaflet/v0.7.7/leaflet.css" />
+<script src = "https://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+<style>
+	#map{height:500px;}
+
+</style>
+{/literal}
+<div class="container manage-page marginBottom">
+   <div class="row cb-box">
+		<div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 hidden-xs">
+			{include file="$style_dir/blocks/manage/userMenuLeft.html"}
+		</div>
+		<div class="mainContent col-md-9 col-sm-9 col-xs-12">
+	   
+		{if $mode == 'list'}
+			<h2>{lang code="manage_audience"}</h2>
+
+			<form name="audience_manager" method="post" action="manage_audience.php?mode=delete">
+				<div class="marginBottom">
+					<img src="{$imageurl}/dot.gif" class="arrow_pointing">
+					<input type="submit" name="delete_audience" id="delete_audience" value="{lang code='delete'}" class="btn btn-primary btn-sm">
+				</div>
+				<br>
+				<div class="account_table table-responsive">
+					<table class="table table-bordered table-striped">
+						<tr>
+							<td width="25">
+								<input type="checkbox" name="checkall" onclick="checkUncheckAll(this);">
+							</td>
+							<td>{lang code='title_ph'}</td>
+							<td width="100">{lang code='latitude, longitude'}</td>
+							<td width="100">{lang code='radius'}</td>
+							<td width="100">{lang code='date_added'}</td>
+							<td width="125" class="last_td"></td>
+						</tr>
+						{section name=a_list loop=$audience}
+							{include file="$style_dir/blocks/manage/account_audience.html" audience=$audience control='full'}
+						{sectionelse}
+						<tr>
+							<td colspan="6">
+								<div align="center" style="padding:5px">
+									<strong><em>{lang code='you_dont_have_audience'}</em></strong>
+								</div>
+							</td>
+						</tr>
+						{/section}
+					</table>       
+				</div>
+				{include file="$style_dir/blocks/pagination.html"}
+			</form>
+		{/if}
+		
+
+		{if $mode == "edit"}
+			<h2>{lang code="add_new_audience"}</h2>
+			<form name="audience_manager" method="post">
+
+				<div class="row">
+					<div id="map" class="col-md-12 map-location">&nbsp;</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">&nbsp;</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12"><input name="audience_title" type="text" placeholder="Enter audience title" class="form-control" id="query" value="{$audience[0].audience_title}"/></div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">&nbsp;</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12"><input name="audience_description" type="text" placeholder="Enter audience description" class="form-control" id="query" value="{$audience[0].audience_description}"/></div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">&nbsp;</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12"><strong>Your Videos</strong></div>
+				</div>
+				<div class="row" style="border:1px solid:#eee;">
+					{foreach from=$userVideos item=foo}
+						<div class="col-md-1">
+							{if in_array($foo.videoid, $linked_videos)}
+								<input type="checkbox" name="linked_videos[]" value="{$foo.videoid}" checked>
+							{else}
+								<input type="checkbox" name="linked_videos[]" value="{$foo.videoid}">
+							{/if}
+						</div>
+						<div class="col-md-5">{$foo.title}</div>
+					{/foreach}
+				</div>
+				<div class="row">
+					<div class="col-md-12">&nbsp;</div>
+				</div>				
+				<div class="row">
+					<div class="col-md-6">
+						<input id="idRad" name="radius" type="text" placeholder="Enter audience radius" class="form-control" id="query" value="{$audience[0].radius}"  onblur="drawCircle(this.value)"/>
+					</div>
+					<div class="col-md-1">&nbsp;</div>
+					<div class="col-md-5">
+						<input name="input" type="submit" class="btn btn-primary" value="{lang code='Update'}"/> 
+						<input id="idMode" name="mode" value="update_audience" type="hidden" />
+					</div>
+				</div>
+
+				<input name="lat" type="hidden" id="idLat" value="{$audience[0].lat}"/>
+				<input name="lng" type="hidden" id="idLng" value="{$audience[0].lng}"/>
+				<input name="audience_id" type="hidden" value="{$audience[0].audience_id}"/>
+
+			</form>
+
+		{/if}
+
+
+		{if $mode == "add_new"}
+			<h2>{lang code="add_new_audience"}</h2>
+			<!--<form name="audience_manager" method="post">-->
+
+				<div class="row">
+					<div id="map" class="col-md-12 map-location">&nbsp;</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">&nbsp;</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12"><input name="audience_title" type="text" placeholder="Enter audience title" class="form-control" id="query" value="{$smarty.get.query|form_val}"/></div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">&nbsp;</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12"><input name="audience_description" type="text" placeholder="Enter audience description" class="form-control" id="query" value="{$smarty.get.query|form_val}"/></div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">&nbsp;</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12"><strong>Your Videos</strong></div>
+				</div>
+				<div class="row" style="border:1px solid:#eee;">
+					{foreach from=$userVideos item=foo}
+						<div class="col-md-1">
+							<input type="checkbox" name="linked_videos[]" value="{$foo.videoid}">
+						</div>
+						<div class="col-md-5">{$foo.title}</div>
+					{/foreach}
+				</div>
+				<div class="row">
+					<div class="col-md-12">&nbsp;</div>
+				</div>
+				<div class="row">
+					<div class="col-md-6">
+						<input name="radius" type="text" placeholder="Enter audience radius" class="form-control" id="query" value="{$smarty.get.query|form_val}"  onblur="drawCircle(this.value)"/>
+					</div>
+					<div class="col-md-1">&nbsp;</div>
+					<div class="col-md-5">
+						<input name="input" type="submit" class="btn btn-primary" value="{lang code='Create'}"/> 
+						<input name="mode" value="create_audience" type="hidden" />
+					</div>
+				</div>
+				<input name="lat" type="hidden" id="idLat" value="{$smarty.get.query|form_val}"/>
+				<input name="lng" type="hidden" id="idLng" value="{$smarty.get.query|form_val}"/>
+
+			<!--</form>-->
+
+		{/if}
+
+	   </div>
+	</div>  
+
+ 
+</div>
+  <script>
+  	{literal}
+
+		LatLng = [33.6108680976006, -114.574636506105];
+
+		var mode = $('#idMode').val();
+		if(mode == 'update_audience'){
+			lat = $('#idLat').val();
+			lon = $('#idLng').val();
+			LatLng = [lat, lon];
+
+		}
+
+		map = createMap(LatLng);
+
+		var theMarker = {};
+		var theCircle = {};
+
+		if(mode == 'update_audience'){
+			radius = $('#idRad').val();
+			theMarker = L.marker([lat,lon]).addTo(map);
+			theCircle = L.circle([lat,lon], radius).addTo(map);
+
+		}//if
+
+
+		map.on('click', function(ev) {
+			lat = ev.latlng.lat;
+			lon = ev.latlng.lng;
+			console.log("You clicked the map at LAT: "+ lat+" and LONG: "+lon );
+
+			//Clear existing marker, 
+
+			if (theMarker != undefined) {
+				  map.removeLayer(theMarker);
+			};
+
+
+			if (theCircle != undefined) {
+				  map.removeLayer(theCircle);
+			};
+
+			theMarker = L.marker([lat,lon]).addTo(map);
+
+			$('#idLat').val(lat);
+			$('#idLng').val(lon);
+
+		});
+
+		function createMap(LatLng){
+
+			var map = L.map('map');
+			map.setView(LatLng, 10);
+			var osm=new L.tileLayer('http://{s}.tile.osm.org/{z}/{x}/{y}.png',{ 
+					attribution: '&copy; <a href="https://osm.org/copyright">OpenStreetMap</a> contributors'});
+
+			osm.addTo(map);
+
+			return map;
+
+		}//createMap
+
+
+		function drawCircle(radValue){
+			
+			newLatLng = theMarker.getLatLng();
+
+
+			if (theMarker != undefined) {
+				  map.removeLayer(theMarker);
+			};
+
+
+			if (theCircle != undefined) {
+				  map.removeLayer(theCircle);
+			};
+
+			theMarker = L.marker(newLatLng).addTo(map);
+
+			theCircle = L.circle(newLatLng, radValue).addTo(map);
+
+		}//drawCircle
+
+
+		map.on('locationfound', function (e) {
+
+		    var radius = e.accuracy / 2;
+		    alert(radius);
+
+        });
+    
+	{/literal}
+  </script>
