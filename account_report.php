@@ -39,6 +39,6 @@ switch($mode)
 }
 
 subtitle(lang("user_manage_contacts"));
-template_files('manage_contacts.html');
+template_files('account_report.html');
 display_it();
 ?>
