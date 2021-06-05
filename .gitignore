@@ -8,6 +8,8 @@ styles/cb_27/
 styles/helloWorld/
 styles/vod/
 
+includes/dbconnect.php
+
 api/
 
 LICENSE
