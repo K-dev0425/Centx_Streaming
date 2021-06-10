@@ -6,10 +6,10 @@
 </style>
 
 {$myAccountLinks = $userquery->my_account_links()}
-<div class="container manage-page marginBottom">
+<div class="container manage-page mb-30">
 
   {if $mode=='profile_settings' || $mode=='account_settings'}
-  <div class="cb-box row">
+  <div class="cb-box row br-10">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 hidden-xs">
       {include file="$style_dir/blocks/manage/userMenuLeft.html"}
     </div>
@@ -171,7 +171,7 @@
 
   {/if}
   {if $mode == "change_cover"}
-  <div class="row cb-box">
+  <div class="row cb-box br-10">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 hidden-xs">
       {include file="$style_dir/blocks/manage/userMenuLeft.html"}
     </div>
@@ -233,7 +233,7 @@
     </div>
   </div>
   {else if $mode != 'profile_settings' && $mode != 'account_settings'}
-  <div class="cb-box row">
+  <div class="cb-box row br-10">
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 hidden-xs">
       {include file="$style_dir/blocks/manage/userMenuLeft.html"}
     </div>

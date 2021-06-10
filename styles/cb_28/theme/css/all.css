@@ -4855,7 +4855,7 @@ textarea#comment_box {
   animation: bounce 800ms ease-out; }
 
 #footer {
-  position: absolute;
+  position: fixed;
   width: 100%;
   bottom: 0;
   background: #2979ec;
@@ -5740,7 +5740,7 @@ textarea#comment_box {
     top: 10px;
   }
   #footer {
-    position: absolute;
+    position: fixed;
     bottom: 64px;
   }
   #forgot_password {
@@ -5859,3 +5859,49 @@ textarea#comment_box {
   /*z-index: 9999!important;*/
   /*opacity: 1!important;*/
 /*}*/
+.mb-30 {
+  margin-bottom: 30px;
+}
+.mt-30 {
+  margin-top: 30px;
+}
+.mb-20 {
+  margin-bottom: 20px;
+}
+.mt-20 {
+  margin-top: 20px;
+}
+.mb-15 {
+  margin-bottom: 15px;
+}
+.mt-15 {
+  margin-top: 15px;
+}
+.mb-10 {
+  margin-bottom: 10px;
+}
+.mt-10 {
+  margin-top: 10px;
+}
+.br-10 {
+  border-radius: 10px;
+}
+.text-bold {
+  font-weight: bold;
+  font-family: "source_sans_probold", sans-serif;
+}
+.ft-12 {
+  font-size: 12px;
+}
+.ft-15 {
+  font-size: 15px;
+}
+.ft-18 {
+  font-size: 18px;
+}
+.ft-20 {
+  font-size: 20px;
+}
+.pd-5 {
+  padding: 5px;
+}

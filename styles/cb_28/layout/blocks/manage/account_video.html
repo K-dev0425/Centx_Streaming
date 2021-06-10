@@ -17,20 +17,21 @@
 					$video.duration>1}{$video.duration|SetTime}{else}00:00{/if})</span>
 				</a>
 			</div>
-			<div class="col-md-9">
-				<a href="edit_video.php?vid={$video.videoid}">{$video.title|truncate:80}</a>
+			<div class="col-md-9 text-left video_content">
+				<a href="edit_video.php?vid={$video.videoid}" style="color: #337ab7">{$video.title|truncate:80}</a>
 				<br>
 				<span class="maccountlabels">
-					<strong>{$video.date_added|niceTime}</strong>
-					{lang code='views'} : <strong>{$video.views|number_format}</strong>
+					<strong>{$video.date_added|niceTime}</strong> <br>
+					{lang code='views'} : <strong>{$video.views|number_format}</strong> <br>
+					<!--<strong>fdfdfdf</strong>-->
 				</span>
-				<div class="labels">
-					{if $video.featured=='yes'}
-					<span class="label label-primary">Featured{else}{/if}</span>
-					<span class="label {if $video.active=='yes'}label-success{else}label-warning{/if} mlabel">{if $video.active=='yes'}{lang code='active'}{else}{lang code='inactive'}{/if}</span>
-					<span class="label {if $video.status=='Successful'}label-success{else}label-warning{/if}">{if $video.status=='Successful'}{lang code='successful'}{else}{lang code='processing'}{/if}</span>
-					<span class="label label-info">{lang code='viewed'} {$video.last_viewed|niceTime}</span>
-				</div>
+				<!--<div class="labels">-->
+					<!--{if $video.featured=='yes'}-->
+					<!--<span class="label label-primary">Featured{else}{/if}</span>-->
+					<!--<span class="label {if $video.active=='yes'}label-success{else}label-warning{/if} mlabel">{if $video.active=='yes'}{lang code='active'}{else}{lang code='inactive'}{/if}</span>-->
+					<!--<span class="label {if $video.status=='Successful'}label-success{else}label-warning{/if}">{if $video.status=='Successful'}{lang code='successful'}{else}{lang code='processing'}{/if}</span>-->
+					<!--<span class="label label-info">{lang code='viewed'} {$video.last_viewed|niceTime}</span>-->
+				<!--</div>-->
 			</div>
 		</td>
 

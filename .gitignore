@@ -10,6 +10,8 @@ styles/vod/
 
 includes/dbconnect.php
 
+files/logs
+
 api/
 
 LICENSE

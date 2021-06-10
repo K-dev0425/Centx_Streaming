@@ -45,7 +45,7 @@ $vdetails = $cbvid->get_video_details($vid);
 if($vdetails['userid'] != userid())
 {
 	e(lang('no_edit_video'));
-	$Cbucket->show_page = false;
+	->show_page = false;
 }else{
 	
 	//Updating Video Details
