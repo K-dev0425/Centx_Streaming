@@ -60,7 +60,235 @@
                     </table>
                     {include file="$style_dir/blocks/pagination.html"}
                 </div>
+                <div class="mb-15 top_video_earner text-center">
+                    <p class="ft-18">Top videos for earnings(Up to 10)</p>
+                    <table class="table table-bordered table-striped manageUsersTable">
+                        <tr>
+                            <td><i class="icon-facetime-video"></i> Videos Details</td>
+                            {*<td>&nbsp;</td>*}
+                            <td class="text-center">Option</td>
+                        </tr>
+                        {section name=uvid loop=$top_10_earn_videos}
+                        {include file="$style_dir/blocks/manage/account_video.html" video=$top_10_earn_videos[uvid] control='full' bg=$bg}
+                        {sectionelse}
+                        <div><strong><em>{lang code="you_dont_have_videos"}</em></strong></div>
+                        {/section}
+                    </table>
+                    {include file="$style_dir/blocks/pagination.html"}
+                </div>
+
+                <div class="mb-15 graph_section">
+                    <p class="ft-20 full-width text-center">Graph Area</p>
+                    <select name="chart_period" id="chart_period">
+                        <option value="total">Total</option>
+                        <option value="today">Today</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                        <option value="year">Year</option>
+                    </select>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="earningChart" class="chart_statistics chart_earning" style="width: 90%; height: 350px; background-color: #FFFFFF;" ></div>
+                            <div id="totalSecondChart" class="chart_statistics chart_earning" style="width: 90%; height: 350px; background-color: #FFFFFF;" ></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="subscribeChart" class="chart_statistics chart_earning" style="width: 90%; height: 350px; background-color: #FFFFFF;" ></div>
+                            <div id="viewChart" class="chart_statistics chart_earning" style="width: 90%; height: 350px; background-color: #FFFFFF;" ></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
+
+<script type="text/javascript">
+    function draw_chart(period, made, spent, subscribers, second_content, second_ad) {
+        AmCharts.makeChart("earningChart",
+            {
+                "type": "serial",
+                "pathToImages": "https://www.amcharts.com/lib/3/images/",
+                "categoryField": "category",
+                "startDuration": 1,
+                "mouseWheelZoomEnabled": false,
+                "startEffect": "easeOutSine",
+                "autoDisplay": true,
+                "theme": "light",
+                "categoryAxis": {
+                    "gridPosition": "start"
+                },
+                "trendLines": [],
+                "graphs": [
+                    {
+                        "colorField": "color",
+                        "fillAlphas": 1,
+                        "id": "AmGraph-1",
+                        "lineColorField": "color",
+                        "title": "graph 1",
+                        "type": "column",
+                        "valueField": "column-1"
+                    }
+                ],
+                "guides": [],
+                "valueAxes": [
+                    {
+                        "id": "ValueAxis-1",
+                        "title": period
+                    }
+                ],
+                "allLabels": [],
+                "balloon": {},
+                "titles": [
+                    {
+                        "bold": false,
+                        "id": "earning_graph_title",
+                        "size": 15,
+                        "text": "Earning"
+                    }
+                ],
+                "dataProvider": [
+                    {
+                        "category": "Made",
+                        "column-1": made,
+                    },
+                    {
+                        "category": "Spent",
+                        "column-1": spent
+                    }
+                ]
+            }
+        );
+
+        AmCharts.makeChart("subscribeChart",
+            {
+                "type": "serial",
+                "pathToImages": "https://www.amcharts.com/lib/3/images/",
+                "categoryField": "category",
+                "startDuration": 1,
+                "mouseWheelZoomEnabled": false,
+                "startEffect": "easeOutSine",
+                "autoDisplay": true,
+                "theme": "light",
+                "categoryAxis": {
+                    "gridPosition": "start"
+                },
+                "trendLines": [],
+                "graphs": [
+                    {
+                        "colorField": "color",
+                        "fillAlphas": 1,
+                        "id": "AmGraph-1",
+                        "lineColorField": "color",
+                        "title": "graph 1",
+                        "type": "column",
+                        "valueField": "column-1"
+                    }
+                ],
+                "guides": [],
+                "valueAxes": [
+                    {
+                        "id": "ValueAxis-1",
+                        "title": "Subscribers",
+                        "integersOnly": true
+                    }
+                ],
+                "allLabels": [],
+                "balloon": {},
+                "titles": [
+                    {
+                        "bold": false,
+                        "id": "earning_graph_title",
+                        "size": 15,
+                        "text": "Subscribers"
+                    }
+                ],
+                "dataProvider": [
+                    {
+                        "category": "Subscribers",
+                        "column-1": subscribers
+                    }
+                ]
+            }
+        );
+
+        AmCharts.makeChart("totalSecondChart",
+            {
+                "type": "serial",
+                "pathToImages": "https://www.amcharts.com/lib/3/images/",
+                "categoryField": "category",
+                "startDuration": 1,
+                "mouseWheelZoomEnabled": false,
+                "startEffect": "easeOutSine",
+                "autoDisplay": true,
+                "theme": "light",
+                "categoryAxis": {
+                    "gridPosition": "start"
+                },
+                "trendLines": [],
+                "graphs": [
+                    {
+                        "colorField": "color",
+                        "fillAlphas": 1,
+                        "id": "AmGraph-1",
+                        "lineColorField": "color",
+                        "title": "graph 1",
+                        "type": "column",
+                        "valueField": "column-1"
+                    }
+                ],
+                "guides": [],
+                "valueAxes": [
+                    {
+                        "id": "ValueAxis-1",
+                        "title": "Total",
+                    }
+                ],
+                "allLabels": [],
+                "balloon": {},
+                "titles": [
+                    {
+                        "bold": false,
+                        "id": "earning_graph_title",
+                        "size": 15,
+                        "text": "Seconds Played"
+                    }
+                ],
+                "dataProvider": [
+                    {
+                        "category": "Content",
+                        "column-1": second_content
+                    },
+                    {
+                        "category": "Ad",
+                        "column-1": second_ad
+                    }
+                ]
+            }
+        );
+    }
+
+    var total_spent = '{$total_spent}';
+    console.log('spent', total_spent);
+</script>
+
+<script>
+    $(document).ready(function () {
+        draw_chart('Total', '{$total_made}', '{$total_spent}', '{$subscribers_total}', '{$total_seconds_content}', '{$total_seconds_ad}');
+
+        $('#chart_period').on('change', function () {
+            var chart_period = $(this).val();
+            $.ajax({
+                url: '/account_report.php',
+                type: 'post',
+                data: {
+                    chart_period: chart_period
+                },
+                success: function (result) {
+                    var data = JSON.parse(result);
+                    console.log('data', data);
+                    draw_chart(chart_period, data.total_made_period, data.total_spent_period, data.subscribers, data.total_seconds_content_period, data.total_seconds_ad_period);
+                }
+            })
+        })
+    })
+</script>

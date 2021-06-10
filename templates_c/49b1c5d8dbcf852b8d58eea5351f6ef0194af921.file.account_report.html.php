@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-06-10 00:32:57
+<?php /* Smarty version Smarty-3.1.15, created on 2021-06-10 16:23:34
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/account_report.html" */ ?>
 <?php /*%%SmartyHeaderCode:131347944660bc4943f0af59-63496901%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '49b1c5d8dbcf852b8d58eea5351f6ef0194af921' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/account_report.html',
-      1 => 1623285177,
+      1 => 1623342213,
       2 => 'file',
     ),
   ),
@@ -32,6 +32,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'subscribers_year' => 0,
     'top_10_views_videos' => 0,
     'bg' => 0,
+    'top_10_earn_videos' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
@@ -136,8 +137,267 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['last']       = ($_sm
                     <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['style_dir']->value)."/blocks/pagination.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
                 </div>
+                <div class="mb-15 top_video_earner text-center">
+                    <p class="ft-18">Top videos for earnings(Up to 10)</p>
+                    <table class="table table-bordered table-striped manageUsersTable">
+                        <tr>
+                            <td><i class="icon-facetime-video"></i> Videos Details</td>
+                            
+                            <td class="text-center">Option</td>
+                        </tr>
+                        <?php if (isset($_smarty_tpl->tpl_vars['smarty']->value['section']['uvid'])) unset($_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['name'] = 'uvid';
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['loop'] = is_array($_loop=$_smarty_tpl->tpl_vars['top_10_earn_videos']->value) ? count($_loop) : max(0, (int) $_loop); unset($_loop);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['show'] = true;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['max'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['loop'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['step'] = 1;
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['start'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['step'] > 0 ? 0 : $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['loop']-1;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['show']) {
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['total'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['loop'];
+    if ($_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['total'] == 0)
+        $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['show'] = false;
+} else
+    $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['total'] = 0;
+if ($_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['show']):
+
+            for ($_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['index'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['start'], $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['iteration'] = 1;
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['iteration'] <= $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['total'];
+                 $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['index'] += $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['step'], $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['iteration']++):
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['rownum'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['iteration'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['index_prev'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['index'] - $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['index_next'] = $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['index'] + $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['step'];
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['first']      = ($_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['iteration'] == 1);
+$_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['last']       = ($_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['iteration'] == $_smarty_tpl->tpl_vars['smarty']->value['section']['uvid']['total']);
+?>
+                        <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['style_dir']->value)."/blocks/manage/account_video.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array('video'=>$_smarty_tpl->tpl_vars['top_10_earn_videos']->value[$_smarty_tpl->getVariable('smarty')->value['section']['uvid']['index']],'control'=>'full','bg'=>$_smarty_tpl->tpl_vars['bg']->value), 0);?>
+
+                        <?php endfor; else: ?>
+                        <div><strong><em><?php echo smarty_lang(array('code'=>"you_dont_have_videos"),$_smarty_tpl);?>
+</em></strong></div>
+                        <?php endif; ?>
+                    </table>
+                    <?php echo $_smarty_tpl->getSubTemplate (((string)$_smarty_tpl->tpl_vars['style_dir']->value)."/blocks/pagination.html", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
+                </div>
+
+                <div class="mb-15 graph_section">
+                    <p class="ft-20 full-width text-center">Graph Area</p>
+                    <select name="chart_period" id="chart_period">
+                        <option value="total">Total</option>
+                        <option value="today">Today</option>
+                        <option value="week">Week</option>
+                        <option value="month">Month</option>
+                        <option value="year">Year</option>
+                    </select>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div id="earningChart" class="chart_statistics chart_earning" style="width: 90%; height: 350px; background-color: #FFFFFF;" ></div>
+                            <div id="totalSecondChart" class="chart_statistics chart_earning" style="width: 90%; height: 350px; background-color: #FFFFFF;" ></div>
+                        </div>
+                        <div class="col-md-6">
+                            <div id="subscribeChart" class="chart_statistics chart_earning" style="width: 90%; height: 350px; background-color: #FFFFFF;" ></div>
+                            <div id="viewChart" class="chart_statistics chart_earning" style="width: 90%; height: 350px; background-color: #FFFFFF;" ></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-<?php }} ?>
+
+<script type="text/javascript">
+    function draw_chart(period, made, spent, subscribers, second_content, second_ad) {
+        AmCharts.makeChart("earningChart",
+            {
+                "type": "serial",
+                "pathToImages": "https://www.amcharts.com/lib/3/images/",
+                "categoryField": "category",
+                "startDuration": 1,
+                "mouseWheelZoomEnabled": false,
+                "startEffect": "easeOutSine",
+                "autoDisplay": true,
+                "theme": "light",
+                "categoryAxis": {
+                    "gridPosition": "start"
+                },
+                "trendLines": [],
+                "graphs": [
+                    {
+                        "colorField": "color",
+                        "fillAlphas": 1,
+                        "id": "AmGraph-1",
+                        "lineColorField": "color",
+                        "title": "graph 1",
+                        "type": "column",
+                        "valueField": "column-1"
+                    }
+                ],
+                "guides": [],
+                "valueAxes": [
+                    {
+                        "id": "ValueAxis-1",
+                        "title": period
+                    }
+                ],
+                "allLabels": [],
+                "balloon": {},
+                "titles": [
+                    {
+                        "bold": false,
+                        "id": "earning_graph_title",
+                        "size": 15,
+                        "text": "Earning"
+                    }
+                ],
+                "dataProvider": [
+                    {
+                        "category": "Made",
+                        "column-1": made,
+                    },
+                    {
+                        "category": "Spent",
+                        "column-1": spent
+                    }
+                ]
+            }
+        );
+
+        AmCharts.makeChart("subscribeChart",
+            {
+                "type": "serial",
+                "pathToImages": "https://www.amcharts.com/lib/3/images/",
+                "categoryField": "category",
+                "startDuration": 1,
+                "mouseWheelZoomEnabled": false,
+                "startEffect": "easeOutSine",
+                "autoDisplay": true,
+                "theme": "light",
+                "categoryAxis": {
+                    "gridPosition": "start"
+                },
+                "trendLines": [],
+                "graphs": [
+                    {
+                        "colorField": "color",
+                        "fillAlphas": 1,
+                        "id": "AmGraph-1",
+                        "lineColorField": "color",
+                        "title": "graph 1",
+                        "type": "column",
+                        "valueField": "column-1"
+                    }
+                ],
+                "guides": [],
+                "valueAxes": [
+                    {
+                        "id": "ValueAxis-1",
+                        "title": "Subscribers",
+                        "integersOnly": true
+                    }
+                ],
+                "allLabels": [],
+                "balloon": {},
+                "titles": [
+                    {
+                        "bold": false,
+                        "id": "earning_graph_title",
+                        "size": 15,
+                        "text": "Subscribers"
+                    }
+                ],
+                "dataProvider": [
+                    {
+                        "category": "Subscribers",
+                        "column-1": subscribers
+                    }
+                ]
+            }
+        );
+
+        AmCharts.makeChart("totalSecondChart",
+            {
+                "type": "serial",
+                "pathToImages": "https://www.amcharts.com/lib/3/images/",
+                "categoryField": "category",
+                "startDuration": 1,
+                "mouseWheelZoomEnabled": false,
+                "startEffect": "easeOutSine",
+                "autoDisplay": true,
+                "theme": "light",
+                "categoryAxis": {
+                    "gridPosition": "start"
+                },
+                "trendLines": [],
+                "graphs": [
+                    {
+                        "colorField": "color",
+                        "fillAlphas": 1,
+                        "id": "AmGraph-1",
+                        "lineColorField": "color",
+                        "title": "graph 1",
+                        "type": "column",
+                        "valueField": "column-1"
+                    }
+                ],
+                "guides": [],
+                "valueAxes": [
+                    {
+                        "id": "ValueAxis-1",
+                        "title": "Total",
+                    }
+                ],
+                "allLabels": [],
+                "balloon": {},
+                "titles": [
+                    {
+                        "bold": false,
+                        "id": "earning_graph_title",
+                        "size": 15,
+                        "text": "Seconds Played"
+                    }
+                ],
+                "dataProvider": [
+                    {
+                        "category": "Content",
+                        "column-1": second_content
+                    },
+                    {
+                        "category": "Ad",
+                        "column-1": second_ad
+                    }
+                ]
+            }
+        );
+    }
+
+    var total_spent = '<?php echo $_smarty_tpl->tpl_vars['total_spent']->value;?>
+';
+    console.log('spent', total_spent);
+</script>
+
+<script>
+    $(document).ready(function () {
+        draw_chart('Total', '<?php echo $_smarty_tpl->tpl_vars['total_made']->value;?>
+', '<?php echo $_smarty_tpl->tpl_vars['total_spent']->value;?>
+', '<?php echo $_smarty_tpl->tpl_vars['subscribers_total']->value;?>
+', '<?php echo $_smarty_tpl->tpl_vars['total_seconds_content']->value;?>
+', '<?php echo $_smarty_tpl->tpl_vars['total_seconds_ad']->value;?>
+');
+
+        $('#chart_period').on('change', function () {
+            var chart_period = $(this).val();
+            $.ajax({
+                url: '/account_report.php',
+                type: 'post',
+                data: {
+                    chart_period: chart_period
+                },
+                success: function (result) {
+                    var data = JSON.parse(result);
+                    console.log('data', data);
+                    draw_chart(chart_period, data.total_made_period, data.total_spent_period, data.subscribers, data.total_seconds_content_period, data.total_seconds_ad_period);
+                }
+            })
+        })
+    })
+</script><?php }} ?>

@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-06-06 02:46:44
+<?php /* Smarty version Smarty-3.1.15, created on 2021-06-10 12:36:05
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/global_header.html" */ ?>
 <?php /*%%SmartyHeaderCode:152047225760bc37144b6167-61308598%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '05d5b5ec37664c531a69ffbd3f91e6f288a85ba0' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/global_header.html',
-      1 => 1622800582,
+      1 => 1623328564,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_60bc371451e7b6_03948168',
   'variables' => 
   array (
     'Cbucket' => 0,
@@ -32,8 +34,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'file' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_60bc371451e7b6_03948168',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_60bc371451e7b6_03948168')) {function content_60bc371451e7b6_03948168($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_date_format')) include '/Applications/MAMP/htdocs/centx/centx/includes/smartyv3/plugins/modifier.date_format.php';
 ?><!DOCTYPE HTML>
@@ -153,7 +153,20 @@ $_smarty_tpl->tpl_vars['cache_buster']->value = $_smarty_tpl->tpl_vars['Cbucket'
 		<script src="<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
 /js/uslider_js/jquery.mousewheel.js"></script>
 		<script async src='https://www.google.com/recaptcha/api.js'></script>
-		
+
+		<script src="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
+/admin_area/styles/cb_2014/theme/js/jquery.amcharts.js" type="text/javascript"></script>
+		<script src="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
+/admin_area/styles/cb_2014/theme/js/jquery.pie.js" type="text/javascript"></script>
+		<script src="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
+/admin_area/styles/cb_2014/theme/js/jquery.light.js" type="text/javascript"></script>
+		<script src="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
+/admin_area/styles/cb_2014/theme/js/jquery.serial.js" type="text/javascript"></script>
+		<script src="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
+/admin_area/styles/cb_2014/theme/js/jquery.bootstrap.newsbox.js" type="text/javascript"></script>
+		<script src="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
+/admin_area/styles/cb_2014/theme/js/jquery.bootstrap.newsbox.min.js" type="text/javascript"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js"></script>
 
 		<!-- Script For Home Page Videos Slider //-->
 

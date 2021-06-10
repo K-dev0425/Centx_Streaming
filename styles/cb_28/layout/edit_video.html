@@ -249,12 +249,14 @@
 		    var diff = parseFloat(limit_price) - parseFloat(new_limit_price);
 		    diff = diff.toFixed(2);
 		    var video_id = '{$v.videoid}';
+		    var video_userid = '{$v.userid}';
 			$.ajax({
 				url: baseurl + '/edit_video.php',
 				type: 'post',
 				data: {
 				    diff: diff,
 					video_id: video_id,
+					video_userid: video_userid
 				},
 				success: function (msg) {
 					console.log(msg);

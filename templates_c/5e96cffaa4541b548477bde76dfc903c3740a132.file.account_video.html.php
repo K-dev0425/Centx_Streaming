@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-06-10 00:29:48
+<?php /* Smarty version Smarty-3.1.15, created on 2021-06-10 02:39:42
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/blocks/manage/account_video.html" */ ?>
 <?php /*%%SmartyHeaderCode:106595367260be969a8aad73-40913343%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '5e96cffaa4541b548477bde76dfc903c3740a132' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/blocks/manage/account_video.html',
-      1 => 1623284987,
+      1 => 1623292782,
       2 => 'file',
     ),
   ),
@@ -46,17 +46,17 @@ $_smarty_tpl->tpl_vars['mode']->value = 'favorites'; $_smarty_tpl->tpl_vars['mod
 <?php if ($_smarty_tpl->tpl_vars['control']->value=='full') {?>
 <tr>
 	<td>
-		<div class="col-md-3">
+		<div class="col-md-3 text-center">
 			<a class="manageVid_thumb" href="edit_video.php?vid=<?php echo $_smarty_tpl->tpl_vars['video']->value['videoid'];?>
 ">
 				<?php if ($_smarty_tpl->tpl_vars['video']->value['background_image']!='') {?>
 				<img src="<?php echo $_smarty_tpl->tpl_vars['video']->value['background_image'];?>
-" class="img-responsive audio_image" width="130" height="80" id="thumbs_<?php echo $_smarty_tpl->tpl_vars['video']->value['videoid'];?>
-" class="vthumb" title="" onload="set_image_ratio(this)" onresize="set_image_ratio(this)" />
+" class="img-responsive audio_image" width="130" height="80" style="max-width: 130px; max-height: 80px" id="thumbs_<?php echo $_smarty_tpl->tpl_vars['video']->value['videoid'];?>
+" title="" onload="set_image_ratio(this)" onresize="set_image_ratio(this)" />
 				<?php } else { ?>
 				<img src="<?php echo getSmartyThumb(array('vdetails'=>$_smarty_tpl->tpl_vars['video']->value),$_smarty_tpl);?>
-" class="img-responsive" width="130" height="80" id="thumbs_<?php echo $_smarty_tpl->tpl_vars['video']->value['videoid'];?>
-" class="vthumb" title=""/>
+" class="img-responsive" width="130" height="80" style="max-width: 130px; max-height: 80px" id="thumbs_<?php echo $_smarty_tpl->tpl_vars['video']->value['videoid'];?>
+" title=""/>
 				<?php }?>
 				<span class="duration">(<?php if ($_smarty_tpl->tpl_vars['video']->value['duration']>1) {?><?php echo SetTime($_smarty_tpl->tpl_vars['video']->value['duration']);?>
 <?php } else { ?>00:00<?php }?>)</span>
@@ -73,7 +73,15 @@ $_smarty_tpl->tpl_vars['mode']->value = 'favorites'; $_smarty_tpl->tpl_vars['mod
 					<?php echo smarty_lang(array('code'=>'views'),$_smarty_tpl);?>
  : <strong><?php echo number_format($_smarty_tpl->tpl_vars['video']->value['views']);?>
 </strong> <br>
-					<!--<strong>fdfdfdf</strong>-->
+					<?php if ($_smarty_tpl->tpl_vars['video']->value['pay_type']=='video') {?>
+					<?php echo smarty_lang(array('code'=>'total_earned'),$_smarty_tpl);?>
+ : <strong>$<?php echo $_smarty_tpl->tpl_vars['video']->value['total_money'];?>
+ USD</strong>
+					<?php } else { ?>
+					<?php echo smarty_lang(array('code'=>'total_spent'),$_smarty_tpl);?>
+ : <strong>$<?php echo $_smarty_tpl->tpl_vars['video']->value['total_money'];?>
+ USD</strong>
+					<?php }?>
 				</span>
 				<!--<div class="labels">-->
 					<!--<?php if ($_smarty_tpl->tpl_vars['video']->value['featured']=='yes') {?>-->

@@ -5832,6 +5832,12 @@ textarea#comment_box {
   margin-bottom: 15px;
 }
 
+@media (max-width: 1200px) {
+  .manageUsersTable .video_content {
+    text-align: center;
+  }
+}
+
 @media (max-width: 1050px) {
   #map_modal .modal-body {
     max-width: 100%;
@@ -5848,6 +5854,7 @@ textarea#comment_box {
   #content_sponsor_ads {
     display: block;
   }
+
 }
 .video-info-container li .added {
   z-index: 1!important;
@@ -5904,4 +5911,8 @@ textarea#comment_box {
 }
 .pd-5 {
   padding: 5px;
+}
+.manageVid_thumb {
+  width: fit-content;
+  margin: auto;
 }

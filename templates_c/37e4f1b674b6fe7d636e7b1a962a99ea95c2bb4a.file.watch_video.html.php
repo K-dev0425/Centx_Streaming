@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-06-06 04:15:08
+<?php /* Smarty version Smarty-3.1.15, created on 2021-06-10 02:17:36
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/watch_video.html" */ ?>
 <?php /*%%SmartyHeaderCode:203724909360bc4bcc7a2ae4-14264906%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '37e4f1b674b6fe7d636e7b1a962a99ea95c2bb4a' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/watch_video.html',
-      1 => 1622800578,
+      1 => 1623291454,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_60bc4bcc92d691_87247680',
   'variables' => 
   array (
     'vdo' => 0,
@@ -51,8 +53,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'object_type' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_60bc4bcc92d691_87247680',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_60bc4bcc92d691_87247680')) {function content_60bc4bcc92d691_87247680($_smarty_tpl) {?><?php if (isset($_smarty_tpl->tpl_vars['video'])) {$_smarty_tpl->tpl_vars['video'] = clone $_smarty_tpl->tpl_vars['video'];
 $_smarty_tpl->tpl_vars['video']->value = $_smarty_tpl->tpl_vars['vdo']->value; $_smarty_tpl->tpl_vars['video']->nocache = null; $_smarty_tpl->tpl_vars['video']->scope = 0;
@@ -870,6 +870,8 @@ s</span></div><div>Balance: $<span id="balance"><?php if (userid()) {?><?php ech
                     videoId: '<?php echo $_smarty_tpl->tpl_vars['video']->value['videoid'];?>
 ',
 					videoOwnerId: '<?php echo $_smarty_tpl->tpl_vars['video']->value['userid'];?>
+',
+					videoTotalMoney: '<?php echo $_smarty_tpl->tpl_vars['video']->value['total_money'];?>
 ',
 					username: '<?php echo $_smarty_tpl->tpl_vars['user_det']->value['username'];?>
 ',

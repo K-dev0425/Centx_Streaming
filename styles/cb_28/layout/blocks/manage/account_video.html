@@ -6,12 +6,12 @@
 {if $control =='full'}
 <tr>
 	<td>
-		<div class="col-md-3">
+		<div class="col-md-3 text-center">
 			<a class="manageVid_thumb" href="edit_video.php?vid={$video.videoid}">
 				{if $video.background_image != ''}
-				<img src="{$video.background_image}" class="img-responsive audio_image" width="130" height="80" id="thumbs_{$video.videoid}" class="vthumb" title="" onload="set_image_ratio(this)" onresize="set_image_ratio(this)" />
+				<img src="{$video.background_image}" class="img-responsive audio_image" width="130" height="80" style="max-width: 130px; max-height: 80px" id="thumbs_{$video.videoid}" title="" onload="set_image_ratio(this)" onresize="set_image_ratio(this)" />
 				{else}
-				<img src="{getThumb vdetails=$video}" class="img-responsive" width="130" height="80" id="thumbs_{$video.videoid}" class="vthumb" title=""/>
+				<img src="{getThumb vdetails=$video}" class="img-responsive" width="130" height="80" style="max-width: 130px; max-height: 80px" id="thumbs_{$video.videoid}" title=""/>
 				{/if}
 				<span class="duration">({if
 					$video.duration>1}{$video.duration|SetTime}{else}00:00{/if})</span>
@@ -23,7 +23,11 @@
 				<span class="maccountlabels">
 					<strong>{$video.date_added|niceTime}</strong> <br>
 					{lang code='views'} : <strong>{$video.views|number_format}</strong> <br>
-					<!--<strong>fdfdfdf</strong>-->
+					{if $video.pay_type == 'video'}
+					{lang code='total_earned'} : <strong>${$video.total_money} USD</strong>
+					{else}
+					{lang code='total_spent'} : <strong>${$video.total_money} USD</strong>
+					{/if}
 				</span>
 				<!--<div class="labels">-->
 					<!--{if $video.featured=='yes'}-->

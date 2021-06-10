@@ -21,6 +21,7 @@ if (isset($_POST['diff'])) {
     $diff = $_POST['diff'];
     $diff = number_format((float)$diff, 2);
     $video_id = $_POST['video_id'];
+    $video_userid = $_POST['video_userid'];
     $balance = $udetails['balance'];
     $new_balance = (float)$diff + (float)$balance;
     $new_balance = number_format($new_balance, 2);
@@ -29,7 +30,7 @@ if (isset($_POST['diff'])) {
     $balance_query = "UPDATE " . tbl("users") . " SET balance = " . $new_balance . " WHERE userid = " . (int)userid();
     $db -> Execute($balance_query);
 
-    $transfer_query = "INSERT INTO " . tbl("transfer") . " (userid, username, user_type, videoid, amount, balance, transfer_type) VALUES(". (int)userid() .", '". $username ."', 'uploader', ". (int)$video_id .", ". abs($diff) .", ". $new_balance .", 'reduce_ad')";
+    $transfer_query = "INSERT INTO " . tbl("transfer") . " (userid, username, user_type, videoid, video_userid, amount, balance, transfer_type) VALUES(". (int)userid() .", '". $username ."', 'uploader', ". (int)$video_id .", ". (int)$video_userid .", ". abs($diff) .", ". $new_balance .", 'reduce_ad')";
     $db -> Execute($transfer_query);
 
     echo $transfer_query;
