@@ -1016,10 +1016,11 @@ class FFMpeg{
                         }
 
                     }catch(Exception $e){
-                        $this->TemplogData .= "\r\n Errot Occured : ".$e->getMessage()."\r\n";
+                        $this->TemplogData .= "\r\n Error Occured : ".$e->getMessage()."\r\n";
                     }
                     $this->TemplogData .= "\r\n ====== End : Thumbs Generation ======= \r\n";
-                    $this->log->writeLine("Thumbs Files ____ " . $this->input_file . " Resolutions: " . $this->configs['cb_combo_res'], $this->input_file, true );
+//                    $this->log->writeLine("Thumbs Files ____ " . $this->input_file . " Resolutions: " . $this->configs['cb_combo_res'], $this->input_file, true );
+                    $this->log->writeLine("Thumbs Files ____ " . $this->TemplogData, true );
 
                 }
 //                UPDATED BY RICKY TEST

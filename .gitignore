@@ -9,6 +9,7 @@ styles/helloWorld/
 styles/vod/
 
 includes/dbconnect.php
+includes/common.php
 
 files/logs
 
