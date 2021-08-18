@@ -6,3 +6,13 @@
     border-color: transparent;
     background: #cc34cc;
 }
+#check_ads {
+    padding: 10px 25px 10px 15px;
+}
+#check_ads label:first-child {
+    font-size: 18px;
+    padding-left: 15px;
+}
+#check_ads label.inline {
+    float: right;
+}

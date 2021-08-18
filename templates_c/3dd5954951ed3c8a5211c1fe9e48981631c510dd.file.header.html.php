@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-08-18 09:25:01
+<?php /* Smarty version Smarty-3.1.15, created on 2021-08-18 22:17:27
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/header.html" */ ?>
 <?php /*%%SmartyHeaderCode:172151246160bc3714b15f00-61789001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3dd5954951ed3c8a5211c1fe9e48981631c510dd' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/header.html',
-      1 => 1629278700,
+      1 => 1629325042,
       2 => 'file',
     ),
   ),
@@ -561,7 +561,7 @@ withdraw_fund.php"><?php echo smarty_lang(array('code'=>"withdraw_funds"),$_smar
 	}
 	#check_ads label.inline {
 		position: relative;
-		top: -3px;
+		top: -2px;
 		z-index: 1!important;
 	}
 	span.total_price {
@@ -743,6 +743,14 @@ $_smarty_tpl->tpl_vars['menu']->_loop = true;
 <!--		</div>-->
 
 	</div>
+
+	<section class="clearfix" id="check_ads">
+		<label for="switch_ad">Show advertising</label>
+		<label class="inline">
+			<input type="checkbox" value="0" name="switch_ad" id="switch_ad" class="ace ace-switch ace-switch-5">
+			<span class="lbl"></span>
+		</label>
+	</section>
 </div>
 
 <script>

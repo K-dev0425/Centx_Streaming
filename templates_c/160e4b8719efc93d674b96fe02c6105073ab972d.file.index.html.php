@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-08-18 08:25:57
+<?php /* Smarty version Smarty-3.1.15, created on 2021-08-18 22:15:41
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/index.html" */ ?>
 <?php /*%%SmartyHeaderCode:48381357660bc4dd35ee3e9-19024861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '160e4b8719efc93d674b96fe02c6105073ab972d' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/index.html',
-      1 => 1629273263,
+      1 => 1629324934,
       2 => 'file',
     ),
   ),
@@ -52,17 +52,17 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 <?php if ($_valid && !is_callable('content_60bc4dd36ef275_20322892')) {function content_60bc4dd36ef275_20322892($_smarty_tpl) {?><?php echo smarty_lang(array('code'=>'no_featured_videos_found','assign'=>'no_found_fe'),$_smarty_tpl);?>
 
 <?php ob_start();?><?php echo smarty_lang(array('code'=>"no_featured_videos_found"),$_smarty_tpl);?>
-<?php $_tmp1=ob_get_clean();?><?php if (isset($_smarty_tpl->tpl_vars['vae'])) {$_smarty_tpl->tpl_vars['vae'] = clone $_smarty_tpl->tpl_vars['vae'];
-$_smarty_tpl->tpl_vars['vae']->value = $_tmp1; $_smarty_tpl->tpl_vars['vae']->nocache = null; $_smarty_tpl->tpl_vars['vae']->scope = 0;
-} else $_smarty_tpl->tpl_vars['vae'] = new Smarty_variable($_tmp1, null, 0);?>
+<?php $_tmp4=ob_get_clean();?><?php if (isset($_smarty_tpl->tpl_vars['vae'])) {$_smarty_tpl->tpl_vars['vae'] = clone $_smarty_tpl->tpl_vars['vae'];
+$_smarty_tpl->tpl_vars['vae']->value = $_tmp4; $_smarty_tpl->tpl_vars['vae']->nocache = null; $_smarty_tpl->tpl_vars['vae']->scope = 0;
+} else $_smarty_tpl->tpl_vars['vae'] = new Smarty_variable($_tmp4, null, 0);?>
 <?php ob_start();?><?php echo smarty_lang(array('code'=>"No available found"),$_smarty_tpl);?>
-<?php $_tmp2=ob_get_clean();?><?php if (isset($_smarty_tpl->tpl_vars['no_recent'])) {$_smarty_tpl->tpl_vars['no_recent'] = clone $_smarty_tpl->tpl_vars['no_recent'];
-$_smarty_tpl->tpl_vars['no_recent']->value = $_tmp2; $_smarty_tpl->tpl_vars['no_recent']->nocache = null; $_smarty_tpl->tpl_vars['no_recent']->scope = 0;
-} else $_smarty_tpl->tpl_vars['no_recent'] = new Smarty_variable($_tmp2, null, 0);?>
+<?php $_tmp5=ob_get_clean();?><?php if (isset($_smarty_tpl->tpl_vars['no_recent'])) {$_smarty_tpl->tpl_vars['no_recent'] = clone $_smarty_tpl->tpl_vars['no_recent'];
+$_smarty_tpl->tpl_vars['no_recent']->value = $_tmp5; $_smarty_tpl->tpl_vars['no_recent']->nocache = null; $_smarty_tpl->tpl_vars['no_recent']->scope = 0;
+} else $_smarty_tpl->tpl_vars['no_recent'] = new Smarty_variable($_tmp5, null, 0);?>
 <?php ob_start();?><?php echo smarty_lang(array('code'=>"load_more"),$_smarty_tpl);?>
-<?php $_tmp3=ob_get_clean();?><?php if (isset($_smarty_tpl->tpl_vars['loadMoreLang'])) {$_smarty_tpl->tpl_vars['loadMoreLang'] = clone $_smarty_tpl->tpl_vars['loadMoreLang'];
-$_smarty_tpl->tpl_vars['loadMoreLang']->value = $_tmp3; $_smarty_tpl->tpl_vars['loadMoreLang']->nocache = null; $_smarty_tpl->tpl_vars['loadMoreLang']->scope = 0;
-} else $_smarty_tpl->tpl_vars['loadMoreLang'] = new Smarty_variable($_tmp3, null, 0);?>
+<?php $_tmp6=ob_get_clean();?><?php if (isset($_smarty_tpl->tpl_vars['loadMoreLang'])) {$_smarty_tpl->tpl_vars['loadMoreLang'] = clone $_smarty_tpl->tpl_vars['loadMoreLang'];
+$_smarty_tpl->tpl_vars['loadMoreLang']->value = $_tmp6; $_smarty_tpl->tpl_vars['loadMoreLang']->nocache = null; $_smarty_tpl->tpl_vars['loadMoreLang']->scope = 0;
+} else $_smarty_tpl->tpl_vars['loadMoreLang'] = new Smarty_variable($_tmp6, null, 0);?>
 <?php echo ANCHOR(array('place'=>"display_head_sec"),$_smarty_tpl);?>
 
 <?php echo ANCHOR(array('place'=>"video_head_player"),$_smarty_tpl);?>
@@ -227,14 +227,6 @@ $_smarty_tpl->tpl_vars['smarty']->value['section']['e_list']['last']       = ($_
 			<!-- ******************************************* -->
 			<!-- ************ EDITORS BLOCK END ************ -->
 			<!-- ******************************************* -->
-
-			<section class="clearfix" id="check_ads">
-				<label for="switch_ad" style="font-size: 20px">Want to see advertising material(audio and video)?</label>
-				<label class="inline">
-					<input type="checkbox" value="0" name="switch_ad" id="switch_ad" class="ace ace-switch ace-switch-5">
-					<span class="lbl"></span>
-				</label>
-			</section>
 
 			<section class="clearfix featured-videos">
 				<h1><?php echo smarty_lang(array('code'=>"featured_videos"),$_smarty_tpl);?>
