@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-06-10 12:36:05
+<?php /* Smarty version Smarty-3.1.15, created on 2021-08-18 08:59:44
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/global_header.html" */ ?>
 <?php /*%%SmartyHeaderCode:152047225760bc37144b6167-61308598%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '05d5b5ec37664c531a69ffbd3f91e6f288a85ba0' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/global_header.html',
-      1 => 1623328564,
+      1 => 1629277183,
       2 => 'file',
     ),
   ),
@@ -114,6 +114,9 @@ $_smarty_tpl->tpl_vars['cache_buster']->value = $_smarty_tpl->tpl_vars['Cbucket'
 			<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['baseurl']->value;?>
 /styles/global/jquery_ui.min.css">
 		<?php }?>
+
+		<link rel="stylesheet" href="<?php echo $_smarty_tpl->tpl_vars['theme']->value;?>
+/css/custom.css">
 
 		<script>
 			var loadingImg = '<i class="glyphicon glyphicon-refresh animate-spin"></i>';

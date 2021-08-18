@@ -216,10 +216,10 @@
 
 								<!-- Shown to small devices only Start  @todo : Add condition for logged in user -->
 								<li class="navbar-sm-login-links">
-									<a class="btn btn-default btn-newacc" href="{link name='signup'}">{lang code='create_new_account'}</a>
+									<a class="btn btn-default btn-login" href="{link name='signup'}?mode=login">{lang code='login'}</a>
 								</li>
 								<li class="navbar-sm-login-links">
-									<a class="btn btn-default btn-login" href="{link name='signup'}?mode=login">{lang code='login'}</a>
+									<a class="btn btn-default btn-newacc" href="{link name='signup'}">{lang code='create_new_account'}</a>
 								</li>
 
 								<!-- Ends -->
@@ -539,18 +539,18 @@
 			{ANCHOR place="cb_28_head"}
 		</ul>
 
-		<hr>
+		<hr style="margin-top: 25px">
 
 		{if $user_det != ''}
 		<span class="balance_menu">Balance: ${number_format((float)($user_det.balance), 2)} USD</span><br><br><br>
 		{/if}
 
-		<div class="form-group">
-			<input type="radio" name="color_scheme" id="dark_theme" value="1" checked onchange="add_dark(this)">
-			<label for="dark_theme">{lang code="dark_theme"}</label><br>
-			<input type="radio" name="color_scheme" id="bright_theme" value="0" onchange="remove_dark(this)">
-			<label for="bright_theme">{lang code="light_theme"}</label>
-		</div>
+<!--		<div class="form-group">-->
+<!--			<input type="radio" name="color_scheme" id="dark_theme" value="1" checked onchange="add_dark(this)">-->
+<!--			<label for="dark_theme">{lang code="dark_theme"}</label><br>-->
+<!--			<input type="radio" name="color_scheme" id="bright_theme" value="0" onchange="remove_dark(this)">-->
+<!--			<label for="bright_theme">{lang code="light_theme"}</label>-->
+<!--		</div>-->
 
 	</div>
 </div>

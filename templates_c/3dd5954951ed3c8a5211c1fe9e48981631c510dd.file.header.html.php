@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-06-06 02:46:44
+<?php /* Smarty version Smarty-3.1.15, created on 2021-08-18 09:25:01
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/header.html" */ ?>
 <?php /*%%SmartyHeaderCode:172151246160bc3714b15f00-61789001%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '3dd5954951ed3c8a5211c1fe9e48981631c510dd' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/header.html',
-      1 => 1622800580,
+      1 => 1629278700,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_60bc3714c1bfe8_37651956',
   'variables' => 
   array (
     'currentPage' => 0,
@@ -35,8 +37,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'channelsMode' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_60bc3714c1bfe8_37651956',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_60bc3714c1bfe8_37651956')) {function content_60bc3714c1bfe8_37651956($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include '/Applications/MAMP/htdocs/centx/centx/includes/smartyv3/plugins/modifier.truncate.php';
 ?><?php if (isset($_smarty_tpl->tpl_vars['currentPage'])) {$_smarty_tpl->tpl_vars['currentPage'] = clone $_smarty_tpl->tpl_vars['currentPage'];
@@ -379,13 +379,13 @@ withdraw_fund.php"><?php echo smarty_lang(array('code'=>"withdraw_funds"),$_smar
 
 								<!-- Shown to small devices only Start  @todo : Add condition for logged in user -->
 								<li class="navbar-sm-login-links">
-									<a class="btn btn-default btn-newacc" href="<?php echo cblink(array('name'=>'signup'),$_smarty_tpl);?>
-"><?php echo smarty_lang(array('code'=>'create_new_account'),$_smarty_tpl);?>
+									<a class="btn btn-default btn-login" href="<?php echo cblink(array('name'=>'signup'),$_smarty_tpl);?>
+?mode=login"><?php echo smarty_lang(array('code'=>'login'),$_smarty_tpl);?>
 </a>
 								</li>
 								<li class="navbar-sm-login-links">
-									<a class="btn btn-default btn-login" href="<?php echo cblink(array('name'=>'signup'),$_smarty_tpl);?>
-?mode=login"><?php echo smarty_lang(array('code'=>'login'),$_smarty_tpl);?>
+									<a class="btn btn-default btn-newacc" href="<?php echo cblink(array('name'=>'signup'),$_smarty_tpl);?>
+"><?php echo smarty_lang(array('code'=>'create_new_account'),$_smarty_tpl);?>
 </a>
 								</li>
 
@@ -726,21 +726,21 @@ $_smarty_tpl->tpl_vars['menu']->_loop = true;
 
 		</ul>
 
-		<hr>
+		<hr style="margin-top: 25px">
 
 		<?php if ($_smarty_tpl->tpl_vars['user_det']->value!='') {?>
 		<span class="balance_menu">Balance: $<?php echo number_format((float)($_smarty_tpl->tpl_vars['user_det']->value['balance']),2);?>
  USD</span><br><br><br>
 		<?php }?>
 
-		<div class="form-group">
-			<input type="radio" name="color_scheme" id="dark_theme" value="1" checked onchange="add_dark(this)">
-			<label for="dark_theme"><?php echo smarty_lang(array('code'=>"dark_theme"),$_smarty_tpl);?>
-</label><br>
-			<input type="radio" name="color_scheme" id="bright_theme" value="0" onchange="remove_dark(this)">
-			<label for="bright_theme"><?php echo smarty_lang(array('code'=>"light_theme"),$_smarty_tpl);?>
-</label>
-		</div>
+<!--		<div class="form-group">-->
+<!--			<input type="radio" name="color_scheme" id="dark_theme" value="1" checked onchange="add_dark(this)">-->
+<!--			<label for="dark_theme"><?php echo smarty_lang(array('code'=>"dark_theme"),$_smarty_tpl);?>
+</label><br>-->
+<!--			<input type="radio" name="color_scheme" id="bright_theme" value="0" onchange="remove_dark(this)">-->
+<!--			<label for="bright_theme"><?php echo smarty_lang(array('code'=>"light_theme"),$_smarty_tpl);?>
+</label>-->
+<!--		</div>-->
 
 	</div>
 </div>

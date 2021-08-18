@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-08-18 07:44:42
+<?php /* Smarty version Smarty-3.1.15, created on 2021-08-18 08:25:57
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/index.html" */ ?>
 <?php /*%%SmartyHeaderCode:48381357660bc4dd35ee3e9-19024861%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '160e4b8719efc93d674b96fe02c6105073ab972d' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/index.html',
-      1 => 1629272681,
+      1 => 1629273263,
       2 => 'file',
     ),
   ),
@@ -124,7 +124,6 @@ $_smarty_tpl->tpl_vars['banner_text']->value = $_smarty_tpl->tpl_vars['Cbucket']
 					<h4>
 						<?php echo $_smarty_tpl->tpl_vars['banner_text']->value;?>
 
-						fdsafdf
 					</h4>
 				</div>
 			</div>
