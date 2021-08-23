@@ -88,21 +88,20 @@
 									{ANCHOR place="cb_28_head"}
 								</ul>
 
-								<hr>
-
 								{$user_det = $userquery->get_user_details(userid())}
 								{if $user_det != ''}
+								<hr>
 								<span class="balance_menu">Balance: ${number_format((float)($user_det.balance), 2)} USD</span><br><br><br>
 								{/if}
 
 								<br><br>
 
-								<div class="form-group">
-									<input type="radio" name="color_scheme" id="dark_theme" value="1" checked onchange="add_dark(this)">
-									<label for="dark_theme">{lang code="dark_theme"}</label><br>
-									<input type="radio" name="color_scheme" id="bright_theme" value="0" onchange="remove_dark(this)">
-									<label for="bright_theme">{lang code="light_theme"}</label>
-								</div>
+<!--								<div class="form-group">-->
+<!--									<input type="radio" name="color_scheme" id="dark_theme" value="1" checked onchange="add_dark(this)">-->
+<!--									<label for="dark_theme">{lang code="dark_theme"}</label><br>-->
+<!--									<input type="radio" name="color_scheme" id="bright_theme" value="0" onchange="remove_dark(this)">-->
+<!--									<label for="bright_theme">{lang code="light_theme"}</label>-->
+<!--								</div>-->
 
 								<!--<span id="balance_link"></span><br><br><br>-->
 

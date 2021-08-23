@@ -3990,7 +3990,10 @@ textarea#comment_box {
     display: none !important; }
 
   .navbar-collapse.collapse.in {
-    display: block !important; }
+    display: block !important;
+    padding: 25px 15px!important;
+    height: 100vh;
+  }
 
   .cd-popup .cb-popup-container {
     width: 90%; } }
@@ -4189,12 +4192,13 @@ textarea#comment_box {
         height: 3px;
         width: 24px;
         margin: 0;
-        background: #000;
+        background: #fff;
         position: absolute;
         left: 8px;
         top: 8px; }
       #header .navbar-default .navbar-toggle:after {
-        top: 18px; }
+        top: 18px;
+      }
       #header .navbar-default .navbar-toggle:before {
         top: 29px; }
 
@@ -5704,9 +5708,9 @@ textarea#comment_box {
 }
 
 @media (max-width: 767px) {
-  .dark .navbar-toggle {
-    background: #fff!important;
-  }
+  /*.dark .navbar-toggle {*/
+  /*  background: #fff!important;*/
+  /*}*/
   .signin-block .user-form {
     padding-bottom: 40px;
   }
