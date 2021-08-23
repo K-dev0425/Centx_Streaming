@@ -3892,8 +3892,8 @@ textarea#comment_box {
 
   .navbar-default .right-menu {
     margin: 0 0 0 10px; }
-    .navbar-default .right-menu.navbar-nav > li {
-      padding: 0; }
+    /*.navbar-default .right-menu.navbar-nav > li {*/
+    /*  padding: 0; }*/
       .navbar-default .right-menu.navbar-nav > li > a.btn-upload {
         padding: 4px 8px;
         border-radius: 50%; }
