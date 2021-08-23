@@ -5916,3 +5916,6 @@ textarea#comment_box {
   width: fit-content;
   margin: auto;
 }
+section.featured-videos .clearfix span img, section.clearfix.videos .clearfix span img {
+  width: 240px;
+}
