@@ -4020,10 +4020,9 @@ textarea#comment_box {
   .newuser-links {
     list-style: none;
     padding: 0;
-    margin: 0;
     font-size: 16px;
     line-height: 24px;
-    margin: 0 0 10px;
+    margin: 25px 0 10px;
     position: relative;
     z-index: 1;
     text-align: center; }
@@ -4044,7 +4043,7 @@ textarea#comment_box {
         display: block;
         width: 100%;
         padding: 5px;
-        background: #fff;
+        background: transparent;
         text-decoration: #000; }
         .newuser-links > li > a a:hover {
           background: #fff;
@@ -5746,8 +5745,8 @@ textarea#comment_box {
     position: absolute;
     bottom: 64px;
   }
-  #header .navbar .navbar-header .btn-search-toggle.visible-xs {
-    background: transparent;
+  #header .navbar .navbar-header .btn-search-toggle.visible-xs, #header .navbar .navbar-header .btn-search-toggle.visible-xs:hover {
+    background: transparent!important;
     border-color: transparent;
   }
   #header .show-search .user_menu.btn-holder {
@@ -5772,6 +5771,15 @@ textarea#comment_box {
   }
   #map_modal .modal-body #audience_manager {
     padding-bottom: 30px;
+  }
+  #footer .footer-holder a {
+    font-size: 15px;
+  }
+  #footer .mobile_footer_image_link {
+    display: block!important;
+  }
+  #footer #footer_centx_link {
+    display: none!important;
   }
 }
 
