@@ -5756,6 +5756,13 @@ textarea#comment_box {
     background: none!important;
     color: #111;
   }
+  #header .menu-holder .newuser-links .upload_link > a {
+    border: 1px solid #c56c5d!important;
+  }
+  #header .menu-holder .newuser-links .upload_link .icon-upload {
+    position: relative;
+    top: 1px;
+  }
   #headErr.alert_messages_holder {
     top: 100px!important;
   }
