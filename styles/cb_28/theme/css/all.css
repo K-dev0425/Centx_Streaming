@@ -3709,7 +3709,6 @@ textarea#comment_box {
 
 .navbar-nav {
   float: none !important; }
-
 .navbar-default .navbar-toggle {
   padding: 0;
   margin: 0 0 0 6px;
@@ -5744,8 +5743,22 @@ textarea#comment_box {
     top: 10px;
   }
   #footer {
-    position: fixed;
+    position: absolute;
     bottom: 64px;
+  }
+  #header .navbar .navbar-header .btn-search-toggle.visible-xs {
+    background: transparent;
+    border-color: transparent;
+  }
+  #header .show-search .user_menu.btn-holder {
+    background: transparent;
+  }
+  #header .search input[type="text"] {
+    background: none!important;
+    color: #111;
+  }
+  #headErr.alert_messages_holder {
+    top: 100px!important;
   }
   #forgot_password {
     display: block;
