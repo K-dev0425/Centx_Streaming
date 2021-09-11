@@ -26,6 +26,23 @@
 /**/
 /**/
 /* buttons */
+body {
+  -webkit-font-smoothing: antialiased;
+}
+#signup_form .form-group:first-child {
+  margin-bottom: 0;
+}
+#signup_form .form-group.clearfix .help-block {
+  font-size: 13px;
+  text-align: left;
+  margin: 0;
+}
+#signup_form .form-group .rad-area {
+  margin: 0 5px 0 0;
+  width: 15px;
+  height: 15px;
+  font: 15px/22px "icomoon";
+}
 .btn-default {
   background: #ececec;
   border-color: #ececec;
@@ -5798,6 +5815,12 @@ textarea#comment_box {
   #footer #footer_centx_link {
     display: none!important;
   }
+}
+
+#signup_submit {
+  background-color: #cc34cc!important;
+  border: 2px solid #cc34cc;
+  border-radius: 5px;
 }
 
 #map_modal {
