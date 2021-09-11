@@ -4006,6 +4006,9 @@ textarea#comment_box {
   .navbar-default .right-menu.navbar-nav > li > a.user-area span {
     font-size: 0;
   }
+  #container {
+    padding-bottom: 157px!important;
+  }
 
   .user_menu {
     width: 100%;
@@ -5613,7 +5616,8 @@ textarea#comment_box {
   margin-bottom: 25px;
 }
 .account-holder #forgot_password {
-  float: left;
+  float: right;
+  font-size: 14px;
 }
 .account-holder form .logo-section {
   max-width: 100px;
@@ -5778,7 +5782,6 @@ textarea#comment_box {
     text-align: left;
     margin-bottom: 18px;
     float: none;
-    color: #000!important;
   }
   #create_new_account {
     float: none!important;

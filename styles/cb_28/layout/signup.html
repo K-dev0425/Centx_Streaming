@@ -41,13 +41,12 @@
 						<input type="checkbox" name="remember_me" value="yes">
 						{lang code="remember_me"}
 					</label>
+					<a href="{$baseurl}/forgot.php" id="forgot_password" class="col_blue"><i class="fa fa-lock"></i>{lang code='user_forgot_message'}</a>
 				</div>
 
 				<input id="login_btn" type="submit" name="login" value="{lang('Login')}" class="btn btn-primary btn-lg btn-block">
 
-				<!--<a href="{$baseurl}/forgot.php?mode=recover_username">{lang code='user_forgot_username'}</a> - -->
-				<a href="{$baseurl}/forgot.php" id="forgot_password" class="col_blue"><i class="fa fa-lock"></i>{lang code='user_forgot_message'}</a>
-				<a href="{$baseurl}/signup.php" id="create_new_account" class="float_right col_blue">{lang code='create_new_account'}</a>
+				<a href="{$baseurl}/signup.php" id="create_new_account" class="col_blue">{lang code='create_new_account'}</a>
 				<input type="hidden" name="login" value="login"></input>
 				{if function_exists('show_all_btns')}
 				<div class="clearfix social-links">
