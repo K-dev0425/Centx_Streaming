@@ -54,6 +54,23 @@
 							<nav class="main-links">
 								{$head_menu=cb_menu()}
 								<ul>
+									{if userid()}
+									{if has_access('admin_access')}
+									<li><a href="{$admin_baseurl}">{lang code="admin_area"}</a></li>
+									{/if}
+									<li><a href="{link name='my_account' }{userid}">{lang code="my_account"}</a></li>
+									<li><a href="{link name='deposit_fund'}deposit_fund.php">{lang code="deposit_funds"}</a></li>
+									<li><a href="{link name='withdraw_fund'}withdraw_fund.php">{lang code="withdraw_funds"}</a></li>
+									<li><a href="{link name='my_videos'}">{lang code="manage_videos"}</a></li>
+									{ANCHOR place="head_audio_dropdown"}
+									<li><a href="{link name='channels'}">{lang code="view_channels"}</a></li>
+									<!-- changes made-->
+									<li><a href="{$baseurl}/manage_playlists.php?user={$userquery->username}">{lang code="my_playlists"}</a></li>
+									<!-- /changes made-->
+									<li><a href="{$baseurl}/view_channel.php?user={$userquery->username}">{lang code="my_channel"}</a></li>
+									{ANCHOR place='premium_button_link'}
+									{else}
+
 									{foreach $head_menu as $menu}
 									{if $menu.name|lower == 'groups'}
 									{continue}
@@ -86,36 +103,21 @@
 										<a href="{$baseurl}/#">{lang code="subscriptions"}</a>
 									</li>
 									{ANCHOR place="cb_28_head"}
+									{/if}
 								</ul>
 
 								{$user_det = $userquery->get_user_details(userid())}
 								{if $user_det != ''}
 								<hr>
-								<span class="balance_menu">Balance: ${number_format((float)($user_det.balance), 2)} USD</span><br><br><br>
+<!--								<span class="balance_menu">Balance: ${number_format((float)($user_det.balance), 2)} USD</span>-->
+								<span class="balance_menu"><a href="{link name='logout'}" style="color: #fff">{lang code="logout"}</a></span>
 								{/if}
 
 								<br><br>
 
-<!--								<div class="form-group">-->
-<!--									<input type="radio" name="color_scheme" id="dark_theme" value="1" checked onchange="add_dark(this)">-->
-<!--									<label for="dark_theme">{lang code="dark_theme"}</label><br>-->
-<!--									<input type="radio" name="color_scheme" id="bright_theme" value="0" onchange="remove_dark(this)">-->
-<!--									<label for="bright_theme">{lang code="light_theme"}</label>-->
-<!--								</div>-->
-
-								<!--<span id="balance_link"></span><br><br><br>-->
-
-								<!--<div class="form-group">-->
-									<!--<input type="radio" name="color_scheme" id="dark_theme" value="1" checked onchange="add_dark(this)">-->
-									<!--<label for="dark_theme">Dark Theme</label><br>-->
-									<!--<input type="radio" name="color_scheme" id="bright_theme" value="0" onchange="remove_dark(this)">-->
-									<!--<label for="bright_theme">Bright Theme</label>-->
-								<!--</div>-->
 							</nav>
 						</div>
-						<!-- <div class="col">
-							<a href="#" class="fancy-btn btn btn-default cd-popup-trigger">Animation</a>
-						</div> -->
+
 						<div class="col btn-holder user_menu text-right">
 							<div class="search">
 								<form class="search-form" action="{link name='search_result'}">
@@ -319,7 +321,7 @@
 	}
 	.balance_menu {
 		font-size: 18px;
-		margin-left: 40px;
+		margin-left: 5px;
 	}
 	#main, .account-container, .manage-page {
 		width: calc(100% - 330px);
@@ -327,9 +329,6 @@
 		margin-left: 290px;
 		padding-top: -40px!important;
 	}
-	/*#content {*/
-		/*width: 100%;*/
-	/*}*/
 	.main-links {
 		display: none!important;
 	}
