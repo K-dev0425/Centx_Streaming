@@ -4648,6 +4648,9 @@ textarea#comment_box {
     margin: -15px 0 0 -15px; }
 
 @media only screen and (max-width: 991px) {
+  #main #content #check_ads {
+    display: block!important;
+  }
   .sidebar-items .featured-video {
     width: 100%;
     display: block;
@@ -5757,34 +5760,6 @@ textarea#comment_box {
 }
 
 @media (max-width: 991px) {
-  #left-menu {
-    display: none;
-  }
-  #main {
-    width: 100%;
-    padding: 0 20px;
-  }
-  .main-links {
-    display: block!important;
-  }
-  .main-links #balance_link {
-    display: table-cell!important;
-  }
-  .main-links .form-group {
-    display: block!important;
-  }
-  #content .filter-dropdowns.clearfix {
-    display: block!important;
-  }
-}
-
-@media (max-width: 767px) {
-  /*.dark .navbar-toggle {*/
-  /*  background: #fff!important;*/
-  /*}*/
-  .signin-block .user-form {
-    padding-bottom: 40px;
-  }
   #mobile-footer {
     display: block!important;
     padding-top: 10px;
@@ -5817,6 +5792,37 @@ textarea#comment_box {
   #footer {
     position: absolute;
     bottom: 64px;
+  }
+  #container {
+    padding-bottom: 117px!important;
+  }
+  #left-menu {
+    display: none;
+  }
+  #main {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .main-links {
+    display: block!important;
+  }
+  .main-links #balance_link {
+    display: table-cell!important;
+  }
+  .main-links .form-group {
+    display: block!important;
+  }
+  #content .filter-dropdowns.clearfix {
+    display: block!important;
+  }
+}
+
+@media (max-width: 767px) {
+  /*.dark .navbar-toggle {*/
+  /*  background: #fff!important;*/
+  /*}*/
+  .signin-block .user-form {
+    padding-bottom: 40px;
   }
   #header .navbar .navbar-header .btn-search-toggle.visible-xs, #header .navbar .navbar-header .btn-search-toggle.visible-xs:hover {
     background: transparent!important;
@@ -5964,7 +5970,6 @@ textarea#comment_box {
   #content_sponsor_ads {
     display: block;
   }
-
 }
 .video-info-container li .added {
   z-index: 1!important;
@@ -6044,4 +6049,14 @@ section.featured-videos .clearfix span img, section.clearfix.videos .clearfix sp
 }
 .container.manage-page .cb-box .col-lg-9 .tab-content {
   border-radius: 10px;
+}
+#main #content #check_ads {
+  padding-left: 0;
+}
+#main #content #check_ads label[for="switch_ad"] {
+  padding-left: 0;
+}
+#main #content #check_ads > label.inline {
+  float: none!important;
+  top: -2px;
 }

@@ -19,7 +19,7 @@
 	#container.dark #content h1 {
 		color: #fff!important;
 	}
-	#check_ads {
+	#left-menu #check_ads {
 		display: block!important;
 	}
 </style>
@@ -97,6 +97,14 @@
 			<!-- ******************************************* -->
 			<!-- ************ EDITORS BLOCK END ************ -->
 			<!-- ******************************************* -->
+
+			<section class="clearfix displayNone" id="check_ads">
+				<label for="switch_ad" style="font-size: 20px">Show advertising</label>
+				<label class="inline">
+					<input type="checkbox" value="0" name="switch_ad" id="switch_ad" class="ace ace-switch ace-switch-5">
+					<span class="lbl"></span>
+				</label>
+			</section>
 
 			<section class="clearfix featured-videos">
 				<h1>{lang code="featured_videos"}</h1>
@@ -323,7 +331,7 @@
 	    // var txt = 'vids';
         video_carousel();
 
-        $('#switch_ad').change(function () {
+        $('#left-menu #switch_ad, #content #switch_ad').change(function () {
 			var val = $(this).val();
 			if (val == 1) {
                 $('#recent_ads_sec').parent('.clearfix').hide();
