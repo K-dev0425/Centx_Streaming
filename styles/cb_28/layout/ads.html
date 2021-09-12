@@ -129,5 +129,8 @@
             root.find('.icon-left-arrow').toggleClass('icon-right-arrow icon-left-arrow');
             root.find('.sub-menu:visible').hide();
         });
+
+        $('#left-menu').append($('.filter-dropdowns .cat-col > .dropdown').clone());
+        $('#left-menu').append($('.filter-dropdowns .sorting-col > .dropdown').clone());
     });
 </script>

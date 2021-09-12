@@ -96,3 +96,10 @@
 		</aside>
 	</div>
 </div>
+
+<script>
+	$(document).ready(function(){
+		$('#left-menu').append($('.filter-dropdowns .cat-col > .dropdown').clone());
+		$('#left-menu').append($('.filter-dropdowns .sorting-col > .dropdown').clone());
+	});
+</script>

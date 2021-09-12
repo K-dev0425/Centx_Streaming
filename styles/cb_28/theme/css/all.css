@@ -29,6 +29,48 @@
 body {
   -webkit-font-smoothing: antialiased;
 }
+.displayNone {
+  display: none;
+}
+#left-menu {
+  overflow-y: auto;
+}
+#left-menu > .dropdown {
+  margin: 15px 30px;
+  padding: 8px 5px;
+  border-bottom: 1px solid;
+}
+#left-menu > .dropdown .dropdown-toggle {
+  color: #fff;
+}
+#left-menu > .dropdown .dropdown-toggle span {
+  float: right;
+}
+#left-menu > .dropdown .dropdown-menu {
+  margin: 0;
+  width: 100%;
+  padding: 0 0 70px 0;
+  background: none;
+  box-shadow: none;
+  border: none;
+}
+#left-menu > .dropdown .dropdown-menu li {
+  min-height: 10px;
+  width: 100%;
+  background: #fff;
+}
+#left-menu > .dropdown .dropdown-menu li a {
+  color: #333!important;
+  font-size: 12px;
+  padding: 6px 20px 6px 12px;
+  display: block;
+}
+#left-menu > .dropdown .dropdown-menu li a:hover {
+  text-decoration: none;
+}
+#content .filter-dropdowns.clearfix {
+  display: none;
+}
 #signup_form .form-group:first-child {
   margin-bottom: 0;
 }
@@ -41,7 +83,7 @@ body {
   margin: 0 5px 0 0;
   width: 15px;
   height: 15px;
-  font: 15px/22px "icomoon";
+  font: 15px/15px "icomoon";
 }
 .btn-default {
   background: #ececec;
@@ -3920,7 +3962,7 @@ textarea#comment_box {
 @media only screen and (max-width: 1130px) {
   #header .menu-holder .col.user_menu.logged-out {
     width: 515px; } }
-@media only screen and (max-width: 1100px) {
+@media only screen and (max-width: 991px) {
   #header .main-links > ul {
     font-size: 14px;
     line-height: 36px; }
@@ -5714,7 +5756,7 @@ textarea#comment_box {
   cursor: pointer;
 }
 
-@media (max-width: 992px) {
+@media (max-width: 991px) {
   #left-menu {
     display: none;
   }
@@ -5729,6 +5771,9 @@ textarea#comment_box {
     display: table-cell!important;
   }
   .main-links .form-group {
+    display: block!important;
+  }
+  #content .filter-dropdowns.clearfix {
     display: block!important;
   }
 }
@@ -5983,4 +6028,17 @@ textarea#comment_box {
 }
 section.featured-videos .clearfix span img, section.clearfix.videos .clearfix span img {
   width: 240px;
+}
+.container.manage-page {
+  margin-bottom: 30px;
+}
+.container.manage-page .cb-box {
+  border-radius: 10px;
+}
+.container.manage-page .cb-box .nav-pills.nav-stacked {
+  margin: 0;
+}
+.container.manage-page .cb-box .nav-pills.nav-stacked li {
+  margin-top: 0;
+  border-radius: 0;
 }
