@@ -4934,7 +4934,7 @@ textarea#comment_box {
   font-size: 16px;
   line-height: 20px;
   color: #fff;
-  z-index: 5; }
+  z-index: 50; }
   #footer .container {
     padding: 0; }
   #footer a {
@@ -6041,4 +6041,7 @@ section.featured-videos .clearfix span img, section.clearfix.videos .clearfix sp
 .container.manage-page .cb-box .nav-pills.nav-stacked li {
   margin-top: 0;
   border-radius: 0;
+}
+.container.manage-page .cb-box .col-lg-9 .tab-content {
+  border-radius: 10px;
 }

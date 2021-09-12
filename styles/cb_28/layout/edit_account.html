@@ -3,6 +3,12 @@
     position: relative;
     top: -2px;
   }
+  @media (max-width: 767px) {
+    #footer {
+      bottom: 48px!important;
+    }
+
+  }
 </style>
 
 {$myAccountLinks = $userquery->my_account_links()}
@@ -175,7 +181,7 @@
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 hidden-xs">
       {include file="$style_dir/blocks/manage/userMenuLeft.html"}
     </div>
-    <div class="col-md-9 col-sm-9 col-xs-12">
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
       <div class="coverPhotoContainer">
         <img src="{$coverPhoto}" alt="coverPhoto" id="coverPhoto" class="edit-img-thumbnail img-responsive">
       </div>
@@ -237,10 +243,9 @@
     <div class="col-lg-3 col-md-3 col-sm-3 col-xs-3 hidden-xs">
       {include file="$style_dir/blocks/manage/userMenuLeft.html"}
     </div>
-    <div class="col-md-8 col-sm-8 col-xs-12">
+    <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12">
       <div class="tabbable">
         <ul class="nav nav-tabs" id="myTab2">
-
 
           <li class="{if $mode =='block_users'}active {/if}">
             <a href="{$baseurl}/edit_account.php?mode=block_users">
@@ -375,9 +380,9 @@
     </div>
   </div>
 </div>
-</div>
-
 {/if}
+
+</div>
 
 
 <script>
