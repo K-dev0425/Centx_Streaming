@@ -349,9 +349,9 @@
                 $('#video_player_ad_icon').remove();
             }
 
-			var text = '<div class="vjs-cb-header-caption vjs-item"><div>Price(/s): $<span id="price">{$video.price_per_sec}</span></div><div>Current Paid: $<span id="curr_paid">0</span></div></div>' +
+			var text = '<div class="vjs-cb-header-caption vjs-item"><div>Price(/s): $<span id="price">{number_format(((float)$video.price_per_sec), 4)}</span></div><div>Current Paid: $<span id="curr_paid">0</span></div></div>' +
 				'<div class="vjs-cb-header-caption vjs-item"><div>Payment Time: <span id="time">{$video.start_paying}s - {$video.end_paying}s</span></div><div>Balance: $<span id="balance">{if userid()}{$user_det.balance}{else}0{/if}</span></div></div>' +
-				'<div class="vjs-cb-header-caption vjs-item"><div>Already Paid Time: <span id="already">{$already_paid_time}</span>s</div><div>Balance(after paid): $<span id="balance_after">{if userid()}{$user_det.balance}{else}0{/if}</span></div></div>';
+				'<div class="vjs-cb-header-caption vjs-item"><div>Already Paid Time: <span id="already">{number_format(((float)$already_paid_time), 4)}</span>s</div><div>Balance(after paid): $<span id="balance_after">{if userid()}{$user_det.balance}{else}0{/if}</span></div></div>';
 
             $('.video-js').append(text);
 
@@ -497,8 +497,8 @@
                     current_flow = parseInt(current_second - start_paying_time);
                     current_pay_amount = current_flow * price_per_sec;
                     current_pay_amount1 = current_pay_amount * (1 - fee);
-					current_pay_amount = current_pay_amount.toFixed(2);
-					current_pay_amount1 = current_pay_amount1.toFixed(2);
+					current_pay_amount = current_pay_amount.toFixed(4);
+					current_pay_amount1 = current_pay_amount1.toFixed(4);
                     // $('#current_amount').empty();
                     $('#curr_paid').text(current_pay_amount);
                     $('#li_current_paid_time .start').text(current_flow + 's');
