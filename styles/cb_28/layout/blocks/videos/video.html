@@ -43,7 +43,7 @@
 	<button data-quick="quick-{$video.videoid}"
 			class="icon-plus2 cb_quickie cb-btn-quick-{$video.videoid} {if in_array($video.videoid, $qlist_vids)}icon-tick{/if}" vtitle="{$video.title}" v-id="{$video.videoid}" vlink="{videoLink($video)}" vthumb="{getThumb vdetails=$video size=600x338 }" vduration="{$video.duration|SetTime}" title="Add {$video.title} to Quicklist">
 	</button>
-	<span class="total_price">${$video.total_price}{if $video.type == 'ad'} (${$video.remaining_price}){/if}</span>
+	<span class="total_price">${number_format(((float)$video.total_price), 4)}</span>
 	{if $user_det!='' && $video.type == 'video'}
 	<span class="watch_color{if (float)$user_det.balance >= (float)$video.total_price} blue{else if (float)$user_det.balance < (float)$video.total_price && 0 < (float)$user_det.balance} yellow{else} red{/if}"></span>
 	{/if}
@@ -96,7 +96,7 @@
 		<button data-quick="quick-{$video.videoid}"
 				class="icon-plus2 add_icon cb_quickie cb-btn-quick-{$video.videoid} {if in_array($video.videoid, $qlist_vids)}icon-tick{/if}" vtitle="{$video.title}" v-id="{$video.videoid}" vlink="{videoLink($video)}" vthumb="{getThumb vdetails=$video size=600x338 }" vduration="{$video.duration|SetTime}" title="Add {$video.title} to Quicklist">
 		</button>
-		<span class="total_price">${$video.total_price} (${number_format((float)$video.remaining_price, 2)})</span>
+		<span class="total_price">${number_format(((float)$video.total_price), 4)}</span>
 		{if $user_det!=''}
 		<span class="watch_color{if (float)$user_det.balance >= (float)$video.total_price} blue{else if (float)$user_det.balance < (float)$video.total_price && 0 < (float)$user_det.balance} yellow{else} red{/if}"></span>
 		{/if}
@@ -148,7 +148,7 @@
 		<button data-quick="quick-{$video.videoid}"
 				class="icon-plus2 add_icon cb_quickie cb-btn-quick-{$video.videoid} {if in_array($video.videoid, $qlist_vids)}icon-tick{/if}" vtitle="{$video.title}" v-id="{$video.videoid}" vlink="{videoLink($video)}" vthumb="{getThumb vdetails=$video size=600x338 }" vduration="{$video.duration|SetTime}" title="Add {$video.title} to Quicklist">
 		</button>
-		<span class="total_price">${$video.total_price} (${number_format((float)$video.remaining_price, 2)})</span>
+		<span class="total_price">${number_format(((float)$video.total_price), 4)}</span>
 		{if $user_det == ''}
 		<span class="watch_color red"></span>
 		{/if}
@@ -196,7 +196,7 @@
 		<button data-quick="quick-{$video.videoid}"
 				class="icon-plus2 add_icon cb_quickie cb-btn-quick-{$video.videoid} {if in_array($video.videoid, $qlist_vids)}icon-tick{/if}" vtitle="{$video.title}" v-id="{$video.videoid}" vlink="{videoLink($video)}" vthumb="{getThumb vdetails=$video size=600x338 }" vduration="{$video.duration|SetTime}" title="Add {$video.title} to Quicklist">
 		</button>
-		<span class="total_price">${$video.total_price} (${number_format((float)$video.remaining_price, 2)})</span>
+		<span class="total_price">$${number_format(((float)$video.total_price), 4)}</span>
 		{if $user_det == ''}
 		<span class="watch_color red"></span>
 		{/if}
@@ -244,7 +244,7 @@
 		<button data-quick="quick-{$video.videoid}"
 				class="icon-plus2 add_icon cb_quickie cb-btn-quick-{$video.videoid} {if in_array($video.videoid, $qlist_vids)}icon-tick{/if}" vtitle="{$video.title}" v-id="{$video.videoid}" vlink="{videoLink($video)}" vthumb="{getThumb vdetails=$video size=600x338 }" vduration="{$video.duration|SetTime}" title="Add {$video.title} to Quicklist">
 		</button>
-		<span class="total_price">${$video.total_price} (${number_format((float)$video.remaining_price, 2)})</span>
+		<span class="total_price">${number_format(((float)$video.total_price), 4)}</span>
 		{if $user_det!=''}
 		<span class="watch_color{if (float)$user_det.balance >= (float)$video.total_price} blue{else if (float)$user_det.balance < (float)$video.total_price && 0 < (float)$user_det.balance} yellow{else} red{/if}"></span>
 		{/if}
@@ -295,7 +295,7 @@
 		<button data-quick="quick-{$video.videoid}"
 				class="icon-plus2 add_icon cb_quickie cb-btn-quick-{$video.videoid} {if in_array($video.videoid, $qlist_vids)}icon-tick{/if}" vtitle="{$video.title}" v-id="{$video.videoid}" vlink="{videoLink($video)}" vthumb="{getThumb vdetails=$video size=600x338 }" vduration="{$video.duration|SetTime}" title="Add {$video.title} to Quicklist">
 		</button>
-		<span class="total_price">${$video.total_price} (${number_format((float)$video.remaining_price, 2)})</span>
+		<span class="total_price">${number_format(((float)$video.total_price), 4)}</span>
 		{if $user_det!=''}
 		<span class="watch_color{if (float)$user_det.balance >= (float)$video.total_price} blue{else if (float)$user_det.balance < (float)$video.total_price && 0 < (float)$user_det.balance} yellow{else} red{/if}"></span>
 		{/if}
@@ -366,7 +366,7 @@
 		<button data-quick="quick-{$video.videoid}"
 				class="icon-plus2 add_icon cb_quickie cb-btn-quick-{$video.videoid} {if in_array($video.videoid, $qlist_vids)}icon-tick{/if}" vtitle="{$video.title}" v-id="{$video.videoid}" vlink="{videoLink($video)}" vthumb="{getThumb vdetails=$video size=600x338 }" vduration="{$video.duration|SetTime}" title="Add {$video.title} to Quicklist">
 		</button>
-		<span class="total_price">${$video.total_price}</span>
+		<span class="total_price">${number_format(((float)$video.total_price), 4)}</span>
 		{if $user_det!=''}
 		<span class="watch_color{if (float)$user_det.balance >= (float)$video.total_price} blue{else if (float)$user_det.balance < (float)$video.total_price && 0 < (float)$user_det.balance} yellow{else} red{/if}"></span>
 		{/if}
@@ -394,7 +394,7 @@
 		<button data-quick="quick-{$video.videoid}"
 				class="icon-plus2 cb_quickie cb-btn-quick-{$video.videoid} {if in_array($video.videoid, $qlist_vids)}icon-tick{/if}" vtitle="{$video.title}" v-id="{$video.videoid}" vlink="{videoLink($video)}" vthumb="{getThumb vdetails=$video size=600x338 }" vduration="{$video.duration|SetTime}" title="Add {$video.title} to Quicklist">
 		</button>
-		<span class="total_price">${$video.total_price}</span>
+		<span class="total_price">${number_format(((float)$video.total_price), 4)}</span>
 		<span class="earning_per_centisec">{lang code="earning_per_second"}: ${number_format(((float)$video.price_per_sec), 4)}</span>
 		{if $user_det!=''}
 		<span class="watch_color{if (float)$user_det.balance >= (float)$video.total_price} blue{else if (float)$user_det.balance < (float)$video.total_price && 0 < (float)$user_det.balance} yellow{else} red{/if}"></span>
