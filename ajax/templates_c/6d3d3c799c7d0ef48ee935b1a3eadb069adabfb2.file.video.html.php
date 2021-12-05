@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-06-06 04:23:47
+<?php /* Smarty version Smarty-3.1.15, created on 2021-12-05 02:34:48
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/blocks/videos/video.html" */ ?>
 <?php /*%%SmartyHeaderCode:36805003060bc4dd3d3ddb4-10710073%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6d3d3c799c7d0ef48ee935b1a3eadb069adabfb2' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/blocks/videos/video.html',
-      1 => 1622800592,
+      1 => 1634307938,
       2 => 'file',
     ),
   ),
@@ -15,6 +15,8 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'function' => 
   array (
   ),
+  'version' => 'Smarty-3.1.15',
+  'unifunc' => 'content_60bc4dd41ccf44_38872745',
   'variables' => 
   array (
     'userquery' => 0,
@@ -29,8 +31,6 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     'imageurl' => 0,
   ),
   'has_nocache_code' => false,
-  'version' => 'Smarty-3.1.15',
-  'unifunc' => 'content_60bc4dd41ccf44_38872745',
 ),false); /*/%%SmartyHeaderCode%%*/?>
 <?php if ($_valid && !is_callable('content_60bc4dd41ccf44_38872745')) {function content_60bc4dd41ccf44_38872745($_smarty_tpl) {?><?php if (!is_callable('smarty_modifier_truncate')) include '/Applications/MAMP/htdocs/centx/centx/includes/smartyv3/plugins/modifier.truncate.php';
 ?><?php if (userid()) {?>
@@ -110,9 +110,8 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 " title="Add <?php echo $_smarty_tpl->tpl_vars['video']->value['title'];?>
  to Quicklist">
 	</button>
-	<span class="total_price">$<?php echo $_smarty_tpl->tpl_vars['video']->value['total_price'];?>
-<?php if ($_smarty_tpl->tpl_vars['video']->value['type']=='ad') {?> ($<?php echo $_smarty_tpl->tpl_vars['video']->value['remaining_price'];?>
-)<?php }?></span>
+	<span class="total_price">$<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['total_price']),4);?>
+</span>
 	<?php if ($_smarty_tpl->tpl_vars['user_det']->value!=''&&$_smarty_tpl->tpl_vars['video']->value['type']=='video') {?>
 	<span class="watch_color<?php if ((float)$_smarty_tpl->tpl_vars['user_det']->value['balance']>=(float)$_smarty_tpl->tpl_vars['video']->value['total_price']) {?> blue<?php } elseif ((float)$_smarty_tpl->tpl_vars['user_det']->value['balance']<(float)$_smarty_tpl->tpl_vars['video']->value['total_price']&&0<(float)$_smarty_tpl->tpl_vars['user_det']->value['balance']) {?> yellow<?php } else { ?> red<?php }?>"></span>
 	<?php }?>
@@ -195,9 +194,8 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 " title="Add <?php echo $_smarty_tpl->tpl_vars['video']->value['title'];?>
  to Quicklist">
 		</button>
-		<span class="total_price">$<?php echo $_smarty_tpl->tpl_vars['video']->value['total_price'];?>
- ($<?php echo number_format((float)$_smarty_tpl->tpl_vars['video']->value['remaining_price'],2);?>
-)</span>
+		<span class="total_price">$<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['total_price']),4);?>
+</span>
 		<?php if ($_smarty_tpl->tpl_vars['user_det']->value!='') {?>
 		<span class="watch_color<?php if ((float)$_smarty_tpl->tpl_vars['user_det']->value['balance']>=(float)$_smarty_tpl->tpl_vars['video']->value['total_price']) {?> blue<?php } elseif ((float)$_smarty_tpl->tpl_vars['user_det']->value['balance']<(float)$_smarty_tpl->tpl_vars['video']->value['total_price']&&0<(float)$_smarty_tpl->tpl_vars['user_det']->value['balance']) {?> yellow<?php } else { ?> red<?php }?>"></span>
 		<?php }?>
@@ -282,9 +280,8 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 " title="Add <?php echo $_smarty_tpl->tpl_vars['video']->value['title'];?>
  to Quicklist">
 		</button>
-		<span class="total_price">$<?php echo $_smarty_tpl->tpl_vars['video']->value['total_price'];?>
- ($<?php echo number_format((float)$_smarty_tpl->tpl_vars['video']->value['remaining_price'],2);?>
-)</span>
+		<span class="total_price">$<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['total_price']),4);?>
+</span>
 		<?php if ($_smarty_tpl->tpl_vars['user_det']->value=='') {?>
 		<span class="watch_color red"></span>
 		<?php }?>
@@ -365,9 +362,8 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 " title="Add <?php echo $_smarty_tpl->tpl_vars['video']->value['title'];?>
  to Quicklist">
 		</button>
-		<span class="total_price">$<?php echo $_smarty_tpl->tpl_vars['video']->value['total_price'];?>
- ($<?php echo number_format((float)$_smarty_tpl->tpl_vars['video']->value['remaining_price'],2);?>
-)</span>
+		<span class="total_price">$$<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['total_price']),4);?>
+</span>
 		<?php if ($_smarty_tpl->tpl_vars['user_det']->value=='') {?>
 		<span class="watch_color red"></span>
 		<?php }?>
@@ -448,9 +444,8 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 " title="Add <?php echo $_smarty_tpl->tpl_vars['video']->value['title'];?>
  to Quicklist">
 		</button>
-		<span class="total_price">$<?php echo $_smarty_tpl->tpl_vars['video']->value['total_price'];?>
- ($<?php echo number_format((float)$_smarty_tpl->tpl_vars['video']->value['remaining_price'],2);?>
-)</span>
+		<span class="total_price">$<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['total_price']),4);?>
+</span>
 		<?php if ($_smarty_tpl->tpl_vars['user_det']->value!='') {?>
 		<span class="watch_color<?php if ((float)$_smarty_tpl->tpl_vars['user_det']->value['balance']>=(float)$_smarty_tpl->tpl_vars['video']->value['total_price']) {?> blue<?php } elseif ((float)$_smarty_tpl->tpl_vars['user_det']->value['balance']<(float)$_smarty_tpl->tpl_vars['video']->value['total_price']&&0<(float)$_smarty_tpl->tpl_vars['user_det']->value['balance']) {?> yellow<?php } else { ?> red<?php }?>"></span>
 		<?php }?>
@@ -534,9 +529,8 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 " title="Add <?php echo $_smarty_tpl->tpl_vars['video']->value['title'];?>
  to Quicklist">
 		</button>
-		<span class="total_price">$<?php echo $_smarty_tpl->tpl_vars['video']->value['total_price'];?>
- ($<?php echo number_format((float)$_smarty_tpl->tpl_vars['video']->value['remaining_price'],2);?>
-)</span>
+		<span class="total_price">$<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['total_price']),4);?>
+</span>
 		<?php if ($_smarty_tpl->tpl_vars['user_det']->value!='') {?>
 		<span class="watch_color<?php if ((float)$_smarty_tpl->tpl_vars['user_det']->value['balance']>=(float)$_smarty_tpl->tpl_vars['video']->value['total_price']) {?> blue<?php } elseif ((float)$_smarty_tpl->tpl_vars['user_det']->value['balance']<(float)$_smarty_tpl->tpl_vars['video']->value['total_price']&&0<(float)$_smarty_tpl->tpl_vars['user_det']->value['balance']) {?> yellow<?php } else { ?> red<?php }?>"></span>
 		<?php }?>
@@ -651,7 +645,7 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 " title="Add <?php echo $_smarty_tpl->tpl_vars['video']->value['title'];?>
  to Quicklist">
 		</button>
-		<span class="total_price">$<?php echo $_smarty_tpl->tpl_vars['video']->value['total_price'];?>
+		<span class="total_price">$<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['total_price']),4);?>
 </span>
 		<?php if ($_smarty_tpl->tpl_vars['user_det']->value!='') {?>
 		<span class="watch_color<?php if ((float)$_smarty_tpl->tpl_vars['user_det']->value['balance']>=(float)$_smarty_tpl->tpl_vars['video']->value['total_price']) {?> blue<?php } elseif ((float)$_smarty_tpl->tpl_vars['user_det']->value['balance']<(float)$_smarty_tpl->tpl_vars['video']->value['total_price']&&0<(float)$_smarty_tpl->tpl_vars['user_det']->value['balance']) {?> yellow<?php } else { ?> red<?php }?>"></span>
@@ -695,7 +689,7 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 " title="Add <?php echo $_smarty_tpl->tpl_vars['video']->value['title'];?>
  to Quicklist">
 		</button>
-		<span class="total_price">$<?php echo $_smarty_tpl->tpl_vars['video']->value['total_price'];?>
+		<span class="total_price">$<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['total_price']),4);?>
 </span>
 		<span class="earning_per_centisec"><?php echo smarty_lang(array('code'=>"earning_per_second"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['price_per_sec']),4);?>

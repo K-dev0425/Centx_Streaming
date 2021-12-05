@@ -2,9 +2,9 @@
 
 /**
  *************************************************************
- | Copyright (c) 2007-2017 Clip-Bucket.com. All rights reserved.
- | @ Author    : Arslan Hassan                              
- | @ Software  : ClipBucket
+ | Copyright (c)
+ | @ Author    : Ricky Keele
+ | @ Software  : Centx
  | @ Modified : { January 10th, 2017 } { Saqib Razzaq } { Updated copyright date }
  *************************************************************
 */

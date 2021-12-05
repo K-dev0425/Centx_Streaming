@@ -17,28 +17,53 @@ if(!defined('SUB_PAGE')){
 
 $userquery->login_check('admin_access');
 
-if (isset($_POST['video_fee'])) {
+if ($_FILES['banner_image']) {
 
-    $video_fee = $_POST['video_fee'];
-    $video_max_price = $_POST['video_max_price'];
-    $audio_max_price = $_POST['audio_max_price'];
+    $extension = getExt($_FILES['banner_image']['name']);
 
-    $query = "UPDATE " . tbl("config") . " SET value = '".$video_fee."'  WHERE name = 'video_fee'";
+    $content_type = get_mime_type($_FILES['banner_image']['tmp_name']);
+
+    if ($content_type != 'image') {
+        echo "<script>alert('The chosen file is not image. Please upload image file.');</script>";
+        exit();
+    }
+
+    $tempFile = $_FILES['banner_image']['tmp_name'];
+    $file_name = 'banner';
+    $targetFileName = $file_name . '.' . getExt($_FILES['banner_image']['name']);
+    $target = IMAGES_DIR . '/banner/' . $targetFileName;
+    $targetUrl = IMAGES_URL . '/banner/' . $targetFileName;
+
+    if (file_exists($target)) {
+        unlink($target);
+    }
+
+    move_uploaded_file($tempFile, $target);
+
+    $query = "UPDATE " . tbl("config") . " SET value = '" . $targetUrl . "' where name = 'banner_url'";
     $db->Execute($query);
 
-    $query1 = "UPDATE " . tbl("config") . " SET value = '".$video_max_price."'  WHERE name = 'video_max_price'";
-    $db->Execute($query1);
-
-    $query2 = "UPDATE " . tbl("config") . " SET value = '".$audio_max_price."'  WHERE name = 'audio_max_price'";
-    $db->Execute($query2);
-
     echo $query;
-
     exit();
 
 }
 
+$banner_header = isset($_POST['banner_header']) ? $_POST['banner_header'] : '';
+$banner_text = isset($_POST['banner_text']) ? $_POST['banner_text'] : '';
+
+if ($banner_header != '') {
+    $hader_query = "UPDATE " . tbl("config") . " SET value = '" . $banner_header . "' where name = 'banner_header'";
+    $db -> Execute($hader_query);
+}
+
+if ($banner_text != '') {
+    $text_query = "UPDATE " . tbl("config") . " SET value = '" . $banner_text . "' where name = 'banner_text'";
+    $db -> Execute($text_query);
+}
+
+
 subtitle("Manage Banner");
 template_files('manage_banner.html');
 display_it();
+
 ?>
