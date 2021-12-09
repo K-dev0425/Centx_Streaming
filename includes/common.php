@@ -415,7 +415,7 @@
 	define('PAYPAL_CLIENT_SECRET', 'EKLrBpFCzvqoY61z6t7Wu9DgiKPm1Db26KI6qJbVkPLWY0eGADC9g6FabpuwiL7uoEU2qaGfD73ZA7tL');
 	define('PAYPAL_ADAPTIVE_SERVICE_URL', (PAYPAL_SANDBOX == true) ? "https://svcs.sandbox.paypal.com/AdaptivePayments/" : "https://svcs.paypal.com/AdaptivePayments/");
 	define("PAYPAL_TOKEN_URL", (PAYPAL_SANDBOX == true) ? "https://api.paypal.com/v1/oauth2/token" : "https://api.sandbox.paypal.com/v1/oauth2/token");
-	define("PYPAL_PAYOUTS_URL", (PAYPAL_SANDBOX == true) ? "https://api.paypal.com/v1/payments/payouts" : "https://api.sandbox.paypal.com/v1/payments/payouts");
+	define("PYPAL_PAYOUTS_URL", (PAYPAL_SANDBOX == true) ? "https://api.sandbox.paypal.com/v1/payments/payouts" : "https://api.sandbox.paypal.com/v1/payments/payouts");
 
 	# RK Twilio Credentials
 	define('TWILIO_SID', 'AC12f1526756a3645f90a919caab5698b5');
