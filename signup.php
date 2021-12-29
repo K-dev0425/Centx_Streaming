@@ -17,6 +17,8 @@
 	if($userquery->login_check('',true)) {
 		redirect_to(BASEURL);
 	}
+	require_once('recaptchalib.php');
+	$publickey = RECAPTCHA_SITE_KEY;
 
 	/**
 	 * Function used to call all signup functions
