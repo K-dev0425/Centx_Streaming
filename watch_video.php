@@ -60,7 +60,7 @@ if ($user_det != '' && (int)userid() != 1 && $user_det['userid'] != $vdo['userid
         ? ((date("Y") - $dob_array[0]) - 1) : (date("Y") - $dob_array[0]);
 
     if ((int)$age < (int)$min_age) {
-        echo "<script>alert('Only " . $min_age . "+ can watch this video.');</script>";
+        echo "<script>alert('Only " . $min_age . $min_age . "+ can watch this video.');</script>";
         echo "<script>history.go(-1);</script>";
         exit();
     }

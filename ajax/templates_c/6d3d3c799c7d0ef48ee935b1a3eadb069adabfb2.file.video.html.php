@@ -1,4 +1,4 @@
-<?php /* Smarty version Smarty-3.1.15, created on 2021-12-05 02:34:48
+<?php /* Smarty version Smarty-3.1.15, created on 2022-02-22 13:36:51
          compiled from "/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/blocks/videos/video.html" */ ?>
 <?php /*%%SmartyHeaderCode:36805003060bc4dd3d3ddb4-10710073%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
@@ -7,7 +7,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
     '6d3d3c799c7d0ef48ee935b1a3eadb069adabfb2' => 
     array (
       0 => '/Applications/MAMP/htdocs/centx/centx/styles/cb_28/layout/blocks/videos/video.html',
-      1 => 1634307938,
+      1 => 1638757345,
       2 => 'file',
     ),
   ),
@@ -218,9 +218,9 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 		<span class="earning_per_centisec"><?php echo smarty_lang(array('code'=>"price_per_sec"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['price_per_sec']),4);?>
 </span>
-		<!--<span class="remaining_budget"><?php echo smarty_lang(array('code'=>"remaining_budget"),$_smarty_tpl);?>
+		<span class="remaining_budget"><?php echo smarty_lang(array('code'=>"remaining_budget"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['remaining_price']),2);?>
-</span>-->
+</span>
 		<div class="clearfix views-date">
 			<span><?php echo $_smarty_tpl->tpl_vars['video']->value['views'];?>
 &nbsp;<?php echo smarty_lang(array('code'=>"views"),$_smarty_tpl);?>
@@ -301,9 +301,9 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 		<span class="earning_per_centisec"><?php echo smarty_lang(array('code'=>"earning_per_second"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['price_per_sec']),4);?>
 </span>
-		<!--<span class="remaining_budget"><?php echo smarty_lang(array('code'=>"remaining_budget"),$_smarty_tpl);?>
+		<span class="remaining_budget"><?php echo smarty_lang(array('code'=>"remaining_budget"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['remaining_price']),2);?>
-</span>-->
+</span>
 		<div class="clearfix views-date">
 			<span><?php echo $_smarty_tpl->tpl_vars['video']->value['views'];?>
 &nbsp;<?php echo smarty_lang(array('code'=>"views"),$_smarty_tpl);?>
@@ -383,9 +383,9 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 		<span class="earning_per_centisec"><?php echo smarty_lang(array('code'=>"earning_per_second"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['price_per_sec']),4);?>
 </span>
-		<!--<span class="remaining_budget"><?php echo smarty_lang(array('code'=>"remaining_budget"),$_smarty_tpl);?>
+		<span class="remaining_budget"><?php echo smarty_lang(array('code'=>"remaining_budget"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['remaining_price']),2);?>
-</span>-->
+</span>
 		<div class="clearfix views-date">
 			<span><?php echo $_smarty_tpl->tpl_vars['video']->value['views'];?>
 &nbsp;<?php echo smarty_lang(array('code'=>"views"),$_smarty_tpl);?>
@@ -468,9 +468,9 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 		<span class="earning_per_centisec"><?php echo smarty_lang(array('code'=>"price_per_sec"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['price_per_sec']),4);?>
 </span>
-		<!--<span class="remaining_budget"><?php echo smarty_lang(array('code'=>"remaining_budget"),$_smarty_tpl);?>
+		<span class="remaining_budget"><?php echo smarty_lang(array('code'=>"remaining_budget"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['remaining_price']),2);?>
-</span>-->
+</span>
 		<div class="clearfix views-date">
 			<span><?php echo $_smarty_tpl->tpl_vars['video']->value['views'];?>
 &nbsp;<?php echo smarty_lang(array('code'=>"views"),$_smarty_tpl);?>
@@ -553,9 +553,9 @@ $_smarty_tpl->tpl_vars['user_det']->value = ''; $_smarty_tpl->tpl_vars['user_det
 		<span class="earning_per_centisec"><?php echo smarty_lang(array('code'=>"price_per_sec"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['price_per_sec']),4);?>
 </span>
-		<!--<span class="remaining_budget"><?php echo smarty_lang(array('code'=>"remaining_budget"),$_smarty_tpl);?>
+		<span class="remaining_budget"><?php echo smarty_lang(array('code'=>"remaining_budget"),$_smarty_tpl);?>
 : $<?php echo number_format(((float)$_smarty_tpl->tpl_vars['video']->value['remaining_price']),2);?>
-</span>-->
+</span>
 		<div class="clearfix views-date">
 			<span><?php echo $_smarty_tpl->tpl_vars['video']->value['views'];?>
 &nbsp;<?php echo smarty_lang(array('code'=>"views"),$_smarty_tpl);?>
