@@ -17,7 +17,7 @@
 	if($userquery->login_check('',true)) {
 		redirect_to(BASEURL);
 	}
-	require_once('recaptchalib.php');
+	require_once(BASEDIR.'/plugins/recaptcha/recaptchalib.php');
 	$publickey = RECAPTCHA_SITE_KEY;
 
 	/**

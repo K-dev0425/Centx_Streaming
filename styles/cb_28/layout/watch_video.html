@@ -478,6 +478,9 @@
         if (video_userId != userid) {
 
             video_player.on('timeupdate', function () {
+            	if (video_type == 'ad') {
+            		return false;
+				}
 
                 $('.vjs-item').css('visibility', 'visible');
 
