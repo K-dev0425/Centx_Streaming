@@ -478,9 +478,6 @@
         if (video_userId != userid) {
 
             video_player.on('timeupdate', function () {
-            	if (video_type == 'ad') {
-            		return false;
-				}
 
                 $('.vjs-item').css('visibility', 'visible');
 
@@ -574,22 +571,31 @@
             video_player.on('abort', function () {
                 // if (payable)
                     pay_video();
-
             });
 
             //For seeking
 			video_player.on('seeking', function () {
-				if (seekStart == null) {
+				if (video_type == 'ad') {
+					if (current_second < video_player.currentTime()) {
+						video_player.currentTime(current_second);
+					}
+				}
+				else if (seekStart == null) {
 				    seekStart = previous_second;
 				}
             });
 			video_player.on('seeked', function () {
-			    console.log('sss');
-				if (current_second > seekStart && current_second > already_paid_time  && price_per_sec > 0) {
-				//     this.currentTime(already_paid_time);
-				    this.currentTime(seekStart);
+				if (video_type == 'ad') {
+					if (current_second < video_player.currentTime()) {
+						video_player.currentTime(current_second);
+					}
+				} else {
+					if (current_second > seekStart && current_second > already_paid_time  && price_per_sec > 0) {
+						//     this.currentTime(already_paid_time);
+						this.currentTime(seekStart);
+					}
+					seekStart = null;
 				}
-				seekStart = null;
             });
 
             $(window).on('beforeunload', function () {
