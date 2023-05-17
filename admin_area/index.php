@@ -74,7 +74,6 @@ switch($mode)
     }
 }
 ///////////////////ends here/////////////
-var_dump('test', $mode);exit();
 
 
 ////////////////getting notes
@@ -202,7 +201,7 @@ switch($mode)
 }
 
 /////////////////////////ending notes
-
+var_dump('test', $mode);exit();
 
 
 
