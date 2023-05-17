@@ -12,7 +12,6 @@ if(!defined('MAIN_PAGE')){
 	if($Cbucket->cbinfo['version'] < $Cbucket->cbinfo['latest']['version'])
 		$Cbucket->cbinfo['new_available'] = true;
 
-var_dump('test');exit();
 
 $result_array = $array;
 //Getting Video List
@@ -21,6 +20,7 @@ if(!$array['order'])
     $result_array['order'] = " doj DESC LIMIT 5  ";
 
 $users = get_users($result_array);
+var_dump('test');exit();
 
 Assign('users', $users);
 
