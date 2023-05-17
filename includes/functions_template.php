@@ -35,11 +35,11 @@ function Fetch($name,$inside=FALSE)
 
 function Template($template,$layout=true){
     global $admin_area,$cbtpl;
+    var_dump('template', $template, $layout);exit();
     if($layout)
         $cbtpl->display(LAYOUT.'/'.$template);
     else
         $cbtpl->display($template);
-    var_dump('template', $template, $layout);exit();
 
     if($template == 'footer.html' && $admin_area !=TRUE){
         $cbtpl->display(BASEDIR.'/includes/templatelib/'.$template);
