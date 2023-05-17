@@ -20,13 +20,13 @@ if(!$array['order'])
     $result_array['order'] = " doj DESC LIMIT 5  ";
 
 $users = get_users($result_array);
-var_dump('test');exit();
 
 Assign('users', $users);
 
 //////////////////getting todolist/////////////
 
 $mode = $_POST['mode'];
+var_dump('test', $mode);exit();
 if(!isset($mode)) $mode = $_GET['mode'];
 switch($mode)
 {
