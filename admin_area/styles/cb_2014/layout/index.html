@@ -213,7 +213,225 @@
     }
 </style>
 
+<script type="text/javascript">
+            AmCharts.makeChart("piechart",
+                {
+                    "type": "pie",
+                    "adjustPrecision": true,
+                    "angle": 12,
+                    "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+                    "depth3D": 15,
+                    "maxLabelWidth": 150,
+                    "titleField": "category",
+                    "valueField": "column-1",
+                    "processTimeout": 5,
+                    "theme": "light",
+                    "allLabels": [],
+                    "balloon": {},
+                    "legend": {
+                        "enabled": true,
+                        "align": "left",
+                        "markerType": "circle"
+                    },
+                    "titles": [
+                        {
+                            "bold": false,
+                            "id": "Title-1",
+                            "size": 15,
+                            "text": "Overall Statistics"
+                        }
+                    ],
+                    "dataProvider": [
+                        {
+                            "category": "Users",
+                            "column-1": '{get_users count_only=yes}'
+                        },
+                        {
+                            "category": "Photos",
+                            "column-1": '{get_photos count_only=yes}'
+                        },
+                        {
+                            "category": "Videos",
+                            "column-1": '{get_videos|number_format count_only=yes}'
+                        },
+                        {
+                            "category": "Collections",
+                            "column-1": '{get_collections count_only=yes}'
+                        },
 
+                    ]
+                }
+            );
+</script>
+
+<script type="text/javascript">
+            // var test =  '{$flaggedPhotos.0.total_flags}';
+            AmCharts.makeChart("donutchart",
+                {
+                    "type": "pie",
+                    "angle": 12,
+                    "balloonText": "[[title]]<br><span style='font-size:14px'><b>[[value]]</b> ([[percents]]%)</span>",
+                    "depth3D": 15,
+                    "innerRadius": "30%",
+                    "titleField": "category",
+                    "valueField": "column-1",
+                    "processTimeout": 5,
+                    "theme": "light",
+                    "allLabels": [],
+                    "balloon": {},
+                    "legend": {
+                        "enabled": true,
+                        "align": "center",
+                        "markerType": "circle"
+                    },
+                    "titles": [
+                        {
+                            "bold": false,
+                            "id": "Title-1",
+                            "size": 15,
+                            "text": "Flagged Objects"
+                        }
+                    ],
+                    "dataProvider": [
+
+                        {
+                            "category": "Photos",
+                            "column-1": '{$cbphoto->action->count_flagged_objects()}'
+                        },
+                        {
+                            "category": "Videos",
+                            "column-1": '{$cbvid->action->count_flagged_objects()}'
+                        }
+                    ]
+                }
+            );
+</script>
+
+<script type="text/javascript">
+            AmCharts.makeChart("ubarchart",
+                {
+                    "type": "serial",
+                    "pathToImages": "https://www.amcharts.com/lib/3/images/",
+                    "categoryField": "category",
+                    "startDuration": 1,
+                    "mouseWheelZoomEnabled": true,
+                    "startEffect": "easeOutSine",
+                    "autoDisplay": true,
+                    "theme": "light",
+                    "categoryAxis": {
+                        "gridPosition": "start"
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "colorField": "color",
+                            "fillAlphas": 1,
+                            "id": "AmGraph-1",
+                            "lineColorField": "color",
+                            "title": "graph 1",
+                            "type": "column",
+                            "valueField": "column-1"
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "id": "ValueAxis-1",
+                            "title": "Users"
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {},
+                    "titles": [
+                        {
+                            "bold": false,
+                            "id": "Title-1",
+                            "size": 15,
+                            "text": "Users Statistics"
+                        }
+                    ],
+                    "dataProvider": [
+                        {
+                            "category": "Total",
+                            "column-1": '{get_users count_only=yes}'
+                        },
+                        {
+                            "category": "Active",
+                            "column-1": '{get_users count_only=yes status='Ok'}'
+                        },
+                        {
+                            "category": "Inactive",
+                            "column-1": '{get_users count_only=yes status='ToActivate'}'
+                        }
+                    ]
+                }
+            );
+</script>
+
+<script type="text/javascript">
+            AmCharts.makeChart("vbarchart",
+                {
+                    "type": "serial",
+                    "pathToImages": "https://www.amcharts.com/lib/3/images/",
+                    "categoryField": "category",
+                    "startDuration": 1,
+                    "mouseWheelZoomEnabled": true,
+                    "startEffect": "easeOutSine",
+                    "autoDisplay": true,
+                    "theme": "light",
+                    "categoryAxis": {
+                        "gridPosition": "start"
+                    },
+                    "trendLines": [],
+                    "graphs": [
+                        {
+                            "colorField": "color",
+                            "fillAlphas": 1,
+                            "id": "AmGraph-1",
+                            "lineColorField": "color",
+                            "title": "graph 1",
+                            "type": "column",
+                            "valueField": "column-1"
+                        }
+                    ],
+                    "guides": [],
+                    "valueAxes": [
+                        {
+                            "id": "ValueAxis-1",
+                            "title": "Videos"
+                        }
+                    ],
+                    "allLabels": [],
+                    "balloon": {},
+                    "titles": [
+                        {
+                            "bold": false,
+                            "id": "Title-1",
+                            "size": 15,
+                            "text": "Video Statistics"
+                        }
+                    ],
+                    "dataProvider": [
+                        {
+                            "category": "Total",
+                            "column-1": '{get_videos count_only=yes}'
+                        },
+                        {
+                            "category": "Active",
+                            "column-1": '{get_videos count_only=yes active="yes"}'
+                        },
+                        {
+                            "category": "Deactive",
+                            "column-1": '{get_videos count_only=yes active='no'}'
+                        },
+                        {
+                            "category": "Reported",
+                            "column-1": '{$cbvid->action->count_flagged_objects()}'
+                        }
+                    ]
+                }
+            );
+ </script>
 
  <script type="text/javascript">
    $(function () {
