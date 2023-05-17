@@ -245,7 +245,6 @@ assign("STATE", $Cbucket->cbinfo['state']);
 //subtitle(lang('video_manager'));
 template_files('index.html');
 display_it();
-var_dump('test', $numbers);exit();
 ?>
 
 
