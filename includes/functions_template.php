@@ -35,7 +35,6 @@ function Fetch($name,$inside=FALSE)
 
 function Template($template,$layout=true){
     global $admin_area,$cbtpl;
-//    var_dump('template', $template, LAYOUT.'/'.$template, $cbtpl);exit();
     if($layout)
         $cbtpl->display(LAYOUT.'/'.$template);
     else
