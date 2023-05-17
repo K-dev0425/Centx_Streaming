@@ -39,6 +39,7 @@ function Template($template,$layout=true){
         $cbtpl->display(LAYOUT.'/'.$template);
     else
         $cbtpl->display($template);
+    var_dump('template', $template, $layout);exit();
 
     if($template == 'footer.html' && $admin_area !=TRUE){
         $cbtpl->display(BASEDIR.'/includes/templatelib/'.$template);
@@ -104,7 +105,6 @@ function display_it()
         assign('template_files',$new_list);
 
         Template('body.html');
-        var_dump('pass', $new_list);exit();
 
         footer();
     }catch(SmartyException $e)
