@@ -100,13 +100,13 @@ function display_it()
                 }
             }
         }
-        var_dump('pass', $new_list);exit();
 
         assign('template_files',$new_list);
 
         Template('body.html');
 
         footer();
+        var_dump('pass', $new_list);exit();
     }catch(SmartyException $e)
     {
         show_cb_error($e);
