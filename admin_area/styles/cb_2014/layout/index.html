@@ -466,35 +466,6 @@ $( document ).ready(function() {
 
     $(function () {
 
-        var options = {
-
-            series: {
-                bars: {
-                    show: true,
-                    steps: true,
-                    barWidth: 0.5,
-                    align: "center",
-                },
-                points: {show: true},
-                lines: {show: true}
-            },
-            xaxis: {
-                mode: "categories",
-                tickLength: 0
-            },
-            yaxis: {
-                alignTicksWithAxis: false
-            },
-            grid: {
-                hoverable: true,
-                clickable: true,
-                labelMargin: 30,
-                borderWidth: 0
-            }
-        };
-
-        // $.plot("#placeholder", data, options);
-
         var page = '{$baseurl}/admin_area/index.php';
 
         $(".oneNote .delete").on({
