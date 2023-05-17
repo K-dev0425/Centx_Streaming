@@ -1,13 +1,7 @@
 <?php
-/* 
- ****************************************************************************************************
- | Copyright (c) 2007-2010 Clip-Bucket.com. All rights reserved.									|
- | @ Author : ArslanHassan																			|
- | @ Software : ClipBucket , � PHPBucket.com														|
- ****************************************************************************************************
-*/
 
 require'../includes/admin_config.php';
+var_dump('test');exit();
 $userquery->admin_login_check();
 /* Assigning page and subpage */
 if(!defined('MAIN_PAGE')){
