@@ -471,20 +471,20 @@ $( document ).ready(function() {
 
 var baseurl="{$baseurl}";
 
-$.ajax({
-   // url: baseurl+'/ajax.php',
-
-   url:baseurl+'/ajax.php',
-    type: "POST",
-    dataType : 'text',
-    data: { mode: "get_news"},
-    success : function(news){
-        $('#clipbucket_news').html(news);
-    },
-    timeout : 5000,
-    error  :  function(err) { $('#clipbucket_news').html(' <div align="center"><em><strong>Connect with Internet to get News</strong></em></div>')},
-    });
-});
+// $.ajax({
+//    // url: baseurl+'/ajax.php',
+//
+//    url:baseurl+'/ajax.php',
+//     type: "POST",
+//     dataType : 'text',
+//     data: { mode: "get_news"},
+//     success : function(news){
+//         $('#clipbucket_news').html(news);
+//     },
+//     timeout : 5000,
+//     error  :  function(err) { $('#clipbucket_news').html(' <div align="center"><em><strong>Connect with Internet to get News</strong></em></div>')},
+//     });
+// });
  $(function() {
 
         var options = {
