@@ -237,11 +237,11 @@ function format_number($number) {
         return $number;
     }
 }
-var_dump('test', $numbers);exit();
 
 Assign(BASEURL,'baseurl');
 assign("VERSION", VERSION);
 assign("STATE", $Cbucket->cbinfo['state']);
+var_dump('test', $numbers);exit();
 
 //subtitle(lang('video_manager'));
 template_files('index.html');
