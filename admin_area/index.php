@@ -1,8 +1,8 @@
 <?php
 
 require'../includes/admin_config.php';
-var_dump('test');exit();
 $userquery->admin_login_check();
+var_dump('test');exit();
 /* Assigning page and subpage */
 if(!defined('MAIN_PAGE')){
 	define('MAIN_PAGE', 'Dashboard');
