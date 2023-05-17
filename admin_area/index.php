@@ -2,7 +2,6 @@
 
 require'../includes/admin_config.php';
 $userquery->admin_login_check();
-var_dump('test');exit();
 /* Assigning page and subpage */
 if(!defined('MAIN_PAGE')){
 	define('MAIN_PAGE', 'Dashboard');
@@ -13,6 +12,7 @@ if(!defined('MAIN_PAGE')){
 	if($Cbucket->cbinfo['version'] < $Cbucket->cbinfo['latest']['version'])
 		$Cbucket->cbinfo['new_available'] = true;
 
+var_dump('test');exit();
 
 $result_array = $array;
 //Getting Video List
