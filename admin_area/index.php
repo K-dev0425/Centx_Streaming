@@ -27,7 +27,6 @@ Assign('users', $users);
 
 $mode = $_POST['mode'];
 if(!isset($mode)) $mode = $_GET['mode'];
-var_dump('test', $mode);exit();
 switch($mode)
 {
     case 'add_todo':
@@ -75,7 +74,7 @@ switch($mode)
     }
 }
 ///////////////////ends here/////////////
-
+var_dump('test', $mode);exit();
 
 
 ////////////////getting notes
