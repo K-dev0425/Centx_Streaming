@@ -209,7 +209,6 @@ if(!$array['order'])
 $videos = get_videos($result_array);
 
 Assign('videos', $videos);
-var_dump('test', $videos);exit();
 
 $comment_cond['limit'] = 10;
 $comments = getComments($comment_cond);
@@ -238,6 +237,7 @@ function format_number($number) {
         return $number;
     }
 }
+var_dump('test', $numbers);exit();
 
 Assign(BASEURL,'baseurl');
 assign("VERSION", VERSION);
