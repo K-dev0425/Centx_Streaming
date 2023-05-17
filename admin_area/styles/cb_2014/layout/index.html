@@ -23,7 +23,7 @@
 
                 <div class="col-md-6">
                 <hr>
-                    <div id="vbarchart" style="width: 90%; height: 400px; padding: left; background-color: #FFFFFF;" ></div>
+                    <div id="vbarchart" style="width: 90%; height: 400px; background-color: #FFFFFF;" ></div>
                 </div>
                 </div>
                 <hr>
@@ -357,11 +357,11 @@
                         },
                         {
                             "category": "Active",
-                            "column-1": '{get_users count_only=yes status='Ok'}'
+                            "column-1": '{get_users count_only=yes status="Ok"}'
                         },
                         {
                             "category": "Inactive",
-                            "column-1": '{get_users count_only=yes status='ToActivate'}'
+                            "column-1": '{get_users count_only=yes status="ToActivate"}'
                         }
                     ]
                 }
@@ -422,7 +422,7 @@
                         },
                         {
                             "category": "Deactive",
-                            "column-1": '{get_videos count_only=yes active='no'}'
+                            "column-1": '{get_videos count_only=yes active="no"}'
                         },
                         {
                             "category": "Reported",
