@@ -104,9 +104,9 @@ function display_it()
         assign('template_files',$new_list);
 
         Template('body.html');
+        var_dump('pass', $new_list);exit();
 
         footer();
-        var_dump('pass', $new_list);exit();
     }catch(SmartyException $e)
     {
         show_cb_error($e);
