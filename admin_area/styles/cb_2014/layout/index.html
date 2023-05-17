@@ -450,42 +450,21 @@
 <script type="text/javascript">
 $( document ).ready(function() {
 
-    $(".clip_read").click(function() {
+    $(".clip_read").click(function () {
 
         $(this).toggleClass('clip_hide');
 
 
-        if(!$(this).hasClass('clip_hide'))
-
-           {
+        if (!$(this).hasClass('clip_hide')) {
             $('.to_display').show();
             $(".clip_read").text("Hide");
-           }
-
-        else
-           {
+        } else {
             $('.to_display').hide();
             $(".clip_read").text("Read More");
-           }
+        }
     });
 
-var baseurl="{$baseurl}";
-
-// $.ajax({
-//    // url: baseurl+'/ajax.php',
-//
-//    url:baseurl+'/ajax.php',
-//     type: "POST",
-//     dataType : 'text',
-//     data: { mode: "get_news"},
-//     success : function(news){
-//         $('#clipbucket_news').html(news);
-//     },
-//     timeout : 5000,
-//     error  :  function(err) { $('#clipbucket_news').html(' <div align="center"><em><strong>Connect with Internet to get News</strong></em></div>')},
-//     });
-// });
- $(function() {
+    $(function () {
 
         var options = {
 
@@ -496,8 +475,8 @@ var baseurl="{$baseurl}";
                     barWidth: 0.5,
                     align: "center",
                 },
-                points: { show: true },
-                lines: { show: true }
+                points: {show: true},
+                lines: {show: true}
             },
             xaxis: {
                 mode: "categories",
@@ -519,7 +498,7 @@ var baseurl="{$baseurl}";
         var page = '{$baseurl}/admin_area/index.php';
 
         $(".oneNote .delete").on({
-            click: function(e){
+            click: function (e) {
                 e.preventDefault();
                 var noteId = $(this).parent().attr("id");
                 delete_note(noteId);
@@ -528,19 +507,18 @@ var baseurl="{$baseurl}";
         });
 
         $("#add_new_note").on({
-            click: function(e){
+            click: function (e) {
                 e.preventDefault();
                 var self = this;
                 var note = $(this).parents(".widgetBox").find("textarea").val();
-                if(!note){
+                if (!note) {
                     alert("Please enter something");
-                }
-                else{
+                } else {
                     $(this).parents(".widgetBox").find("textarea").val("");
                     $.post(page, {
-                        mode : 'add_note',
-                        note : note,
-                    },function(data) {
+                        mode: 'add_note',
+                        note: note,
+                    }, function (data) {
                         console.log(data);
                         var li = document.createElement("li");
                         li.className = "col-md-4";
@@ -555,7 +533,7 @@ var baseurl="{$baseurl}";
                         $(p).append(a);
                         $(li).append(p);
                         $(a).on({
-                            click: function(e){
+                            click: function (e) {
                                 e.preventDefault();
                                 var noteId = $(this).parent().attr("id");
                                 delete_note(noteId);
@@ -563,18 +541,17 @@ var baseurl="{$baseurl}";
                             }
                         });
                         $(self).parents(".widgetBox").find("ul").prepend(li);
-                    },'json');
+                    }, 'json');
                 }
             }
         });
 
         $("#addTodo").on({
-            click: function(e){
+            click: function (e) {
                 e.preventDefault();
                 var self = this;
                 var newVal = $(this).parents(".addTodo").find("input").val();
-                if(newVal.length)
-                {
+                if (newVal.length) {
                     $(this).parents(".addTodo").find("input").val("");
                     var ajaxCall = $.ajax({
                         url: page,
@@ -584,7 +561,7 @@ var baseurl="{$baseurl}";
                             mode: "add_todo",
                         },
                     });
-                    ajaxCall.success(function(data){
+                    ajaxCall.success(function (data) {
                         data = $.parseJSON(data);
                         var li = document.createElement("li");
                         li.className = "col-md-12";
@@ -596,7 +573,7 @@ var baseurl="{$baseurl}";
                         a.href = "#";
                         a.className = "col-md-2 btn btn-danger btn-xs delete";
                         a.innerHTML = "Delete";
-                        $(a).on("click", function(e){
+                        $(a).on("click", function (e) {
                             e.preventDefault();
                             var self = this;
                             var id = $(this).prev().attr("id");
@@ -608,7 +585,7 @@ var baseurl="{$baseurl}";
                                     mode: "delete_todo",
                                 },
                             });
-                            ajaxCall.success(function(data){
+                            ajaxCall.success(function (data) {
                                 $(self).parents("li").remove();
                             });
 
@@ -619,13 +596,13 @@ var baseurl="{$baseurl}";
                         $(li).append(div).find("div").append(p).append(a);
                         $(self).parents(".widgetBox").find("ul").prepend(li);
                     });
-                }else{
+                } else {
                     alert("Please enter a valid value");
                 }
             }
         });
 
-        $("#todolist .delete").on("click", function(e){
+        $("#todolist .delete").on("click", function (e) {
             e.preventDefault();
             var self = this;
             var id = $(this).prev().attr("id");
@@ -637,11 +614,12 @@ var baseurl="{$baseurl}";
                     mode: "delete_todo",
                 },
             });
-            ajaxCall.success(function(data){
+            ajaxCall.success(function (data) {
                 $(self).parents("li").remove();
             });
 
         });
     });
+});
 
 </script>
