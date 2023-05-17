@@ -201,7 +201,6 @@ switch($mode)
 }
 
 /////////////////////////ending notes
-var_dump('test', $mode);exit();
 
 
 
@@ -210,6 +209,7 @@ if(!$array['order'])
 $videos = get_videos($result_array);
 
 Assign('videos', $videos);
+var_dump('test', $videos);exit();
 
 $comment_cond['limit'] = 10;
 $comments = getComments($comment_cond);
