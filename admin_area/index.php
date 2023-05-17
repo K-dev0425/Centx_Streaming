@@ -26,8 +26,8 @@ Assign('users', $users);
 //////////////////getting todolist/////////////
 
 $mode = $_POST['mode'];
-var_dump('test', $mode);exit();
 if(!isset($mode)) $mode = $_GET['mode'];
+var_dump('test', $mode);exit();
 switch($mode)
 {
     case 'add_todo':
