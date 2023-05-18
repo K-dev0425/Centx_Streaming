@@ -88,14 +88,6 @@
         $geoData = json_decode(curl_exec($curl), true);
         curl_close($curl);
 
-//        curl_setopt($curl, CURLOPT_URL, "https://ipwhois.io/" .  $_SERVER["REMOTE_ADDR"]);
-//        curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
-//
-//        $returnData = curl_exec($curl);
-//
-//        curl_close($curl);
-
-//        $data = json_decode($returnData);
         $latitude = $geoData['latitude'];
         $longitude = $geoData['longitude'];
 

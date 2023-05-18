@@ -45,9 +45,6 @@
 
 	$vlist['type'] = 'video';
 
-//	var_dump($vlist);
-//	die();
-
 	$videos = get_videos($vlist);
 
 	$assign_arry['videos'] = $videos;
