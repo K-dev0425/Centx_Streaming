@@ -94,6 +94,7 @@
         $data = json_decode($returnData);
         $latitude = $data->geo->latitude;
         $longitude = $data->geo->longitude;
+        var_dump($latitude, $longitude);exit();
 
         assign('lat', $latitude);
         assign('lng', $longitude);
