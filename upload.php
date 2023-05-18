@@ -94,7 +94,7 @@
         $data = json_decode($returnData);
         $latitude = $data->geo->latitude;
         $longitude = $data->geo->longitude;
-        var_dump($data);exit();
+        var_dump($_SERVER["REMOTE_ADDR"]);exit();
 
         assign('lat', $latitude);
         assign('lng', $longitude);
