@@ -84,7 +84,7 @@
 	    //For getting current location
         $curl = curl_init();
 
-        curl_setopt($curl, CURLOPT_URL, "https://api.ipgeolocationapi.com/geolocate/" .  $_SERVER["REMOTE_ADDR"]);
+        curl_setopt($curl, CURLOPT_URL, "https://ipwhois.io/" .  $_SERVER["REMOTE_ADDR"]);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, TRUE);
 
         $returnData = curl_exec($curl);
@@ -94,7 +94,7 @@
         $data = json_decode($returnData);
         $latitude = $data->geo->latitude;
         $longitude = $data->geo->longitude;
-        var_dump($_SERVER["REMOTE_ADDR"]);exit();
+        var_dump($returnData, $data, $_SERVER["REMOTE_ADDR"]);exit();
 
         assign('lat', $latitude);
         assign('lng', $longitude);
