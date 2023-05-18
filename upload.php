@@ -85,7 +85,7 @@
         $curl = curl_init('http://ipwho.is/' . $_SERVER["REMOTE_ADDR"]);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
         curl_setopt($curl, CURLOPT_HEADER, false);
-        $ipwhois = json_decode(curl_exec($curl), true);
+        $geoData = json_decode(curl_exec($curl), true);
         curl_close($curl);
 
 //        curl_setopt($curl, CURLOPT_URL, "https://ipwhois.io/" .  $_SERVER["REMOTE_ADDR"]);
@@ -96,9 +96,8 @@
 //        curl_close($curl);
 
 //        $data = json_decode($returnData);
-//        $latitude = $data->geo->latitude;
-//        $longitude = $data->geo->longitude;
-        var_dump($ipwhois, $_SERVER["REMOTE_ADDR"]);exit();
+        $latitude = $geoData['latitude'];
+        $longitude = $geoData['longitude'];
 
         assign('lat', $latitude);
         assign('lng', $longitude);
