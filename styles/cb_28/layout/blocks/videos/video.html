@@ -111,7 +111,7 @@
 		<h2 class="title"><a href="{videoLink($video)}">{$video.title|truncate:50}</a></h2>
 		<span class="author">{lang code="by"}&nbsp;<a href="{$userquery->profile_link($video)}">{$video.username}</a></span>
 		<span class="earning_per_centisec">{lang code="price_per_sec"}: ${number_format(((float)$video.price_per_sec), 4)}</span>
-		<span class="remaining_budget">{lang code="remaining_budget"}: ${number_format(((float)$video.remaining_price), 2)}</span>
+<!--		<span class="remaining_budget">{lang code="remaining_budget"}: ${number_format(((float)$video.remaining_price), 2)}</span>-->
 		<div class="clearfix views-date">
 			<span>{$video.views}&nbsp;{lang code="views"}</span>
 			<time class="date" datetime="2016-15-03">{$video.date_added|niceTime}</time>
