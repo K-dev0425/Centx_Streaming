@@ -163,6 +163,7 @@ if (isset($_POST['load_type'])) {
             else {
                 $paid_time = 0;
             }
+            var_dump($video);exit();
 
             $pay_interval = (int)$video['end_paying'] - (int)$video['start_paying'];
             $remaining_interval = $pay_interval - (int)$paid_time;
