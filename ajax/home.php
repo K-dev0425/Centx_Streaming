@@ -163,13 +163,12 @@ if (isset($_POST['load_type'])) {
             else {
                 $paid_time = 0;
             }
-            var_dump($video);exit();
 
             $pay_interval = (int)$video['end_paying'] - (int)$video['start_paying'];
             $remaining_interval = $pay_interval - (int)$paid_time;
             $remaining_price = $remaining_interval * (float)$video['price_per_sec'];
             if ($remaining_price > (float)$video['total_price']) $remaining_price = $video['total_price'];
-            $video['remaining_price'] = $remaining_price;
+            $video['remaining_paid'] = $remaining_price;
 
             //Filtering
             //    check map radius
