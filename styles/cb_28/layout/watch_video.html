@@ -329,14 +329,6 @@
         var n = 0;
 
         var video_type = '{$video.pay_type}';
-        if (video_type == 'ad') {
-        	console.log('test')
-            // $('.vidTitle').append('<span style="font-size: 16px">&nbsp;(Ad)</span>');
-            $('.uploaderName.col').append('&nbsp;&nbsp;<span class="ad-logo-player">Ad</span>');
-
-            $('.main-links li.active').removeClass('active');
-            $('.main-links li:eq(4)').addClass('active');
-		}
 
 		var video_det = JSON.parse('{json_encode($video)}');
 
@@ -346,6 +338,14 @@
         var answer_3 = "";
 
 		$(document).ready(function () {
+			if (video_type == 'ad') {
+				$('.vidTitle').append('<span style="font-size: 16px">&nbsp;(Ad)</span>');
+				$('.uploaderName.col').append('&nbsp;&nbsp;<span class="ad-logo-player">Ad</span>');
+
+				$('.main-links li.active').removeClass('active');
+				$('.main-links li:eq(4)').addClass('active');
+			}
+
 			// $('#vjs-cb-logo').remove();
             if (video_type !== "ad") {
                 $('#video_player_ad_icon').remove();
