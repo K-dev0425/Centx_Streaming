@@ -330,8 +330,8 @@
 
         var video_type = '{$video.pay_type}';
         if (video_type == 'ad') {
-            $('.vidTitle').append('<span style="font-size: 16px">&nbsp;(Ad)</span>');
-            $('.uploaderName').append('&nbsp;&nbsp;<span class="ad-logo-player">Ad</span>');
+            // $('.vidTitle').append('<span style="font-size: 16px">&nbsp;(Ad)</span>');
+            $('.uploaderName.col').append('&nbsp;&nbsp;<span class="ad-logo-player">Ad</span>');
 
             $('.main-links li.active').removeClass('active');
             $('.main-links li:eq(4)').addClass('active');
