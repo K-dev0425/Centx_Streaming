@@ -290,6 +290,7 @@
 
 					$("#allUploadForms").html("");
 					$("#allUploadForms").append(uploadForms);
+					$("#allUploadForms").addClass("hidden");
 
 					//Disabling saveDetails button for Current form
 					var div_wrap_numb = totalFiles - 1;
@@ -595,8 +596,11 @@
 					$("#fileUploadProgress").addClass("hidden");
 
 					$("#uploadMore").removeClass("hidden");
+					$('#allUploadForms').removeClass('hidden');
 					$(".uploadingProgressContainer").hide();
+
 					uploader.refresh();
+
 					$("#uploadMessage").html("All Files are uploaded Successfully").attr("class", "alert alert-success container");
 					setTimeout(function(){
 						$("#uploadMessage").addClass("hidden");
